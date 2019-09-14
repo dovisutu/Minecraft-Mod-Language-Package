@@ -1,0 +1,2 @@
+高级空气压缩机是一个可以产生[link{pneumaticcraft:menu/generating_pressure}]压缩空气[link{}]的机器。它是[link{block/air_compressor}]空气压缩机[link{}]的升级版，基础空气产出 50ml/tick，最高安全气压 20 bar。它可以被速度升级升级，然而，它需要[link{pneumaticcraft:menu/heat}]冷却[link{}]，因为随着温度的上升它的效率降低，直到不产生空气。
+[crafting{200, 130, key=block/advanced_air_compressor}] 

@@ -1,0 +1,21 @@
+[image{200,10,0.49,pneumaticcraft:textures/wiki/thermopneumatic_processor.png}]
+热气动加工机使用气压和[link{pneumaticcraft:menu/heat}]热量[link{}]来加工材料。它有好几个用法
+
+[prefix{l}]生产塑料[prefix{}]
+它可以使用 LPG（100 mB）和煤（1）来生产液态塑料（1000 mB）。这一过程不需要气压。液态塑料可以通过[link{block/plastic_mixer}]塑料混合机[link{}]转化为固态。进行这一过程不需要气压，只需要热量。
+
+[prefix{l}]生产润滑油[prefix{}]
+输入柴油（1000 mB）和红石（1）可以生产润滑油（1000 mB）。这一过程不需要气压。润滑油被用于合成速度升级。
+
+[prefix{l}]将重油裂解为轻油。[prefix{}]
+热气动加工机可以将[link{block/refinery}]精炼塔[link{}]生产的重油以  80%的效率裂解为轻油。也就是说：
+
+柴油 --> 煤油
+煤油 --> 汽油
+汽油 --> LPG
+
+[link{https://crafttweaker.readthedocs.io/en/latest/#Mods/PneumaticCraft_Repressurized/PneumaticCraft_Repressurized/}]对 CraftTweaker 的支持[link{}]
+
+如果你的整合包里有 CraftTweaker，上述（默认）合成也许适用，也许不。建议使用 JEI 查看这台机器“当前”的合成表。
+
+[crafting{200, 410, key=block/thermopneumatic_processing_plant}]

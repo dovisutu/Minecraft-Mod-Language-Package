@@ -1,0 +1,31 @@
+实体过滤器在气动工艺中被好几个地方使用。使用的方法是一样的。在一个文本框里你可以指定包含哪些实体。它按下列规则工作：
+
+要指定特定的实体，不管他们有相同的类型（‘爬行者’）还是相同的名字（一个叫‘MineMaarten’的玩家），直接输入（英文）纯文本。当你想指定某一类实体（总体上的动物，敌对生物，玩家），在前面加入‘@’。下列是所有的‘@’类型，以及使用示例：
+
+[prefix{1}]@player [prefix{}]匹配所有玩家
+[prefix{1}]@mob [prefix{}]匹配所有敌对生物
+[prefix{1}]@animal [prefix{}]匹配所有被动生物（动物）
+[prefix{1}]@animal(age = adult) [prefix{}]匹配所有成年动物
+[prefix{1}]@animal(age = baby) [prefix{}]匹配所有未成年动物
+[prefix{1}]@animal(breedable = yes) [prefix{}]匹配所有可以被即刻喂食的动物
+[prefix{1}]@minecart [prefix{}]匹配矿车
+[prefix{1}]@boat [prefix{}]匹配船
+[prefix{1}]@living [prefix{}]匹配所有活的实体
+[prefix{1}]@item [prefix{}]匹配所有物品掉落物
+[prefix{1}]@drone [prefix{}]匹配无人机（实体）
+[prefix{1}]Creeper [prefix{}]匹配爬行者（Creeper）
+[prefix{1}]MineMaarten [prefix{}]匹配所有名为‘MineMaarten’的实体
+[prefix{1}]c* [prefix{}]匹配所有以‘c’开头的实体（比如爬行者（Creeper），或者牛（Cows））。
+[prefix{1}]*pig* [prefix{}]匹配所有名字含有‘pig’的生物（比如猪（Pig）或者僵尸猪人（Zombie Pigman））。
+
+所有的匹配都忽略大小写，比如：“zombie”和“Zombie”都匹配僵尸（Zombie）。
+
+你可以使用“;”（半角分号）指定一系列过滤器 - 这是“匹配任意”函数：
+
+[prefix{1}]Creeper;Zombie [prefix{}]匹配爬行者（Creeper）和僵尸（Zombie）
+
+你可以在过滤器前加“!”（半角感叹号）以否定过滤器：
+
+[prefix{1}]!@player [prefix{}]匹配所有不是玩家的实体
+[prefix{1}]!Creeper;Zombie [prefix{}]匹配所有既不是爬行者（Creeper）又不是僵尸（Zombie）的实体
+[prefix{1}]Creeper;!Zombie [prefix{}]无效：“!”只能在整个过滤器的开始

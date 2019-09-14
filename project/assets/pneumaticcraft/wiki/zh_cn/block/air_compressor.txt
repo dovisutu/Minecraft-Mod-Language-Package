@@ -1,0 +1,2 @@
+空气压缩机是一个可以生[link{pneumaticcraft:menu/generating_pressure}]压缩空气[link{}]的机器。任何可以在原版熔炉里燃烧的物品都可以用作它的燃料。
+[crafting{200, 60, key=block/air_compressor}]

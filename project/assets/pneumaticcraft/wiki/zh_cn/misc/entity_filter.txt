@@ -15,7 +15,7 @@
 [prefix{1}]@drone [prefix{}]匹配无人机（实体）
 [prefix{1}]Creeper [prefix{}]匹配爬行者（Creeper）
 [prefix{1}]MineMaarten [prefix{}]匹配所有名为‘MineMaarten’的实体
-[prefix{1}]c* [prefix{}]匹配所有以‘c’开头的实体（比如爬行者（Creeper），或者牛（Cows））。
+[prefix{1}]c* [prefix{}]匹配所有以‘c’开头的实体（比如爬行者（Creeper），或者牛（Cow））。
 [prefix{1}]*pig* [prefix{}]匹配所有名字含有‘pig’的生物（比如猪（Pig）或者僵尸猪人（Zombie Pigman））。
 
 所有的匹配都忽略大小写，比如：“zombie”和“Zombie”都匹配僵尸（Zombie）。

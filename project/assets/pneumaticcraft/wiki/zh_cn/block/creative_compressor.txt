@@ -1,0 +1,1 @@
+创造压缩机是一个不可合成的仅限创造模式的[link{pneumaticcraft:menu/generating_pressure}]空气压缩机[link{}]。输出压力可以在 GUI 内设置。

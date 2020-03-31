@@ -1,0 +1,2 @@
+一个压缩铁块包含九个[link{pneumaticcraft:menu/base_concepts}]压缩铁锭[link{}]。它有一个特性： 它是一个很好的[link{pneumaticcraft:menu/heat}]热导体[link{}]。压缩铁块一般用来将热传导到其他地方。
+[crafting{200, 80,key=block/compressed_iron_block}]

@@ -1,0 +1,22 @@
+[image{380, 20, 0.3, pneumaticcraft:textures/wiki/charging_station.png}]
+充气站是一个气动物品可以在其中被充/放气的机器。充气站和气动物体的交互与管道和机器的交互是一样的：气压差会被平衡。这意味着你需要使充气站内气压很高才能把物品充到一个很高的气压。
+
+很多可以充气的物品的最高气压为 10 bar。但是不要担心爆炸；超过 10 bar 时物品不会因过压而爆炸，只会停止充气。
+
+[prefix{l}]Charge Pad[prefix{}]
+你可以通过安装一个[link{pneumaticcraft:menu/machine_upgrades}]发射器升级[link{}]来将充气站变成充气台。它可以对任何位于其上方的无人机、物品，以及玩家背包内的物品进行充/放气。充气台可以通过[link{item/camo_applicator}]伪装涂敷器[link{}]进行伪装。
+
+[prefix{l}]升级管理[prefix{}]
+充气站同时也作为对于可以安装升级的物品（目前只有无人机与气动装甲）的升级管理器。要往一个物品安装升级，像平常一样把它放在充气站里，然后点击物品栏上方的“Inv”键。这会打开一个用来安装升级的 GUI；每一个对于所放置的物品适用的升级都已选项卡的形式列在了 GUI 的两边。
+
+以下是目前可以被充气的物品：
+
+• [link{item/air_canister}]空气罐[link{}]
+• [link{item/pneumatic_wrench}]气动扳手[link{}]
+• [link{item/logistics_configurator}]物流配置器[link{}]
+• [link{item/camo_applicator}]伪装涂敷器[link{}]
+• [link{item/vortex_cannon}]涡流炮[link{}]
+• [link{item/minigun}]M134 型速射机枪[link{}]
+• [link{item/drone}]无人机[link{}]
+• [link{item/manometer}]压力计[link{}]
+• [link{menu/pneumatic_armor}]气动装甲[link{}]

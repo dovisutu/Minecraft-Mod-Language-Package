@@ -1,108 +1,108 @@
 [image{200, 20, 0.44,pneumaticcraft:textures/wiki/drone_interface.png}]
-The Drone Interface is a block that only gets added when ComputerCraft is installed. It's a peripheral that's used to communicate with Drones. To do so, program a Drone with a ComputerCraft puzzle piece. You can combine it with other puzzle pieces. When the Drone gets to the ComputerCraft piece, it'll try to connect to an available Drone Interface located within the selected area. Available, because a Drone Interface can connect to one Drone at a time only. The following functions apply:
+无人机接口是一个只有在安装了 ComputerCraft 时才会出现的方块。它是一个用来与无人机联系的外部设备。在对无人机编程时加入 ComputerCraft 的编程拼图从而做到这一点。你可以将其与其他的编程拼图结合在一起。当无人机运行到了 ComputerCraft 拼图时，它会试图与一个选定区域内可用的无人机接口连接。说“可用”是因为一个无人机接口只能一次与一个无人机连接。下列函数可用：
 
 [prefix{l}]isConnectedToDrone() [prefix{}] 
-Returns true if a Drone has connected with this Drone Interface (when the Drone's program has arrived at the ComputerCraft piece and made a connection).
+如果一个无人机与该无人机接口连接（即无人机的程序运行到了 ComputerCraft 拼图并且连接上了），返回 True。
 
 [prefix{l}]getDronePressure() [prefix{}] 
-Returns the pressure of the connected Drone.
+返回所连接的无人机的当前气压。
 
 [prefix{l}]getDronePosition() [prefix{}] 
-Returns a table of 3 double values containing the x,y and z position respectively of the Drone.
+返回包含有无人机的 x, y, z 坐标的列表。
 
 [prefix{l}]exitPiece() [prefix{}] 
-Stops the ComputerCraft piece in the Drone, and allows the Drone's program to proceed to the next puzzle piece.
+终止无人机所在的 ComputerCraft 拼图，使得无人机的程序进入下一块拼图。
 
 [prefix{l}]getAllActions() [prefix{}] 
-Returns a table of all the current selectable actions (like 'dig' or 'place').
+返回包含所有可以被选择的操作（比如 dig（挖掘） 或者 place（放置））的列表，以英文表示。
 
 [prefix{l}]setBlockOrder(<"closest"/"highToLow"/"lowToHigh">) [prefix{}]
-Sets the place/dig order of the Drone.
+设置无人机挖掘/放置方块的顺序。
 
 [prefix{l}]getAreaTypes() [prefix{}] 
-Returns a table of all the possible area types (filled, frame, sphere, ..).
+返回所有可行的区域类型（filled（填充），frame（框架），sphere（球）等）。
 
 [prefix{l}]addArea(<x>,<y>,<z>),
 addArea(<x1>,<y1>,<z1>,<x2>,<y2>,<z2>,<areaType>) [prefix{}] 
-Adds an area to the current stored area of the Drone. When using the latter method, x1, y1, and z1, represent the first point (which would be the first GPS Tool normally), and x2, y2, and z2 represent the second point.
+向无人机目前存储的区域添加一个区域。当使用后一个重载时，<x1,y1,z1>表示的是第一个点（代表手动添加时第一个 GPS 工具），<x1,y2,z2>表示第二个点。
 
 [prefix{l}]removeArea(<x>,<y>,<z>),
-removeArea(<x1>,<y1>,<z1>,<x2>,<y2>,<z2>,<areaType>) [prefix{}] 
-Removes an area from the current stored area (like blacklisting).
+removeArea(<x1>,<y1>,<z1>,<x2>,<y2>,<z2>,<区域类型>) [prefix{}] 
+从目前存储的区域里删除一个区域（即加入黑名单）。
 
 [prefix{l}]clearArea() [prefix{}] 
-Clears the current stored area.
+清空当前存储的区域。
 
 [prefix{l}]showArea() [prefix{}] 
-Will show the current stored area using the area renderer you are used to.
+使用区域渲染器显示存储的区域，如果你习惯的话。
 [prefix{l}]hideArea() [prefix{}] 
-Will stop showing the area stored in the Drone.
+停止显示无人机存储的区域。
 
-[prefix{l}]addWhitelistItemFilter(<item/block name>, <damage/metadata>, <useMetadata>, <useNBT>, <useOreDictionary>, <useModSimilarity>) [prefix{}] 
-Acts as you've put a Item Filter piece on the right of a piece (making it whitelisting). The item/block name is in Minecraft format, i.e. "minecraft:stone", or "pneumaticcraft:pressureTube". The 'useXXX' are all booleans that determine what filters will be used (same functionality as the check boxes in the Item Filter puzzle piece).
+[prefix{l}]addWhitelistItemFilter(<物品/方块名>, <损害值/元数据>, <使用元数据>, <使用NBT>, <使用矿物词典>, <useModSimilarity>) [prefix{}] 
+就像把一个物品过滤器放在一块拼图的右侧一样（加入白名单）。物品/方块名使用 Minecraft 格式，如："minecraft:stone"，或"pneumaticcraft:pressureTube"。‘使用xxx’参数确定哪些过滤器会被使用的 bool 参数（和物品过滤器编程拼图里的多选框功能一样）。
 
-[prefix{l}]addBlacklistItemFilter(<item/block name>, <damage/metadata>, <useMetadata>, <useNBT>, <useOreDictionary>, <useModSimilarity>) [prefix{}] 
-Like the addWhitelistItemFilter(...), but to blacklist items.
+[prefix{l}]addBlacklistItemFilter(<物品/方块名>, <损害值/元数据>, <使用元数据>, <使用NBT>, <使用矿物词典>, <useModSimilarity>) [prefix{}] 
+和addWhitelistItemFilter(...)一样，但加入的是黑名单。
 
 [prefix{l}]clearWhitelistItemFilter() [prefix{}] 
-Clears all the whitelisted item filters stored.
+清空白名单内存储的物品过滤器。
 
 [prefix{l}]clearBlacklistItemFilter() [prefix{}] 
-Clears all the blacklisted item filters stored.
+清空黑名单内存储的物品过滤器。
 
-[prefix{l}]addWhitelistText(<text>) [prefix{}] 
-Adds a text to the whitelisted texts. Used to specify a filter for the Entity Attack action for example.
+[prefix{l}]addWhitelistText(<文本>) [prefix{}] 
+向白名单加入一个文本。例如：指定攻击实体操作的过滤器。
 
-[prefix{l}]addBlacklistText(<text>) [prefix{}] 
-Adds a text to the blacklisted texts. Used to specify a filter for the Entity Attack action for example.
+[prefix{l}]addBlacklistText(<文本>) [prefix{}] 
+向黑名单加入一个文本。例如：指定攻击实体操作的过滤器。
 
 [prefix{l}]clearWhitelistText() [prefix{}] 
-Clears the stored whitelisted texts.
+清空白名单内的文本。
 
 [prefix{l}]clearBlacklistText() [prefix{}] 
-Clears the stored blacklisted texts.
+清空黑名单内的文本。
 
-[prefix{l}]addWhitelistLiquidFilter(<liquid name>) [prefix{}] 
-Acts as you've put a Liquid Filter piece on the right of a piece (making it whitelisting). You can either give it the 'registry name', or the localized name.
+[prefix{l}]addWhitelistLiquidFilter(<流体名>) [prefix{}] 
+就像把一个流体过滤器放在一块拼图的右侧一样（加入白名单）。流体名可以是其‘注册名’，也可以是本地化的名称。
 
-[prefix{l}]addBlacklistLiquidFilter(<liquid name>) [prefix{}] 
-Like the addWhitelistLiquidFilter(...), but to blacklist liquids.
+[prefix{l}]addBlacklistLiquidFilter(<流体名>) [prefix{}] 
+和addWhitelistLiquidFilter(...)一样，但加入的是黑名单。
 
 [prefix{l}]clearWhitelistLiquidFilter() [prefix{}] 
-Clears all the whitelisted liquid filters stored.
+清空白名单内存储的物品过滤器。
 
 [prefix{l}]clearBlacklistLiquidFilter() [prefix{}] 
-Clears all the blacklisted liquid filters stored.
+清空黑名单内存储的物品过滤器。
 
-[prefix{l}]setEmittingRedstone(<strength>) [prefix{}] 
-Sets the strength the redstone will be emitting when the "emitRedstone" action would be set.
+[prefix{l}]setEmittingRedstone(<强度>) [prefix{}] 
+设置执行 emitRedstone （输出红石信号）操作时输出的红石信号强度。.
 
-[prefix{l}]setRenameString(<name>) [prefix{}] 
-Sets the name the Drone will be named to when the "rename" action would be set.
+[prefix{l}]setRenameString(<名称>) [prefix{}] 
+设置执行 rename （改名）操作时无人机会被设置的名称。
 
 [prefix{l}]setDropStraight(<true/false>) [prefix{}] 
-When the "dropItem" action would be set, this determines whether or not the item will be dropped with a random velocity, or straight down.
+设置执行 dropItem （丢出物品）操作时物品会以一个随机的速度丢出（false）还是竖直下落（true）。 
 
 [prefix{l}]setUseCount(<true/false>) [prefix{}] 
-This says whether or not the Drone has a maximum of imported/exported/dropped pieces. If true, also use setCount().
+设置无人机是否有最大输入/输出/丢出物品限制。 如果设置为 true，需要同时调用 setCount()。
 
-[prefix{l}]setCount(<amount>) [prefix{}] 
-This configures the maximum amount of imported/exported/dropped items, and also is the amount that's checked when doing a condition check.
+[prefix{l}]setCount(<数量>) [prefix{}] 
+设置最大输入/输出/丢出物品限制，也是条件检查时被检查的物品数量。
 
 [prefix{l}]setIsAndFunction(<true/false>) [prefix{}] 
-Used in conditions only. When true, all checked blocks need to satisfy the condition requirements (>=10 etcetera).
+只在条件中使用。设置为 true 时，所有被检查的方块需要满足条件（如>= 10）。
 
 [prefix{l}]setOperator(<">=" / "=">) [prefix{}] 
-Used in conditions only. Says whether or not the condition is checking for an equal amount (=) or equal and higher than amount (>=). The amount can be set using setCount().
+只在条件中使用。设置该条件检查相等于（"="）或是大于等于（">="）指定数量。这个数量可以用 setCount() 设置。
 
 [prefix{l}]evaluateCondition() [prefix{}] 
-Returns true/false. Used in conditions only. Will return true/false depending on whether or not the condition is satisfied. Drone Conditions can be checked right after setting 'setAction()'. Note that you need to wait until 'isActionDone' if you're dealing with a non Drone Condition.
+返回 true/false。只在条件中使用。其将根据条件是否满足返回 true/false。无人机条件可以在调用 setAction() 后被检查。注意：如果你要检查的是非无人机条件，需要等到 isActionDone。
 
-[prefix{l}]setSide(<side>, <accessible>) [prefix{}] 
-Sets the specific side to be accessible or not. Used in the Inventory Im- and Export actions to set which side of the inventory the Drone can access. It is also used for the Place action to determine how to place the block.
+[prefix{l}]setSide(<朝向>, <可访问性>) [prefix{}] 
+设置方块某一面可以被访问。用于  Inventory Import / Export（输入/出容器）时设置无人机可以访问容器的哪一面。也可以用于 Place（放置）指令，此时决定如何放置方块。
 
-[prefix{l}]setSides(<down>, <up>, <north>, <south>, <east>, <west>) [prefix{}] 
-Same as above, now in one function to set all sides at once (6x boolean).
+[prefix{l}]setSides(<下>, <上>, <北>, <南>, <东>, <西>) [prefix{}] 
+和上一个重载一样，这次一次性设置所有面（6 个 bool）
 
 [prefix{l}]setUseMaxActions(<true/false>) [prefix{}] 
 This says whether or not the Drone has a maximum actions performed on a block at a time before the command is considered 'done'. Applies to the Place, Dig and Right-Click block program. If true, also use setMaxActions().
@@ -119,9 +119,9 @@ Only used in the right click command, this will set whether or not the fake play
 [prefix{l}]setPlaceFluidBlocks(<true/false>) [prefix{}]
 Only used in the Liquid Export command, when set to true the Drone will be allowed to place down fluid blocks.
 
-[prefix{l}]setVariable(<variable name>, <true/false>) [prefix{}]
-[prefix{l}]setVariable(<variable name>, <x>) [prefix{}]
-[prefix{l}]setVariable(<variable name>, <x>, <y>, <z>) [prefix{}]
+[prefix{l}]setVariable(<变量名>, <true/false>) [prefix{}]
+[prefix{l}]setVariable(<变量名>, <x>) [prefix{}]
+[prefix{l}]setVariable(<变量名>, <x>, <y>, <z>) [prefix{}]
 Sets the[link{pneumaticcraft:progwidget/coordinate_operator}] variable[link{}] of this Drone. When passing 'true', the coordinate will be set to (1,0,0). Alternatively, false will be setting it to (0,0,0). It is possible to set global variables (#) as well.
 
 [prefix{l}]getVariable(<variable name>) [prefix{}]

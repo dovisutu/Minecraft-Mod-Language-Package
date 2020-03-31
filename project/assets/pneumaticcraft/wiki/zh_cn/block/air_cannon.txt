@@ -1,5 +1,5 @@
 [image{325, 20,0.5, pneumaticcraft:textures/wiki/air_cannon.png}]
-The Air Cannon is a device you can use to transport your items quite some distance, through the air. It uses compressed air as propellant.
+空气炮是一个可以从空中将物品传送比较长的距离的机器。它使用压缩空气作为推进剂。
 
 [crafting{200, 130, key=item/cannon_barrel}]
 [crafting{200, 250,key=item/stone_base}]

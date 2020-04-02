@@ -1,0 +1,5 @@
+[image{335, 20, 0.4, pneumaticcraft:textures/wiki/electric_compressor.png}]
+电动压缩机可以使用工业2的 EU 生产压缩空气。默认情况下，它的效率为40%，但这可以在配置里被更改。它的表现与工业2的一阶机器相同，也就是说，当你给他输入中/高压时，它会爆炸。像一般的工业2机器一样，你可以加装升压升级来允许其接受更高的电压。*以 mL/tick 为单位的能量输出 = 输入比率 / 效率 * 400，其中效率按 % 计算。例如，当效率为 40%，输入比率为 30 EU/tick 时，压缩空气产出速度为 32 / 40 * 400 = 320 mL/tick.
+
+另一个影响效率的因素时机器的热量。这台机器需要被[link{pneumaticcraft:menu/heat}]冷却[link{}]，因为它的效率会随温度的增高而减小，直到无法生产空气。
+[crafting{200, 280, key=block/electric_compressor}]

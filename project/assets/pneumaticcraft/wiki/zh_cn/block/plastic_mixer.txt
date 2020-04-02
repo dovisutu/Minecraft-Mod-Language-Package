@@ -1,0 +1,28 @@
+塑料混合机是一台可以用来将一种颜色的塑料转化为另一种的机器。它使用热量与染料做到该功能。第二个功能是固化由[link{block/thermopneumatic_processing_plant}]热气动加工机[link{}]生产的液态塑料；[prefix{l}]这不需要燃料[prefix{}]。
+[image{370, 5, 0.3,pneumaticcraft:textures/wiki/plastic_mixer.png}]
+[image{200, 125,0.4, pneumaticcraft:textures/wiki/plastic_mixer_gui.png}]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+塑料混合机需要[link{pneumaticcraft:menu/heat}]热量[link{}]来熔化固态塑料。其将会对任何放置在“物品”部分上方槽的塑料加热。当塑料的温度达到 150℃时，它将会熔化并进入液体槽。
+
+[prefix{l}]固化塑料[prefix{}]
+首先，打开“选择塑料”标签。将会显示一个有 16 个按钮的面板。点击对应你需要生产的塑料颜色的按钮。所需染料将会与液态塑料混合，并将固化后输出至输出槽。注：白色塑料不需要染料。 勾选“锁定选择”后，选择塑料面板将会锁定。这使得塑料混合机自动生产指定的塑料，便于自动化。
+
+[prefix{l}]Redstone options[prefix{}]
+首先，塑料混合机有 3 个选项：默认红石设置、有红石信号时运行、没有红石信号时运行。它同样含有“通过信号选择塑料”模式。在该模式中以红石信号强度为索引的塑料将会被选中。如：信号强度 0 代表黑色塑料，1 代表红色塑料，以此类推。
+
+[crafting{200, 520, key=block/plastic_mixer}]

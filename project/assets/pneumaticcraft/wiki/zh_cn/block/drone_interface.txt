@@ -105,50 +105,50 @@ removeArea(<x1>,<y1>,<z1>,<x2>,<y2>,<z2>,<区域类型>) [prefix{}]
 和上一个重载一样，这次一次性设置所有面（6 个 bool）
 
 [prefix{l}]setUseMaxActions(<true/false>) [prefix{}] 
-This says whether or not the Drone has a maximum actions performed on a block at a time before the command is considered 'done'. Applies to the Place, Dig and Right-Click block program. If true, also use setMaxActions().
+设置无人机是否有在指令被认为‘完成’前在一个方块上执行的最多操作限制。对 Place, Dig, Rifht-Click 操作适用。如果设置为 true，需要同时调用 setMaxActions()。
 
-[prefix{l}]setMaxActions(<amount>) [prefix{}] 
-This configures the maximum amount of actions performed on blocks before the command is considered 'done'. This applies to the Place, Dig an Right-Click block program. Be sure to also call setUseMaxActions(true) to enable usage of this.
+[prefix{l}]setMaxActions(<数量>) [prefix{}] 
+设置在指令被认为‘完成’前在一个方块上执行的最多操作限制。对 Place, Dig, Rifht-Click 操作适用。确保调用了 setUseMaxActions(true) 以启用控制。
 
-[prefix{l}]setCraftingGrid(<item/block name>, <item/block name>, ...(9x)) [prefix{}] 
-Sets up the crafting grid so when the Crafting instruction is called, this recipe will be used. You need to specify all 9 items making up the recipe. For empty spaces supply nil. The naming format is the same as for supplying item filters.
+[prefix{l}]setCraftingGrid(<物品/方块名>, <物品/方块名>, ...(9个)) [prefix{}] 
+设置好在 Crafting 指令被调用时适用的合成配方。需要指定所有 9 个参与合成配方的物品。用 nil 代表空格。命名格式与设置物品过滤器的格式一样。
 
 [prefix{l}]setSneaking(<true/false>) [prefix{}]
-Only used in the right click command, this will set whether or not the fake player is sneaking while right clicking.
+只用在 Right-Cilck 指令。设置右键时是否模拟潜行。
 
 [prefix{l}]setPlaceFluidBlocks(<true/false>) [prefix{}]
-Only used in the Liquid Export command, when set to true the Drone will be allowed to place down fluid blocks.
+只用在 Liquid Export 指令。设置为 true 时无人机可以放置下流体方块。
 
 [prefix{l}]setVariable(<变量名>, <true/false>) [prefix{}]
 [prefix{l}]setVariable(<变量名>, <x>) [prefix{}]
 [prefix{l}]setVariable(<变量名>, <x>, <y>, <z>) [prefix{}]
-Sets the[link{pneumaticcraft:progwidget/coordinate_operator}] variable[link{}] of this Drone. When passing 'true', the coordinate will be set to (1,0,0). Alternatively, false will be setting it to (0,0,0). It is possible to set global variables (#) as well.
+设置无人机的[link{pneumaticcraft:progwidget/coordinate_operator}]变量[link{}]。当传入 true 时，坐标会被设为 <1,0,0>。同样，false 会被设为 <0,0,0>。同样可以设置全局变量（使用#）。
 
-[prefix{l}]getVariable(<variable name>) [prefix{}]
-Returns the value of the variable from this Drone (x, y and z). It is possible to get global (#) and special variables ($) as well.
+[prefix{l}]getVariable(<变量名>) [prefix{}]
+返回无人机的变量值<x,y,z>。同样可以返回全局（使用#）和局部（使用$）变量。
 
-[prefix{l}]setSignText(<line1>, <line2>, ..., <lineN>) [prefix{}]
-Sets the text that's going to be set to Signs using the Edit Sign command.
+[prefix{l}]setSignText(<行1>, <行2>, ..., <行N>) [prefix{}]
+设置将通过 Edit Sign 指令被写入告示牌的文本。
 
 [prefix{l}]setRequiresTool(<true/false>) [prefix{}]
-This configures whether or not the Drone should use a tool when executing the Dig or Harvest piece.
+设置无人机在执行 Dig 或 Harvest 指令时使用工具。
 
-[prefix{l}]setAction(<action>) [prefix{}] 
-String that represents the action. This should be one of the actions returned by getAllActions().
+[prefix{l}]setAction(<操作>) [prefix{}] 
+设置操作（用字符串表示）。参数应当是 getAllActions 返回的列表中的一个。
 
 [prefix{l}]getAction() [prefix{}]
-Returns a string that represents the last action set by 'setAction'. Will return nil when no action is set. Can be used to make sure to only call 'isActionDone()' when this method does not return nil.
+返回代表上一个被 setAction 设置的操作的字符串。当没有操作被设置时返回 nil。可以用以确保只在其不返回 nil 时才调用 isActionDone。
 
 [prefix{l}]abortAction() [prefix{}] 
-Stops the current running action.
+终止正在运行的操作。
 
 [prefix{l}]isActionDone() [prefix{}] 
-Returns true if the current action is done (goto has arrived at the target location, inventory import can't import anymore, dig has dug every possible block, ..).
+如果目前的操作已经结束（如：goto 到了目标位置，inventory import 无法继续输入，dig 挖掉了所有指定方块），返回 true。
 
 [prefix{l}]forgetTarget() [prefix{}] 
-When the Drone was targeting an Entity (in the Entity Attack program), this will stop attacking that target.
+当无人机（在 Entity Attack 指令中）被指定了一个实体，停止攻击该实体。
 
-[prefix{l}]getUpgrades(<upgrade>) [prefix{}] 
-Will get the amount of inserted upgrades of the given type. This type is the index of the upgrade (in creative, or NEI), starting with 0. Or the metadata value when you use NEI. A Speed upgrade for example has an index of 5.
+[prefix{l}]getUpgrades(<升级>) [prefix{}] 
+获取给定类型的被安装的升级的数量。“类型”是以0为基准的（在创造模式中，或者按 NBT）升级的索引。也可以是使用 NEI时的元数据。例如，速度升级的索引为 5。
 
-Anytime the Drone gets updated a ring will be shot out of the Drone Interface, indicating it was successful. The color of the ring is the same color as the puzzle piece it was associated with.
+当无人机被更新时，一个环会从无人机接口中出现，表示更新成功。环的颜色与所关联的拼图的颜色相同。

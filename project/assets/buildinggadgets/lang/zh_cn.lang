@@ -11,10 +11,10 @@ config.buildinggadgets.general.enableDestructionGadget=启用破坏小帮手
 config.buildinggadgets.general.enableDestructionGadget.tooltip=设置为 false 将禁用破坏小帮手
 config.buildinggadgets.general.enablePaste=启用构建糨糊
 config.buildinggadgets.general.enablePaste.tooltip=设置为 false 则禁用构建糨糊的合成
-config.buildinggadgets.general.poweredByFE=Forge Energy 能量供能
-config.buildinggadgets.general.poweredByFE.tooltip=设置为 true 将使用 Forge Energy 能量，设置为 false 则为原版物品损耗
+config.buildinggadgets.general.poweredByFE=由Forge Energy供能
+config.buildinggadgets.general.poweredByFE.tooltip=设置为 true 将使用 Forge Energy ，设置为 false 则为原版耐久损耗
 config.buildinggadgets.general.rayTraceRange=最大修建距离
-config.buildinggadgets.general.rayTraceRange.tooltip=用来管控你可以修建的距离
+config.buildinggadgets.general.rayTraceRange.tooltip=设置你可以修建的最远距离
 config.buildinggadgets.general.subCategoryBlacklist=黑名单设置
 config.buildinggadgets.general.subCategoryBlacklist.blockBlacklist=黑名单方块
 config.buildinggadgets.general.subCategoryBlacklist.blockBlacklist.tooltip=所有添加到此处的方块都会被当做 TileEntities 一样处理。\n你可以使用 Java 所使用的标准正则表达式来实现更复杂的过滤。\n比如使用“awfulmod:.*”来将所有 awfulmod 模组方块加入黑名单。
@@ -83,7 +83,7 @@ message.gadget.pastesuccess=从剪贴板粘贴成功
 message.gadget.pastetoobig=粘贴过大
 message.gadget.rotated=方块已旋转
 message.gadget.toobigarea=区域过大，最大区域为 125x125x125（右击空气方块进行重置）
-message.gadget.toolmode=工具当前模式
+message.gadget.toolmode=工具当前模式：%s
 message.gadget.toolrange=工具当前范围
 message.gadget.toomanyblocks=方块过多，最大只允许 32,768 个（右击空气进行重置）
 message.gadget.undofailed=撤销失败（尝试靠近一点？）
@@ -140,7 +140,7 @@ message.gadget.building.placement.atop=顶上
 message.gadget.building.placement.inside=内部
 config.buildinggadgets.general.subCategoryPasteContainers.capacity.t1=T1 粘贴容器容量
 item.buildinggadgets.construction_chunk_dense.name=致密构建块
-#tile: 
+#tile:
 tile.buildinggadgets.constructionblock_dense.name=致密构建方块
 tooltip.gadget.connected_area=连通区域
 tooltip.gadget.connected_surface=连接面
@@ -151,3 +151,40 @@ config.buildinggadgets.general.paste.dropped.min=构建糨糊掉落数量 - 最�
 config.buildinggadgets.general.paste.dropped.min.tooltip=由一个致密构建方块掉落的构建糨糊的最小数量。
 config.buildinggadgets.general.paste.dropped.max=构建糨糊掉落数量 - 最大
 config.buildinggadgets.general.paste.dropped.max.tooltip=由一个致密构建方块掉落的构建糨糊的最大数量。
+key.anchor=锚
+key.settings_menu=设置菜单
+key.range=范围/覆盖
+key.rotate_mirror=旋转/镜像
+key.undo=撤销
+key.fuzzy=模糊
+key.connected_area=连通区域
+tooltip.gadget.rotate=旋转
+tooltip.gadget.mirror=镜像
+tooltip.gadget.anchor=锚
+tooltip.gadget.undo=撤销
+#modes:
+modes.buildinggadgets.surface=平面
+modes.buildinggadgets.grid=网格
+modes.buildinggadgets.horizontal_column=水平柱体
+modes.buildinggadgets.horizontal_wall=水平墙面
+modes.buildinggadgets.vertical_column=纵向柱体
+modes.buildinggadgets.vertical_wall=纵向墙面
+modes.buildinggadgets.stair=楼梯
+modes.buildinggadgets.axis_chasing=建筑到玩家所在位置
+key.material_list=材料列表
+tooltip.gadget.copypaste.opengui=编辑放置
+#gui button name:
+gui.buildinggadgets.materialList.button.close=关闭
+gui.buildinggadgets.materialList.button.copyList=复制
+gui.buildinggadgets.materialList.button.sortingMode.name=名称↓
+gui.buildinggadgets.materialList.button.sortingMode.nameReversed=名称↑
+gui.buildinggadgets.materialList.button.sortingMode.count=数量↓
+gui.buildinggadgets.materialList.button.sortingMode.countReversed=数量↑
+#gui texts:
+gui.buildinggadgets.materialList.text.statusTemplate=%s/%s
+#gui messages:
+gui.buildinggadgets.materialList.message.copiedMaterialList=成功复制%s的材料列表
+gui.buildinggadgets.materialList.message.copiedMaterialList.simple=简易
+gui.buildinggadgets.materialList.message.copiedMaterialList.detailed=详细
+#gui title:
+gui.buildinggadgets.materialList.title=材料列表

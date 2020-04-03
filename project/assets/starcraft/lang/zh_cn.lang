@@ -1,4 +1,3 @@
-
 ### Item Groups ###
 #############################################################################################
 itemGroup.protoss=星际争霸丨神族
@@ -6,7 +5,6 @@ itemGroup.terran=星际争霸丨人族
 itemGroup.zerg=星际争霸丨虫族
 itemGroup.flora=星际争霸丨植物
 itemGroup.books=星际争霸丨日志
-
 itemGroup.terran.general=星际争霸丨普通
 itemGroup.terran.machine=星际争霸丨机器
 itemGroup.terran.decoration=星际争霸丨装饰品
@@ -14,8 +12,6 @@ itemGroup.terran.weapons=星际争霸丨武器
 itemGroup.terran.armors=星际争霸丨盔甲
 itemGroup.terran.tools=星际争霸丨工具
 #############################################################################################
-
-
 
 ### Key Bindings ###
 #############################################################################################
@@ -26,14 +22,10 @@ key.ship.ability.2=舰船能力 2
 key.ship.ability.3=舰船能力 3
 #############################################################################################
 
-
-
 ### Enchantments ###
 #############################################################################################
 enchantment.glowing=荧光
 #############################################################################################
-
-
 
 ### Commands ###
 #############################################################################################
@@ -46,98 +38,77 @@ commands.dimension.success.id=将 %s 送到维度 %s
 commands.dimension.success.name=将 %s 送到 %s
 #############################################################################################
 
-
-
 ### Protoss Blocks ###
 #############################################################################################
 tile.protoss.cyberneticscorecore.khalai.name=卡莱控制核心
 tile.protoss.cyberneticscorecore.void.name=空间控制核心
 tile.protoss.cyberneticscorecore.dark.name=黑暗控制核心
-
 tile.protoss.pyloncore.khalai.name=卡莱水晶塔核心
 tile.protoss.pyloncore.void.name=空间水晶塔核心
 tile.protoss.pyloncore.dark.name=黑暗水晶塔核心
-
 tile.protoss.warpgatecore.khalai.name=卡莱折跃门
 tile.protoss.warpgatecore.void.name=空间折跃门
 tile.protoss.warpgatecore.dark.name=黑暗折跃门
-
 tile.protoss.energychannel.name=卡莱能源通道
 tile.protoss.energychannel.void.name=空间能源通道
 tile.protoss.energychannel.dark.name=黑暗能源通道
-
 tile.protoss.stabilizer.name=卡莱能源通道稳定器
 tile.protoss.stabilizer.void.name=空间能源通道稳定器
 tile.protoss.stabilizer.dark.name=黑暗能源通道稳定器
-
 tile.protoss.metal.1.aiur.name=卡莱T1神族金属
 tile.protoss.metal.1.dark.name=黑色T1神族金属
 tile.protoss.metal.1.green.name=绿色T1神族金属
 tile.protoss.metal.1.blue.name=蓝色T1神族金属
 tile.protoss.metal.1.red.name=红色T1神族金属
-
 tile.protoss.metal.2.aiur.name=卡莱T2神族金属
 tile.protoss.metal.2.dark.name=黑色T2神族金属
 tile.protoss.metal.2.green.name=绿色T2神族金属
 tile.protoss.metal.2.blue.name=蓝色T2神族金属
 tile.protoss.metal.2.red.name=红色T2神族金属
-
 tile.protoss.metal.3.aiur.name=卡莱T3神族金属
 tile.protoss.metal.3.dark.name=黑色T3神族金属
 tile.protoss.metal.3.green.name=绿色T3神族金属
 tile.protoss.metal.3.blue.name=蓝色T3神族金属
 tile.protoss.metal.3.red.name=红色T3神族金属
-
 tile.protoss.pyloncrystal.pure.name=纯净水晶塔晶体
 tile.protoss.pyloncrystal.dark.name=黑暗水晶塔晶体
 tile.protoss.pyloncrystal.void.name=空间水晶塔晶体
-
 tile.protoss.wormhole.name=神族虫洞
 tile.protoss.shield.name=神族盾牌
-
 tile.protoss.khaydarincrystal.block.normal.name=凯达林晶体方块
-
 tile.gas.collector.protoss.name=吸收间
 tile.protoss.furnace.name=神族熔炉
-
 tile.stair.protoss.metal.1.aiur.name=卡莱T1神族金属楼梯
 tile.stair.protoss.metal.1.dark.name=黑色T1神族金属楼梯
 tile.stair.protoss.metal.1.green.name=绿色T1神族金属楼梯
 tile.stair.protoss.metal.1.blue.name=蓝色T1神族金属楼梯
 tile.stair.protoss.metal.1.red.name=红色T1神族金属楼梯
-
 tile.stair.protoss.metal.2.aiur.name=卡莱T2神族金属楼梯
 tile.stair.protoss.metal.2.dark.name=黑色T2神族金属楼梯
 tile.stair.protoss.metal.2.green.name=绿色T2神族金属楼梯
 tile.stair.protoss.metal.2.blue.name=蓝色T2神族金属楼梯
 tile.stair.protoss.metal.2.red.name=红色T2神族金属楼梯
-
 tile.stair.protoss.metal.3.aiur.name=卡莱T3神族金属楼梯
 tile.stair.protoss.metal.3.dark.name=黑色T3神族金属楼梯
 tile.stair.protoss.metal.3.green.name=绿色T3神族金属楼梯
 tile.stair.protoss.metal.3.blue.name=蓝色T3神族金属楼梯
 tile.stair.protoss.metal.3.red.name=红色T3神族金属楼梯
-
 tile.slab.protoss.metal.1.aiur.name=卡莱T1神族金属台阶
 tile.slab.protoss.metal.1.dark.name=黑色T1神族金属台阶
 tile.slab.protoss.metal.1.green.name=绿色T1神族金属台阶
 tile.slab.protoss.metal.1.blue.name=蓝色T1神族金属台阶
 tile.slab.protoss.metal.1.red.name=红色T1神族金属台阶
-
 tile.slab.protoss.metal.2.aiur.name=卡莱T2神族金属台阶
 tile.slab.protoss.metal.2.dark.name=黑色T2神族金属台阶
 tile.slab.protoss.metal.2.green.name=绿色T2神族金属台阶
 tile.slab.protoss.metal.2.blue.name=蓝色T2神族金属台阶
 tile.slab.protoss.metal.2.red.name=红色T2神族金属台阶
-
 tile.slab.protoss.metal.3.aiur.name=卡莱T3神族金属台阶
 tile.slab.protoss.metal.3.dark.name=黑色T3神族金属台阶
 tile.slab.protoss.metal.3.green.name=绿色T3神族金属台阶
 tile.slab.protoss.metal.3.blue.name=蓝色T3神族金属台阶
 tile.slab.protoss.metal.3.red.name=红色T3神族金属台阶
 #############################################################################################
-
-
 
 ### Terran Blocks ###
 #############################################################################################
@@ -146,18 +117,14 @@ tile.terran.metal.steel.name=钢块
 tile.terran.metal.titanium.name=钛块
 tile.terran.metal.neosteel.name=合金钢块
 tile.terran.warningtape.name=警告带
-
 tile.terran.neosteel.base.name=合金钢基地方块
 tile.terran.neosteel.frame.name=合金钢框架
-
 tile.stair.terran.metal.copper.name=铜楼梯
 tile.stair.terran.metal.steel.name=钢楼梯
 tile.stair.terran.metal.titanium.name=钛楼梯
 tile.stair.terran.warningtape.name=警告带楼梯
-
 tile.stair.terran.neosteel.base.name=合金钢基地方块楼梯
 tile.stair.terran.neosteel.frame.name=合金钢框架楼梯
-
 tile.terran.paristeel.purple.name=紫色帕里钢
 tile.terran.paristeel.brown.name=棕色帕里钢
 tile.terran.paristeel.pink.name=粉色帕里钢
@@ -174,7 +141,6 @@ tile.terran.paristeel.silver.name=银色帕里钢
 tile.terran.paristeel.white.name=白色帕里钢
 tile.terran.paristeel.yellow.name=黄色帕里钢
 tile.terran.paristeel.black.name=黑色帕里钢
-
 tile.stair.terran.paristeel.purple.name=紫色帕里钢楼梯
 tile.stair.terran.paristeel.brown.name=棕色帕里钢楼梯
 tile.stair.terran.paristeel.pink.name=粉色帕里钢楼梯
@@ -191,20 +157,15 @@ tile.stair.terran.paristeel.silver.name=银色帕里钢楼梯
 tile.stair.terran.paristeel.white.name=白色帕里钢楼梯
 tile.stair.terran.paristeel.yellow.name=黄色帕里钢楼梯
 tile.stair.terran.paristeel.black.name=黑色帕里钢楼梯
-
 tile.gas.collector.terran.name=冶炼厂
-
 tile.terran.barrackscore.name=人族兵营核心
 tile.terran.commandcentercore.name=人族指挥中心核心
 #############################################################################################
-
-
 
 ### Zerg Blocks ###
 #############################################################################################
 tile.zerg.keratin.name=角蛋白
 tile.zerg.creep.name=蠕变
-
 tile.zerg.flesh.purple.name=紫色虫族肉
 tile.zerg.flesh.brown.name=棕色虫族肉
 tile.zerg.flesh.pink.name=粉色虫族肉
@@ -220,15 +181,11 @@ tile.zerg.flesh.red.name=红色虫族肉
 tile.zerg.flesh.silver.name=银色虫族肉
 tile.zerg.flesh.white.name=白色虫族肉
 tile.zerg.flesh.yellow.name=黄色虫族肉
-
 tile.zerg.carapace.1.name=T1虫族结构甲壳
 tile.zerg.carapace.2.name=T2虫族结构甲壳
 tile.zerg.carapace.3.name=T3虫族结构甲壳
-
 tile.gas.collector.zerg.name=萃取器
 #############################################################################################
-
-
 
 ### Flora ###
 #############################################################################################
@@ -239,8 +196,6 @@ tile.flora.brambles.zerus.name=泽勒斯棕榈树
 tile.flora.zerus.lightcap.name=泽勒斯灯帽蘑菇
 #############################################################################################
 
-
-
 ### Earth（Overworld）###
 #############################################################################################
 tile.overworld.copper.name=铜矿石丨地球
@@ -250,8 +205,6 @@ tile.overworld.uranium.name=铀矿石丨地球
 tile.overworld.mineral.name=矿脉矿石丨地球
 tile.overworld.richmineral.name=富矿石丨地球
 #############################################################################################
-
-
 
 ### Shakuras ###
 #############################################################################################
@@ -267,18 +220,14 @@ tile.shakuras.diamond.name=钻石矿石丨萨古拉斯
 tile.shakuras.mineral.name=矿脉矿石丨萨古拉斯
 tile.shakuras.richmineral.name=富矿石丨萨古拉斯
 tile.shakuras.gold.name=金矿石丨萨古拉斯
-
 tile.shakuras.cobblestone.name=圆石丨萨古拉斯
 tile.shakuras.stone.name=石头丨萨古拉斯
 tile.shakuras.sand.name=沙子丨萨古拉斯
 tile.shakuras.gravel.name=砾石丨萨古拉斯
 tile.shakuras.dirt.name=泥土丨萨古拉斯
 tile.shakuras.farmland.name=农田丨萨古拉斯
-
 tile.shakuras.furnace.name=熔炉丨萨古拉斯
 #############################################################################################
-
-
 
 ### Char ###
 #############################################################################################
@@ -294,7 +243,6 @@ tile.char.diamond.name=钻石矿石丨查尔
 tile.char.mineral.name=矿脉矿石丨查尔
 tile.char.richmineral.name=富矿石丨查尔
 tile.char.gold.name=金矿石丨查尔
-
 tile.char.cobblestone.name=圆石丨查尔
 tile.char.stone.name=石头丨查尔
 tile.char.magma.name=岩浆丨查尔
@@ -302,18 +250,13 @@ tile.char.gravel.name=砾石丨查尔
 tile.char.dirt.name=泥土丨查尔
 tile.char.farmland.name=农田丨查尔
 tile.char.ash.name=灰烬 丨查尔
-
 tile.char.furnace.name=熔炉丨查尔
 #############################################################################################
-
-
 
 ### Korhal ###
 #############################################################################################
 tile.korhal.stone.city.name=科尔哈尔城市石头丨科尔哈尔
 #############################################################################################
-
-
 
 ### Slayn ###
 #############################################################################################
@@ -329,18 +272,14 @@ tile.slayn.diamond.name=钻石矿石丨斯莱恩
 tile.slayn.mineral.name=矿脉矿石丨斯莱恩
 tile.slayn.richmineral.name=富矿石丨斯莱恩
 tile.slayn.gold.name=金矿石丨斯莱恩
-
 tile.slayn.cobblestone.name=圆石丨斯莱恩
 tile.slayn.stone.name=石头丨斯莱恩
 tile.slayn.sand.name=沙子丨斯莱恩
 tile.slayn.gravel.name=砾石丨斯莱恩
 tile.slayn.dirt.name=泥土丨斯莱恩
 tile.slayn.farmland.name=农田丨斯莱恩
-
 tile.slayn.furnace.name=熔炉丨斯莱恩
 #############################################################################################
-
-
 
 ### Zerus ###
 #############################################################################################
@@ -356,7 +295,6 @@ tile.zerus.diamond.name=钻石矿石丨泽勒斯
 tile.zerus.mineral.name=矿脉矿石丨泽勒斯
 tile.zerus.richmineral.name=富矿石丨泽勒斯
 tile.zerus.gold.name=金矿石丨泽勒斯
-
 tile.zerus.cobblestone.name=圆石丨泽勒斯
 tile.zerus.stone.name=石头丨泽勒斯
 tile.zerus.sand.name=沙子丨泽勒斯
@@ -364,39 +302,31 @@ tile.zerus.gravel.name=砾石丨泽勒斯
 tile.zerus.dirt.name=泥土丨泽勒斯
 tile.zerus.grass.name=草方块丨泽勒斯
 tile.zerus.farmland.name=农田丨泽勒斯
-
 tile.zerus.furnace.name=熔炉丨泽勒斯
 #############################################################################################
-
 
 ### Miscellaneous Blocks ###
 #############################################################################################
 tile.block.energy.pure.name=卡莱能量块
 tile.block.energy.corrupted.name=纳拉兹能量块
 tile.block.energy.void.name=空间能量块
-
 tile.gas.vespene.name=乙烯气体
 tile.gas.terrazine.name=特拉津气体
-
 tile.skull.civilian.name=平民的头
 tile.skull.zergling_sc2.name=跳虫的头
 tile.skull.brutalisk.name=无情兽的头
 tile.skull.hydralisk.name=刺蛇的头
-
 tile.mineral.compressed.blue.name=矿物
 tile.mineral.compressed.rich.name=富矿石
-
 tile.block.light.name=光照
 tile.block.entityspawner.name=生物生成器
 tile.test.block.name=测试方块
-
 tile.block.star.blue.name=蓝色恒星表面方块
 tile.block.star.lightblue.name=淡蓝色恒星表面方块
 tile.block.star.orange.name=橙色恒星星表面方块
 tile.block.star.yellow.name=黄色恒星表面方块
 tile.block.star.lightyellow.name=浅黄色恒星表面方块
 tile.block.star.red.name=红星恒星表面方块
-
 tile.block.planet.blue.name=蓝色行星表面方块
 tile.block.planet.brown.name=棕色行星表面方块
 tile.block.planet.cyan.name=青色行星表面方块
@@ -415,8 +345,6 @@ tile.block.planet.black.name=黑色行星表面方块
 tile.block.planet.yellow.name=黄色行星表面方块
 #############################################################################################
 
-
-
 ### Fluids ###
 #############################################################################################
 tile.fluid.acid.name=酸丨燃料
@@ -424,7 +352,6 @@ tile.fluid.blood.name=血液丨燃料
 tile.fluid.vespene.name=维斯彭气丨燃料
 tile.fluid.terrazine.name=特拉津丨燃料
 tile.fluid.tar.name=焦油丨燃料
-
 fluid.fluid.acid=酸丨燃料
 fluid.fluid.blood=血液丨燃料
 fluid.fluid.vespene=维斯彭气丨燃料
@@ -432,94 +359,72 @@ fluid.fluid.terrazine=特拉津丨燃料
 fluid.fluid.tar=焦油丨燃料
 #############################################################################################
 
-
-
 ### Protoss Items ###
 #############################################################################################
 item.protoss.ingot.khalai.name=卡莱神族铸锭
 item.protoss.ingot.dark.name=黑色神族铸锭
-
 item.protoss.focuser.aiur.name=卡莱神族聚焦器
 item.protoss.focuser.dark.name=黑色神族聚焦器
-
 item.protoss.spawner.cyberneticscore.dark.name=黑暗控制核心生成
 item.protoss.spawner.cyberneticscore.void.name=空间控制核心生成
 item.protoss.spawner.cyberneticscore.name=卡莱控制核心生成
-
 item.protoss.spawner.pylon.dark.name=黑暗水晶塔生成
 item.protoss.spawner.pylon.void.name=空间水晶塔生成
 item.protoss.spawner.pylon.name=卡莱水晶塔生成
-
 item.protoss.spawner.warpgate.dark.name=黑暗折跃门生成
 item.protoss.spawner.warpgate.void.name=空间折跃门生成
 item.protoss.spawner.warpgate.name=卡莱折跃门生成
-
 item.protoss.helmet.1.name=T1神族头盔
 item.protoss.chestplate.1.name=T1神族板甲
 item.protoss.leggings.1.name=T1神族护腿
 item.protoss.boots.1.name=T1神族战靴
-
 item.protoss.helmet.2.name=T2神族头盔
 item.protoss.chestplate.2.name=T2神族板甲
 item.protoss.leggings.2.name=T2神族护腿
 item.protoss.boots.2.name=T2神族战靴
-
 item.protoss.helmet.3.name=T3神族头盔
 item.protoss.chestplate.3.name=T3神族板甲
 item.protoss.leggings.3.name=T3神族护腿
 item.protoss.boots.3.name=T3神族战靴
-
 item.protoss.nerazim.helmet.1.name=T1纳拉兹神族头盔
 item.protoss.nerazim.chestplate.1.name=T1纳拉兹神族板甲
 item.protoss.nerazim.leggings.1.name=T1纳拉兹神族护腿
 item.protoss.nerazim.boots.1.name=T1纳拉兹神族战靴
-
 item.protoss.nerazim.helmet.2.name=T2纳拉兹神族头盔
 item.protoss.nerazim.chestplate.2.name=T2纳拉兹神族板甲
 item.protoss.nerazim.leggings.2.name=T2纳拉兹神族护腿
 item.protoss.nerazim.boots.2.name=T2纳拉兹神族战靴
-
 item.protoss.nerazim.helmet.3.name=T3纳拉兹神族头盔
 item.protoss.nerazim.chestplate.3.name=T3纳拉兹神族板甲
 item.protoss.nerazim.leggings.3.name=T3纳拉兹神族护腿
 item.protoss.nerazim.boots.3.name=T3纳拉兹神族战靴
-
 item.protoss.taldarim.helmet.1.name=T1黑色神族头盔
 item.protoss.taldarim.chestplate.1.name=T1黑色神族板甲
 item.protoss.taldarim.leggings.1.name=T1黑色神族绑腿
 item.protoss.taldarim.boots.1.name=T1黑色神族战靴
-
 item.protoss.taldarim.helmet.2.name=T2黑色神族头盔
 item.protoss.taldarim.chestplate.2.name=T2黑色神族板甲
 item.protoss.taldarim.leggings.2.name=T2黑色神族绑腿
 item.protoss.taldarim.boots.2.name=T2黑色神族战靴
-
 item.protoss.taldarim.helmet.3.name=T3黑色神族头盔
 item.protoss.taldarim.chestplate.3.name=T3黑色神族板甲
 item.protoss.taldarim.leggings.3.name=T3黑色神族绑腿
 item.protoss.taldarim.boots.3.name=T3黑色神族战靴
-
 item.protoss.blade.psi.aiur.name=卡莱Psi刀
 item.protoss.blade.psi.dark.name=伙毒之刀
 item.protoss.blade.warp.aiur.name=卡莱Psi刀
 item.protoss.blade.warp.dark.name=黑暗弯刀
 item.protoss.blade.master.name=主宰Psi刀
-
 item.protoss.weapon.solaritereaper.name=绢云母弯刀机
-
 item.protoss.khaydarincrystal.pure.name=纯净凯达琳水晶
 item.protoss.khaydarincrystal.dark.name=黑暗凯达琳水晶
 item.protoss.khaydarincrystal.void.name=空间凯达琳水晶
-
 item.protoss.upgrade.speed.name=速度模块
 item.protoss.upgrade.efficiency.name=效率模块
-
 item.container.protoss.name=神族气体容器
 item.vespene.protoss.name=神族维斯彭气
 item.terrazine.protoss.name=神族特拉津
 #############################################################################################
-
-
 
 ### Terran Items ###
 #############################################################################################
@@ -527,102 +432,76 @@ item.ingot.copper.name=铜锭
 item.ingot.titanium.name=钛锭
 item.ingot.steel.name=钢锭
 item.ingot.neosteel.name=合金钢锭
-
 item.terran.riflec14.name=C14高斯步枪
 item.terran.flamethrower.name=火焰喷射器
-
 item.terran.riflec14.part.0.name=C14步枪枪管
 item.terran.riflec14.part.1.name=C14步枪主体
 item.terran.riflec14.part.2.name=C14步枪握柄
-
 item.terran.flamethrower.part.0.name=火焰喷射器喷嘴
 item.terran.flamethrower.part.1.name=火焰喷射器底座
 item.terran.flamethrower.part.2.name=火焰喷射器手柄
 item.terran.flamethrower.part.3.name=火焰喷射器房室
-
 item.terran.magazine.c14.name=C14步枪弹夹
 item.terran.magazine.flamethrower.name=火焰喷色器燃料
-
 item.stimpack.name=斯廷帕克
 item.carbotifier.name=碳化剂
-
 item.terran.spawner.bunker.name=料仓生成
 item.terran.spawner.barracks.name=兵营
 item.terran.spawner.commandcenter.name=指挥中心生成
-
 item.titanium.helmet.name=钛头盔
 item.titanium.chestplate.name=钛板甲
 item.titanium.leggings.name=钛护腿
 item.titanium.boots.name=钛战靴
-
-
 item.copper.helmet.name=铜头盔
 item.copper.chestplate.name=铜板甲
 item.copper.leggings.name=铜护腿
 item.copper.boots.name=铜战靴
-
-
 item.steel.helmet.name=钢头盔
 item.steel.chestplate.name=钢板甲
 item.steel.leggings.name=钢护腿
 item.steel.boots.name=钢战靴
-
 item.terran.marine.helmet.1.name=T1机枪兵头盔
 item.terran.marine.chestplate.1.name=T1机枪兵板甲
 item.terran.marine.leggings.1.name=T1机枪兵护腿
 item.terran.marine.boots.1.name=T1机枪兵战靴
-
 item.terran.marine.helmet.2.name=T2机枪兵头盔
 item.terran.marine.chestplate.2.name=T2机枪兵板甲
 item.terran.marine.leggings.2.name=T2机枪兵护腿
 item.terran.marine.boots.2.name=T2机枪兵战靴
-
 item.terran.marine.helmet.3.name=T3机枪兵头盔
 item.terran.marine.chestplate.3.name=T3机枪兵护腿
 item.terran.marine.leggings.3.name=T3机枪兵护腿
 item.terran.marine.boots.3.name=T3机枪兵战靴
-
 item.terran.raynor.helmet.1.name=雷诺尔的头盔
 item.terran.raynor.chestplate.1.name=雷诺尔的绑架
 item.terran.raynor.leggings.1.name=雷诺尔的护腿
 item.terran.raynor.boots.1.name=雷诺尔的战靴
-
 item.balisong.name=甩刀
 item.terran.knife.military.name=军用刀
 item.blade.monomolecular.name=单分子叶片刀
-
 item.copper.sword.name=铜剑
 item.titanium.sword.name=钛剑
 item.steel.sword.name=钢剑
-
 item.copper.pickaxe.name=铜镐
 item.copper.axe.name=铜斧
 item.copper.shovel.name=铜铲
 item.copper.hoe.name=铜锄
-
 item.titanium.pickaxe.name=钛镐
 item.titanium.axe.name=钛斧
 item.titanium.shovel.name=钛铲
 item.titanium.hoe.name=钛锄
-
 item.steel.pickaxe.name=钢镐
 item.steel.axe.name=钢斧
 item.steel.shovel.name=钢铲
 item.steel.hoe.name=钢锄
-
 item.container.terran.name=人族气体容器
 item.vespene.terran.name=人族维斯彭气
 item.terrazine.terran.name=人族特拉津
-
 item.dust.steel.name=钢粉
 item.dust.iron.name=铁粉
-
 item.dust.carbon.name=碳粉
-
 item.terran.marine.helmet.visor.name=海洋遮阳板
 #############################################################################################
-
-
 
 ### Zerg Items ###
 #############################################################################################
@@ -632,73 +511,53 @@ item.zerg.icarapace.3.name=T3虫族甲壳
 item.zerg.icarapace.primal.1.name=T1原始虫族甲壳
 item.zerg.icarapace.primal.2.name=T2原始虫族甲壳
 item.zerg.icarapace.primal.3.name=T3原始虫族甲壳
-
 item.zerg.creepresin.name=蠕动树脂
 item.zerg.tissue.name=虫族组织
 item.biomass.name=生物量
-
 item.zerg.spawner.spawningpool.name=产卵池生成
 item.zerg.spawner.spire.name=尖顶塔巢生成
 item.zerg.spawner.hydraliskden.name=刺蛇洞穴生成
-
 item.zerg.helmet.1.name=T1虫族头盔
 item.zerg.chestplate.1.name=T1虫族板甲
 item.zerg.leggings.1.name=T1虫族护腿
 item.zerg.boots.1.name=T1虫族战靴
-
 item.zerg.helmet.2.name=T2虫族头盔
 item.zerg.chestplate.2.name=T2虫族板甲
 item.zerg.leggings.2.name=T2虫族护腿
 item.zerg.boots.2.name=T2虫族战靴
-
 item.zerg.helmet.3.name=T3虫族头盔
 item.zerg.chestplate.3.name=T3虫族板甲
 item.zerg.leggings.3.name=T3虫族护腿
 item.zerg.boots.3.name=T3虫族战靴
-
-
 item.container.zerg.name=虫族气体容器
 item.vespene.zerg.name=虫族维斯彭气
 item.terrazine.zerg.name=虫族特拉津
 #############################################################################################
-
-
 
 ### Miscellaneous Items ###
 #############################################################################################
 item.mineral.blue.name=矿物碎片
 item.mineral.rich.name=富含矿物的碎片
 item.phosphorus.name=磷
-
 item.vespene.raw.name=生维斯彭气
 item.terrazine.raw.name=生特拉津
-
 item.energy.pure.name=卡莱能量
 item.energy.corrupted.name=纳拉津能量
 item.energy.void.name=空间能量
-
 item.pledge.name=团队誓言
-
 item.icon.protoss.name=神族
 item.icon.terran.name=人族
 item.icon.zerg.name=虫族
-
 item.test.item.name=测试物品
 #############################################################################################
-
-
 
 ### Liquids ###
 #############################################################################################
 #############################################################################################
 
-
-
 ### Gases ###
 #############################################################################################
 #############################################################################################
-
-
 
 ##### NOTE: These lang bindings are deprecated, as portal blocks were removed around 2.0.405
 ### Portals ###
@@ -712,8 +571,6 @@ tile.slayn.portal.name=斯莱恩通道入口
 tile.aiur.portal.name=泽勒斯通道入口
 tile.zerus.portal.name=艾尔通道入口
 #############################################################################################
-
-
 
 ### Entities ###
 #############################################################################################
@@ -730,10 +587,8 @@ entity.hydralisk.name=刺蛇
 entity.mutalisk.name=飞龙
 entity.mutaliskBroodlord.name=飞龙（家养毒株）
 entity.mutaliskViper.name=飞龙（蝮蛇毒株）
-
 entity.queen.name=王后
 entity.nafash.name=纳法什
-
 entity.mutaliskPrimal.name=原始飞龙
 entity.zerglingPrimal1.name=原始跳虫
 entity.zerglingPrimal2.name=原始跳虫
@@ -741,13 +596,11 @@ entity.zerglingPrimal3.name=原始跳虫
 entity.hydraliskPrimal.name=原始刺蛇
 entity.tyrannozor.name=泰兰诺泽
 entity.brakk.name=布拉克
-
 entity.zerglingPrimalDehaka.name=原始跳虫（德哈卡）
 entity.zerglingPrimalDehakaBoost.name=原始跳虫（代谢提升，德哈卡）
 entity.mutaliskPrimalDehaka.name=原始飞龙（德哈卡）
 entity.hydraliskPrimalDehaka.name=原始刺蛇（德哈卡）
 entity.tyrannozorDehaka.name=泰兰诺泽（德哈卡）
-
 entity.probe.name=探头
 entity.darkProbe.name=黑暗探头
 entity.voidProbe.name=空间探头
@@ -756,20 +609,16 @@ entity.zealot.name=狂热者
 entity.protossReaver.name=掠夺者
 entity.scarab.name=圣甲虫
 entity.zeratul.name=泽拉图
-
 entity.civilian.name=平民
 entity.predator.name=捕食者
 entity.marine.name=机枪兵
 entity.jimRaynor.name=吉姆·雷诺
-
 entity.kakaru.name=卡卡鲁
 entity.tastelope.name=酒鬼
 entity.artosilope.name=阿特鲁尔
 entity.ursadon.name=乌尔萨顿
 entity.ursadonMatriarch.name=乌尔萨顿女族长
 #############################################################################################
-
-
 
 ### Damage Sources ###
 #############################################################################################
@@ -782,14 +631,10 @@ death.fluid.poison=%s 的皮肤融化了他们的骨头
 death.gas.poison=%s 窒息了
 #############################################################################################
 
-
-
 ### Commands ###
 #############################################################################################
 command.updateModels=用法：/command
 #############################################################################################
-
-
 
 ### GUIs/Containers ###
 #############################################################################################
@@ -797,7 +642,6 @@ gui.gas_collector.protoss.fuel.tooltip=在 %s %s 这里激活机器。
 gui.gas_collector.terran.fuel.tooltip=在 %s %s 这里激活机器。
 gui.gas_collector.zerg.fuel.tooltip=在 %s %s 这里激活机器。
 item.protoss_ingot.name=神族铸锭
-
 gui.item_shop=商人
 gui.item_shop.money=货币
 gui.item_shop.tooltip.mineral_cost=矿物成本: %s
@@ -805,86 +649,60 @@ gui.item_shop.tooltip.vespene_cost=维斯彭气成本: %s
 gui.item_shop.no_minerals=没有更多的矿物质！
 gui.item_shop.no_vespene=没有更多的维斯彭气！
 gui.item_shop.christmas=圣诞快乐！
-
 gui.larva_morph.tooltip.mineral_cost=矿物成本: %s
 gui.larva_morph.tooltip.vespene_cost=维斯彭气成本: %s
 gui.larva_morph.tooltip.children=儿童: %s
-
 gui.larva_progress=幼虫进程
 gui.larva_progress.cancel=停止变形
 gui.larva_progress.transform=转换成 %s
 gui.larva_progress.time_remaining=剩余时间: %s
 gui.larva_progress.bar_percentage=%s%s 完成
-
 gui.buy=购买
 #############################################################################################
-
-
 
 ### Advancements ###
 #############################################################################################
 advancements.starcraft.pageStarcraft=星际争霸
 advancements.starcraft.pageStarcraft.desc=欢迎来到太空！你将为史诗般的征服做准备，在这太空中三个种族将互相战斗到死亡！去征服宇宙…去当一个可怕的恶魔在太空中摇曳……
-
 advancements.starcraft.mineMinerals.title=哦，闪闪发光！
 advancements.starcraft.mineMinerals.desc=获取矿物碎片！
-
 advancements.starcraft.mineRichMinerals.title=嘘！
 advancements.starcraft.mineRichMinerals.desc=获得丰富的矿物碎片！
-
 advancements.starcraft.mineVespene.title=维斯彭气歇泉耗尽了！
 advancements.starcraft.mineVespene.desc=获得维斯彭气！
-
 advancements.starcraft.mineTerrazine.title=更多的力量！
 advancements.starcraft.mineTerrazine.desc=获得特拉津！
-
 advancements.starcraft.getC14GaussRifle.title=该死，是时候了！
 advancements.starcraft.getC14GaussRifle.desc=获得C14高斯步枪！
-
 advancements.starcraft.getFlamethrower.title=让我们燃烧！
 advancements.starcraft.getFlamethrower.desc=获得火焰喷射器！
-
 advancements.starcraft.getPsiBladeFocuser.title=拥抱纯洁！
 advancements.starcraft.getPsiBladeFocuser.desc=获得Psi刀片聚焦器！
-
 advancements.starcraft.getPsiBladeFocuserDark.title=拥抱腐败
 advancements.starcraft.getPsiBladeFocuserDark.desc=获得Psi刀片聚焦器（黑暗）！
-
 advancements.starcraft.getPsiBlade.title=我的生命为艾尔！
 advancements.starcraft.getPsiBlade.desc=得到一个Psi刀片！
-
 advancements.starcraft.getPsiBladeDark.title=亚蒙神遗嘱
 advancements.starcraft.getPsiBladeDark.desc=获得锯齿形刀片！
-
 advancements.starcraft.getWarpBlade.title=为了萨古拉斯！
 advancements.starcraft.getWarpBlade.desc=获得翘曲叶片刀！
-
 advancements.starcraft.getMasterPsiBlade.title=恩塔罗泽拉图尔……
 advancements.starcraft.getMasterPsiBlade.desc=获得主宰psi刀片
-
 advancements.starcraft.enterChar.title=魔鬼窝
 advancements.starcraft.enterChar.desc=抵达查尔！
-
 advancements.starcraft.enterKaldir.title=寒冷如冰
 advancements.starcraft.enterKaldir.desc=抵达卡迪尔！
-
 advancements.starcraft.enterKorhal.title=记住科尔哈尔
 advancements.starcraft.enterKorhal.desc=到达科尔哈尔！
-
 advancements.starcraft.enterShakuras.title=我们徘徊在暮色中
 advancements.starcraft.enterShakuras.desc=到达泽勒斯！
-
 advancements.starcraft.enterSlayn.title=锻造
 advancements.starcraft.enterShakuras.desc=到达泽勒斯！
-
 advancements.starcraft.enterAiur.title=进步的灯塔
 advancements.starcraft.enterAiur.desc=到达艾尔！
-
 advancements.starcraft.enterZerus.title=原始之汤
 advancements.starcraft.enterShakuras.desc=到达泽勒斯！
 #############################################################################################
-
-
 
 ### Config ###
 #############################################################################################
@@ -895,13 +713,11 @@ gui.starcraft.config.category.dimension.ids=维度ID
 gui.starcraft.config.category.dimension.ids.tooltip=更改维度的ID
 gui.starcraft.config.category.mob.options=生物选择
 gui.starcraft.config.category.mob.options.tooltip=决定你想在生物身上有什么选择
-
 # General
 gui.starcraft.config.block.creep.spread.name=蠕变可以蔓延
 gui.starcraft.config.block.creep.spread.comment=虫族蠕虫能否传播
 gui.starcraft.config.block.creep.spread.base.name=蠕变扩展基值
 gui.starcraft.config.block.creep.spread.base.comment=蠕变蔓延的基准值。警告，不要设置这么高
-
 #Dim Ids
 gui.starcraft.config.dimension.char.id.name=查尔ID
 gui.starcraft.config.dimension.char.id.comment=设置行星查尔的ID
@@ -919,7 +735,6 @@ gui.starcraft.config.dimension.zerus.id.name=泽勒斯ID
 gui.starcraft.config.dimension.zerus.id.comment=设置行星泽勒斯的ID
 gui.starcraft.config.dimension.space.id.name=太空ID
 gui.starcraft.config.dimension.space.id.comment=设置太空的ID
-
 # Mob Options
 gui.starcraft.config.vanilla.mob.spawn.name=原版生物生成被禁用
 gui.starcraft.config.dimension.mob.spawn.comment=停止在世界上生成任何的原版生物
@@ -927,9 +742,101 @@ gui.starcraft.config.starcraft.templar.dark.visible.name=让黑暗圣堂武士�
 gui.starcraft.config.starcraft.templar.dark.visible.comment=让黑暗圣堂武士不可见
 #############################################################################################
 
-
-
 ### JEI ###
 #############################################################################################
 gui.starcraft.category.gascollector=集气器
 #############################################################################################
+
+# Generated by Translation Diff Generator
+#
+# Date: 2019-09-13 18:06:43
+# English translation count: 34
+# Chinese translation count: 11
+# Diff count: 23
+#
+
+material.stconcinderstone.name=灰烬石
+material.stcondragonbezoar.name=龙胆
+material.stconpyralis.name=鼠尾草属
+material.stconthraka.name=特拉卡
+modifier.blinding.desc=§o如此明亮！§r\n使你的敌人致盲。
+modifier.blinding.name=致盲
+modifier.durable.desc=§o强大...§r\n您的工具使用的耐久性较低。
+modifier.durable.name=耐用的
+modifier.dwarvish.desc=§o来自大熔炉！§r\n对地狱生物的额外伤害。
+modifier.dwarvish.extra=对地狱：+%s
+modifier.dwarvish.name=矮人
+modifier.fieryt.desc=§o现在很热！§r\n造成火焰伤害，点燃敌人。
+modifier.fieryt.extra=火伤害：+%s
+modifier.fieryt.extra2=燃烧持续时间：%ss
+modifier.fieryt.name=火热的
+modifier.illuminating.desc=§o我能看见！§r\n攻击时的夜视。
+modifier.illuminating.name=照明
+modifier.magical.desc=§o你感觉到了力量，§r\n这一定是某种魔法。
+modifier.magical.name=神奇的
+modifier.modifiable.desc=§o有魔力的§r\n这允许更多的变动。
+modifier.modifiable.name=可修改的
+modifier.slowing.desc=§o不能移动！§r\n使你的敌人减速。
+modifier.slowing.name=减速
+
+
+advancements.cavenia.crazy_hunter.description=成为一个疯狂的猎人
+advancements.cavenia.crazy_hunter.title=疯狂猎人
+advancements.cavenia.crazy_ranger.description=成为一个疯狂的游猎者
+advancements.cavenia.crazy_ranger.title=疯狂游猎者
+advancements.cavenia.hunter.description=成为一个猎人
+advancements.cavenia.hunter.title=猎人
+advancements.cavenia.kill_crazy_mobs.description=杀死每一个疯狂的怪物
+advancements.cavenia.kill_crazy_mobs.title=可怕的猎人
+advancements.cavenia.ranger.description=成为一名游猎者
+advancements.cavenia.ranger.title=游猎者
+advancements.cavenia.root.description=进入 Cavenia 维度
+advancements.cavenia.root.title=Cavenia
+advancements.cavern.composite_tools.description=用合成魔法构造合成工具
+advancements.cavern.composite_tools.title=神奇的工具
+advancements.cavern.grand_mage.description=成为大法师
+advancements.cavern.grand_mage.title=大法师
+advancements.cavern.ice_stuff.description=弄到一堆冰
+advancements.cavern.ice_stuff.title=冰料
+advancements.cavern.mage.description=成为法师
+advancements.cavern.mage.title=法师
+advancements.cavern.magic_compositing.description=成功的一个合成魔法
+advancements.cavern.magic_compositing.title=合成器
+advancements.cavern.magic_flame_breath.description=成功的一个火焰呼吸魔法
+advancements.cavern.magic_flame_breath.title=火焰喷射器
+advancements.cavern.magical_weapons.description=建造魔法武器
+advancements.cavern.magical_weapons.title=魔法的提高
+advancements.cavern.magician.description=成为魔术师
+advancements.cavern.magician.title=魔术师
+advancements.cavern.mine_manalite.description=获得海蓝宝石
+advancements.cavern.pick_sapling.title=在哪里种植？
+cavern.escapeMission.bad.message=洞穴发展尚未完成
+death.attack.exhaust.mp=%1$s 使多人玩家累死了
+item.axeManalite.name=魔法斧：海蓝宝石
+item.bowManalite.name=魔法弓：海蓝宝石
+item.elixir.name=万能药
+item.elixir.tooltip.mp=治愈多人玩家
+item.elixirAwaken.name=苏醒万能药
+item.elixirHigh.name=高级万能药
+item.elixirMedium.name=中级万能药
+item.magicalBook.compositing.failed=合成魔法已失败
+item.magicalBook.compositing.name=合成
+item.magicalBook.flying.name=飞行
+item.magicalBook.infinity.failed=无限魔法还不能使用
+item.magicalBook.infinity.name=无限
+item.magicalBook.invisible.name=隐形的
+item.magicalBook.summon.name=召唤
+item.magicalBook.teleport.name=传送
+item.magicalBook.torch.exist=你已经在表演火炬魔术了
+item.magicalBook.torch.finish=火炬魔术消失了
+item.magicalBook.torch.lack=你没有足够的火把
+item.magicalBook.torch.name=火炬
+item.magicalBook.warp.name=弯曲
+item.magicalBook.warp.point=弯曲点
+item.magicalBook.warp.point.far=弯曲点太远
+item.magicalBook.warp.point.set=已设置弯曲点
+item.swordManalite.name=魔剑：海蓝宝石
+key.cavern.magicSpelling=咒语魔法书
+commands.dimension.same_dim=％s已经在维度％s中了！
+commands.dimension.success=将%s发送到维度%s
+death.attack.vespene_gas=％s窒息而死。

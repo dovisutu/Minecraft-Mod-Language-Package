@@ -15,6 +15,7 @@ entity.MinecartFurnace.name=动力矿车
 entity.MinecartCommandBlock.name=命令方块矿车
 entity.MinecartSpawner.name=刷怪笼矿车
 entity.LeashKnot.name=拴绳结
+entity.EnderCrystal.name=末影水晶
 
 # Hex Lands 模组作者的神奇操作
 # 复写原版给好的 key，所以只能这样进行本地化了
@@ -145,3 +146,31 @@ base.material.sapphire=蓝宝石
 base.material.tanzanite=坦桑石
 base.material.topaz=黄玉
 base.material.vinteum=温特姆
+
+tile.buriedPetals.name=埋藏花瓣
+
+# 匠魂key缺失修复
+potion.magnetic=磁力
+potion.momentum=动力
+
+# Silents Gems
+entity.EnderSlime.name=末地史莱姆
+
+# CraftingTweaks
+key.craftingtweaks.rotate_counter_clockwise=逆时针旋转
+
+# Ender Zoo
+enchantment.witherWeapon=凋零
+
+# Unknown keys name
+key.control=放大
+
+# 修复railcraft的缺失key
+tile.railcraft.coke.oven.red.name=红焦炉砖
+tile.railcraft.coke.oven.red.tips=多方块结构：3x3x3（中空）
+item.railcraft.backpack.signalman.t1.name=信号员背包
+item.railcraft.backpack.signalman.t2.name=编织的信号员背包
+
+# Quark缺失的陷阱刷怪箱翻译
+tile.monster_box.name=陷阱刷怪箱
+

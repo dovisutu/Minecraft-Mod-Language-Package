@@ -1,0 +1,27 @@
+如果你想要防止他人在一个区域内乱搞，你可以使用安全站。其阻止任何未授权的在区域内的左击或右击。也就是说，不能打开容器，不能放置或移除方块。听起来不错，但在设置安全站的时候需要做一些工作才能确保它的安全性。因为事实上，安全站可以被侵入。安全站的侵入系统很大程度上基于杀出重围3：人类革命的侵入系统。下面是一个视频帮你回顾或介绍这个系统：
+
+[link{https://www.youtube.com/watch?v=4r_sxo_kxq7ro}]杀出重围3：人类革命 - 如何侵入[link{}]
+
+[prefix{l}]设置安全站[prefix{}]
+你需要将网络部件放置在网络网格中来设置安全站。每个网络中应该有一个诊断子程序、一个网络 IO 接口以及一个网络注册表。他们需要被一一连接起来，可以通过网络节点来做到。将网络部件以多余一个的堆叠放入可以提升其节点排名，也就是说，侵入者（以及诊断子程序）需要花更长的时间来控制它。在升级槽内可以安装实体跟踪器升级来提高侵入者被诊断子程序发现的几率，每个升级增加 20%。同样可以安装安全升级。想要侵入你的安全站的人必须拥有一个安装了至少一个安全升级的气动头盔。向安全站加装安全升级后，侵入者需要安装至少两个安全升级。最后，可以安装范围升级，作用和它的名字一样：增大安全站作用的范围。
+
+[image{320, 410, 0.5, pneumaticcraft:textures/wiki/sharing_rights.png}]
+[prefix{l}]共享权限[prefix{}]
+你可以允许他人在安全站范围内互动。为了做到这一点，你可以向访问标签里的列表里添加该玩家的用户名。你可以通过点击玩家的用户名来删除玩家的权限。
+
+[prefix{l}]被入侵[prefix{}]
+当他人入侵你的安全站时，你可以在问题与状态标签内看到，同时还会显示谁在入侵。这些用户入侵完成后可以与区域内的方块交互，但是只有这些用户。你需要充气安全站以再次组织这些用户的访问。按下安全站内的按钮以做到这一点。该过程将持续 1 分钟，在这段时间内这片区域将不会被保护。
+
+[prefix{l}]入侵[prefix{}]
+当你打开一个不属于你的安全站时，你需要一个安装有[link{pneumaticcraft:menu/machine_upgrades}]安全升级[link{}]的[link{item/pneumatic_helmet}]气动头盔[link{}]当你这么做时，一个和下面相似的 GUI 将被显示。观看在此页开始处的视频以获得如何侵入的指导。左击一个节点以获取对其的控制。右击一个已经被控制的节点来强化它。
+
+[image{190, 700, 0.5, pneumaticcraft:textures/wiki/hacking1.png}]
+[image{335, 700, 0.5, pneumaticcraft:textures/wiki/hacking2.png}]
+
+[crafting{200, 870, key=block/security_station}]
+[crafting{200, 990, key=item/network_component0}]
+[crafting{200, 1110, key=item/network_component1}]
+[crafting{200, 1230, key=item/network_component2}]
+[crafting{200, 1350, key=item/network_component3}]
+[crafting{200, 1470, key=item/network_component4}]
+[crafting{200, 1590, key=item/network_component5}]

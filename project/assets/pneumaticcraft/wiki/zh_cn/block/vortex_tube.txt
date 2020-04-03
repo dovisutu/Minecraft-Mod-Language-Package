@@ -1,0 +1,8 @@
+涡流管是一个基于现实[link{baike.baidu.com/item/涡流管制冷/1947352}]（点击这里以获得更多信息）[link{}]的机器。它将流入的空气分离成冷与热两部分，从而将热端加热，冷端冷却。注意：热端与冷端仍然有热传导，所以当你使用热端时，最好给冷端通风以达到更高效率，反之亦然。这可以通过[link{block/heat_sink}]散热片[link{}]或任何其他的[link{pneumaticcraft:menu/heat}]热导方块[link{}]。
+
+当你放置或旋转涡流管时，热端将以红色高亮几秒，冷端将以蓝色高亮几秒。
+
+涡流管需要空气来工作。更高的压力使得涡流管两边温差更大，但空气同样将以更高的速度被使用。
+[image{200,165,0.68,pneumaticcraft:textures/wiki/vortex_tube.png}]
+
+[crafting{200,410,key=block/vortex_tube}]

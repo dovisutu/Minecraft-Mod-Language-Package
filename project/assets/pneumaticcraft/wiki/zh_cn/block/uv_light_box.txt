@@ -1,0 +1,4 @@
+[image{320, 20, 0.5, pneumaticcraft:textures/wiki/uv_light_box.png}]
+紫外线灯箱是一个可以用来将[link{pneumaticcraft:menu/printed_circuit_boards}]PCB（印刷电路板）[link{}]于特定的位置（由电路板蓝图决定）照射紫外光的机器。照射过程需要最多 10 分钟（加装了速度升级时会更快）。照射完成后铭刻过程（下一步）的成功几率将为 100%。不过，你可以将印刷电路板照射更少的时间，但这也会降低其被成功铭刻的几率。紫外线灯箱需要空气运行，并且管道不能被接在其正、后或顶面。
+
+[crafting{200, 220, key=block/uv_light_box}]

@@ -1,0 +1,96 @@
+[prefix{l}]编程器[prefix{}]
+
+编程器是一个可以用来对[link{item/drone}]无人机[link{}]进行编程的机器。这可以用一个很自然的方式达成：通过编程拼图。
+[crafting{200,70,key=block/programmer}]
+
+
+
+
+
+
+
+
+
+
+
+打开编程器的接口时，你会看到类似于此的界面：
+[image{200,200,0.20,pneumaticcraft:textures/wiki/programmer_gui.png}]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+在右侧可以看到所以可用编程拼图的列表。有好几页。将一个‘开始’拼图拖动到屏幕的某处来开始。这是每一个程序开始的地方。像图片里一样，编程拼图可以被连接。解释一下这个程序是什么意思：
+-程序从‘开始’拼图开始。
+-程序将执行 Inv-I（从容器中提取）程序。有一个‘区域’拼图与其连接，用来指定它将从哪里提取物品。
+-程序将执行‘挖掘’程序。所连接的‘区域’拼图指定在哪里挖掘。在该拼图的左侧连接了一个‘物品过滤器’拼图。这用来指定‘挖掘’程序不应该挖掘橡木。任何其他东西都可以被挖掘。
+
+也就是说：竖直放置的拼图将按次序执行。无人机应该执行当前程序还是移动到下一个指令取决于一个条件：正在运行的程序何时完成。对于每一块拼图这一点都是不一样的，将在各自页面解释。
+
+水平放置的拼图是‘主要’（即含有竖直输入/输出的）拼图的参数。这些参数可以是区域、物品过滤器以及文本等。当其被放置在右侧时，它会被向主要拼图加入，作为白名单。放置在左侧时其将作为黑名单。例如，如果你想要一个无人机攻击除了你以外的任何人，你可以向右侧放置一个含有“@player”（即所有玩家）的‘文本’拼图，然后在左侧放置一个含有你的用户名的‘文本’拼图。也即，每一个玩家都会（从右侧）加入，而你将会）从左侧）移除。
+
+以下是所有编程拼图的列表：
+• [link{pneumaticcraft:progwidget/start}]开始[link{}]
+• [link{pneumaticcraft:progwidget/inventory_export}]向容器输出物品[link{}]
+• [link{pneumaticcraft:progwidget/inventory_import}]从容器提取物品[link{}]
+• [link{pneumaticcraft:progwidget/liquid_export}]向储罐输出流体[link{}]
+• [link{pneumaticcraft:progwidget/liquid_import}]从储罐提取流体[link{}]
+• [link{pneumaticcraft:progwidget/entity_export}]搭载实体[link{}]
+• [link{pneumaticcraft:progwidget/entity_import}]卸载实体[link{}]
+• [link{pneumaticcraft:progwidget/pickup_item}]捡起物品[link{}]
+• [link{pneumaticcraft:progwidget/drop_item}]丢出物品[link{}]
+• [link{pneumaticcraft:progwidget/dig}]挖掘方块[link{}]
+• [link{pneumaticcraft:progwidget/place}]放置方块[link{}]
+• [link{pneumaticcraft:progwidget/block_right_click}]右击方块[link{}]
+• [link{pneumaticcraft:progwidget/entity_right_click}]右击实体[link{}]
+• [link{pneumaticcraft:progwidget/crafting}]合成物品[link{}]
+• [link{pneumaticcraft:progwidget/goto}]去往位置[link{}]
+• [link{pneumaticcraft:progwidget/teleport}]传送至位置[link{}]
+• [link{pneumaticcraft:progwidget/entity_attack}]攻击实体[link{}]
+• [link{pneumaticcraft:progwidget/emit_redstone}]发出红石信号[link{}]
+• [link{pneumaticcraft:progwidget/item_filter}]物品过滤器[link{}]
+• [link{pneumaticcraft:progwidget/liquid_filter}]流体过滤器[link{}]
+• [link{pneumaticcraft:progwidget/area}]区域[link{}]
+• [link{pneumaticcraft:progwidget/text}]文本[link{}]
+• [link{pneumaticcraft:progwidget/jump}]跳转[link{}]
+• [link{pneumaticcraft:progwidget/label}]标签[link{}]
+• [link{pneumaticcraft:progwidget/wait}]等待[link{}]
+• [link{pneumaticcraft:progwidget/rename}]重命名无人机[link{}]
+• [link{pneumaticcraft:progwidget/suicide}]自毁[link{}]
+• [link{pneumaticcraft:progwidget/external_program}]外部程序[link{}]
+• [link{pneumaticcraft:progwidget/coordinate}]坐标[link{}]
+• [link{pneumaticcraft:progwidget/coordinate_operator}]坐标算子[link{}]
+
+最后，但当然不是最不重要的，是一系列拼图：
+• [link{pneumaticcraft:progwidget/conditions}]条件[link{}]
+
+拉拽并放置拼图来编写你的程序。当你写完程序后，将无人机放入 GUI 右上方的槽，然后按下‘输出’按钮。在鼠标悬浮在‘导出’按钮上时会提示需要合成拼图。为了成功编程，你的背包内或编程器旁边的容器内需要有对应的拼图。导出到一个已经被编程的无人机时，将返还任何没有被新的程序用到的拼图。
+
+按下‘导入’按钮以将无人机内存储的程序导入编程器。这将会覆盖编程器内已有的任何程序。
+
+你可以通过在鼠标悬浮在‘输出’按钮上时按下 R 以自动化对无人机的编程。这将把编程器设置为‘输入物品时编程’模式。当物品通过（比如说漏斗）输入时，无人机将被自动试图编程（使用任何相邻的容器内的编程拼图）。
+
+有一个更快编程的小技巧：中击一块拼图以将其与其属性复制（也就是说，复制的‘区域’拼图将会包含被复制的拼图所包含的区域）。并且，Shift + 中击拼图将会复制整个拼图链。
+
+[prefix{l}]分享程序[prefix{}]
+你可以通过点击‘从/到 Pastebin 中导入/导出预设’按钮以与他人分享程序。它将会创建一个你可以在其中创建一个 pastebin 链接，或者输入一个 pastebin 链接以导入程序的窗口。可选的，你可以登入你的 pastebin 账号来绕过未登录时有的限制。
+
+你同样可以通过把程序写入网络数据存储器来与在同一个服务器上的玩家共享程序。这时一个特殊的‘库’物品，不需要任何拼图就可以向其写入，可以用来将程序导出至此处以便之后再导入至任何编程器。（注：网络数据存储器同样可以在[link{block/security_station}]安全站[link{}]内用作网络节点。）当然，你可以直接给他人一个编程好的无人机——如果你不介意消耗的无人机拼图……
+
+[prefix{l}]将程序转化为使用相对坐标[prefix{}]
+这是一个便于共享程序的高级功能。比如说，你设计了一个自动创建并管理一个农场的程序并且你想与别人共享。在别处的人将会希望农场建在不同的地方，所以他们需要修改每一个[link{pneumaticcraft:progwidget/area}]区域拼图[link{}]。‘转化为相对坐标’按钮使这要方便多了。它只需要你设置一个固定的坐标（比如输入箱子的坐标）。然后将基于相对于基准坐标的偏移创建并在程序中使用。终端用户只需要调整基准坐标至他们所使用的坐标。

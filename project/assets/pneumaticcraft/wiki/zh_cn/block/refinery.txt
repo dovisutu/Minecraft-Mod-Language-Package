@@ -1,0 +1,51 @@
+[image{200,10,0.415,pneumaticcraft:textures/wiki/refinery_gui.png}]
+[image{360,300,0.40,pneumaticcraft:textures/wiki/refinery.png}]
+精炼厂是一个使用[link{pneumaticcraft:menu/heat}]热量[link{}]来将原油精炼为好几种燃料的机器。它在温度高于 100℃ 时开始工作。温度越高，精炼效率越高。下面是可以产出的所有燃料，从轻到重排列：
+
+• LPG (液化石油气）)
+• 汽油（等价于建筑工艺中的燃油和热力膨胀中的精炼油）
+• 煤油
+• 柴油
+
+精炼厂不能以单方块运行：需要将多个精炼厂（2-4 个）堆叠起来才能运行。不同数量的精炼厂产出不同数量、种类的产物：
+
+2 个精炼厂：
+• LPG         (2mB)
+• 柴油        (4mB)
+
+3 个精炼厂：
+• LPG         (2mB)
+• 煤油        (3mB)
+• 柴油        (2mB)
+
+4 个精炼厂
+• LPG         (2mB)
+• 汽油        (3mB)
+• 煤油        (3mB)
+• 柴油        (2mB)
+
+最轻的燃油会在精炼厂的顶端产出，最重的在底端。如果你像精炼厂堆叠更多的方块，其将试图把已有的输出流体重排到正确的方块以保持其运转。。
+
+所有产出的流体可以在[link{block/liquid_compressor}]流体压缩机[link{}]中被用作燃料。然而，其有另两个很重要的用途：LPG被用来生产液态塑料，柴油用来生产速度升级中需要的润滑油。这两个过程都需要在[link{block/thermopneumatic_processing_plant}]热气动加工机[link{}]中进行。
+
+[prefix{l}]比较器（可以工作？）[prefix{}]
+精炼厂可以与比较器配合使用：当其可以工作时比较器会输出强度为 15 的红石信号，否则输出强度为 0。当机器内有可以被精炼的原油并且输出槽有足够空间时，它“可以工作”。
+
+
+
+
+
+
+
+
+
+[prefix{l}]精炼厂设置建议[prefix{}]
+因为精炼厂是一个多方块结构并且有很多面暴露在空气中，如果没有良好隔热，它可以很快失去热量。所以，强烈建议将所有未被使用的面覆盖住以最大化效率。注意：所有非热导方块可以被用来覆盖，包括台阶、活版门等“半固体方块”。
+
+你可以使用[link{block/vortex_tube}]涡流泵[link{}]来加热精炼厂，或者在任何一个精炼厂方块旁边放置热流体（岩浆等）或者方块（熔岩块等）注意：这些流体/方块的热量会被耗尽（被精炼厂吸取），所以最好将其生产与放置自动化。
+
+[prefix{l}][link{https://crafttweaker.readthedocs.io/en/latest/#Mods/PneumaticCraft_Repressurized/PneumaticCraft_Repressurized/}]CraftTweaker 支持[link{}][prefix{}]
+
+如果你的整合包内含有 CraftTweaker，上述合成也许可用，也许不。最好使用 JEI 查看这台机器的当前合成。
+
+[crafting{200,680, key=block/refinery}]

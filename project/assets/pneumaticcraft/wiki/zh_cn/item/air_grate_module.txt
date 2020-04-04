@@ -1,0 +1,24 @@
+该物品是一个[link{pneumaticcraft:menu/pressure_tubes}]管道模组[link{}]。也就是说，它只能被放置在压力管道上。点击链接以得到关于管道模组的基本信息。
+
+该模组吸引或排斥周围的实体。当向管道施加压缩空气时该管道将吹走实体，当使管道抽取为真空时该管道将把物体吸过来。通过[link{block/vacuum_pump}]真空泵[link{}]可以创造真空。当物品足够接近时将会被自动输入到任何相邻的容器内，接受拥有特定面的输入规则的方块（如熔炉）。气压越高，范围越大。变化规律遵守以下公式：
+
+被加压时：
+[prefix{l}]范围（格） = 4 × 气压（bar）[prefix{}]
+真空时：
+[prefix{l}]范围（格） = -16 × 气压（bar）[prefix{}]
+
+比如说，当该模组的气压为 2 bar 时其将会排斥在（4 × 2 =）8 格内的实体。当该模组处于 -0.5 bar 的真空中时其范围将为（-16 × -0.5 =） 8 格。
+
+[prefix{l}]对散热片主动散热[prefix{}]
+空气栅管道模块可以被用来对[link{block/heat_sink}]散热片[link{}]主动散热。散热可以被散热的范围是以管道栅前为基准的 3 * 3 * 3 格内。当该模组被放置是这个范围会被显示。只有管道栅的范围大于等于 3 格时才会对散热片散热。
+
+[image{200, 350, 0.88, pneumaticcraft:textures/wiki/active_cooling.png}]
+
+[prefix{l}]用    [link{item/advanced_pcb}] 高级印刷电路板[link{}]    升级[prefix{}]
+当用高级印刷电路板升级后，可以控制哪些实体会被该模组影响。你可以设置使得只有一些玩家被影响，或者只有苦力怕被影响。这些都可以通过升级后右击模组来做到。如下的 GUI 会显示：
+
+[image{200, 620, 0.36, pneumaticcraft:textures/wiki/air_grate_gui.png}]
+
+
+
+它具有很高的自解释性：在文本框里输入[link{pneumaticcraft:misc/entity_filter}]实体过滤器[link{}]。当该 GUI 显示时在游戏中按下 F1 也会显示该信息。

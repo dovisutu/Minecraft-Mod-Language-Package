@@ -1,0 +1,8 @@
+铭刻酸用来以化学的方式处理 [link{pneumaticcraft:menu/printed_circuit_boards}]PCB（印刷电路板）[link{}]。铭刻酸可在压力室内制造：Etching Acid is made in a Pressure Chamber:
+
+[pressureChamber{190, 50, item/bucket/etchacid}]
+
+[image{380, 230, 0.3, pneumaticcraft:textures/wiki/etching_acid.png}]
+有了在[link{block/uv_light_box}]紫外线灯箱[link{}]内照射过的 PCB 后，可以将空白的（被照射的）PCB扔入铭刻酸中。PCB 需要被铭刻 5 分钟。可以在铭刻过程中捡起以查看铭刻进度。你需要将其捡起以防止其被刷新掉。听起来很烦人，但是你又有了一项需要自动化的东西！5 分钟后，空白（已被照射）的 PCB 将会在成功时变为未组装电路板，失败时变为失效的印刷电路板。失效的印刷电路板可以在熔炉内被烧制转化为空白电路板（未被照射）。
+
+[furnace{200, 400, key=item/empty_pcb}]

@@ -1,0 +1,8 @@
+合成原料。
+
+由[link{pneumaticcraft:menu/oil}]O原油[link{}]生产得到
+
+[prefix{l}]旧合成[prefix{}]
+将[link{pneumaticcraft:menu/worldgen}]种子[link{}]扔入[link{pneumaticcraft:menu/pressure_chamber}]压力室[link{}]来合成。特定颜色的种子会变为相同颜色的塑料。
+
+[pressureChamber{190, 70, item/plastic}]

@@ -1,0 +1,35 @@
+[image{200,20,0.56,pneumaticcraft:textures/wiki/worldgen.png}]
+
+
+
+
+
+
+
+
+
+
+
+
+在气动工艺中只有一项被生成的物品——植物。气动工艺添加了 14 种植物，每一种都有各自的散播途径。从视觉上分辨它们的唯一方式是通过其言颜色。按 Q 把种子扔到地上来种植植物。生长过程有 6 个阶段。当长成后，其将执行其特定的传播方式。你也可以在其发生前破坏植物：完全长成时破坏植物将会掉落 2-3 个种子而不是长成前的 1 个。
+
+因为其自扩散性，你可能会认为这些植物会遍布整个世界。幸运的是，不是这样的。每一次执行器自扩散时其有一个小的概率变得闲置其将会生长到最大阶段但不会执行扩散操作。不幸的是，这同样意味着基于其自扩散性建造的农场将会逐渐停止运转。植物可以通过施加骨粉或重新捡起种子来重新激活。
+
+注意：大多数植物需要特定的光照强度。如果你把种子扔到了地上却没有结果，检查光照强度。
+
+种子可以在[link{block.pressure_chamber}]压力室[link{}]里被压缩为同一颜色的塑料。不同颜色的塑料在该 mod 里有不同的合成配方。下面是所有植物的列表：
+
+[link{item/plastic_plant0}]Squid Plant [link{}]
+[link{item/plastic_plant1}]火焰花[link{}]
+[link{item/plastic_plant2}]苦力怕草[link{}]
+[link{item/plastic_plant3}]史莱姆草[link{}]
+[link{item/plastic_plant4}]雨草[link{}]
+[link{item/plastic_plant5}]末地草[link{}]
+[link{item/plastic_plant6}]闪电草[link{}]
+[link{item/plastic_plant8}]爆发草[link{}]
+[link{item/plastic_plant9}]药水草[link{}]
+[link{item/plastic_plant10}]反斥草[link{}]
+[link{item/plastic_plant11}]氦草[link{}]
+[link{item/plastic_plant12}]直升机草[link{}]
+[link{item/plastic_plant14}]推进草[link{}]
+[link{item/plastic_plant15}]飞行花[link{}]

@@ -1,3 +1,3 @@
-Crafting component
+合成用品
 
 [pressureChamber{190, 40, item/capacitor}]

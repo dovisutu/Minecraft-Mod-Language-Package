@@ -1,3 +1,3 @@
-Crafting item
+合成用品
 
 [crafting{200, 40, key=item/pneumatic_cylinder}]

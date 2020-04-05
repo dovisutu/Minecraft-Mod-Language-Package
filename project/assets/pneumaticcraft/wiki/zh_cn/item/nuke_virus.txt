@@ -1,0 +1,1 @@
+只在地牢箱子中找到。被用在[link{block/security_station}]安全站[link{}]中。

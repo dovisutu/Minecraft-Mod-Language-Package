@@ -1,0 +1,11 @@
+被放置在刷怪笼上后，该物品会以下列方式“激活”刷怪笼：
+1. 它会防止生成的怪物在玩家离开后消失。
+2. 它还会使刷怪笼在玩家离开后一直刷怪。
+
+想要刷些什么吗？
+
+用[link{item/logistics_configurator}]物流配置器[link{}]或另一个刷怪笼激活器潜行右击刷怪笼以移除刷怪笼激活器。
+
+[crafting{200, 160, key=item/spawner_agitator}]
+
+[image{200,290,0.2,pneumaticcraft:textures/wiki/spawner_agitator.png}]

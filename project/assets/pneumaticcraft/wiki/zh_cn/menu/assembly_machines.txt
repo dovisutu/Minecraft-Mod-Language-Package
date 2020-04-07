@@ -1,0 +1,43 @@
+[image{200, 20, 0.9, pneumaticcraft:textures/wiki/assembly_machines.png}]
+为了制造更高阶的材料，需要设置好一套装配台，基本上就是一些装配机器。这些机器可以在水平相邻时交互。在设置中每一种机器只能出现一次（装配台 IO 设备除外，见下）。装配线需要压缩空气以运转，但你只需要给装配控制器提供压力来为整个系统供能。
+
+[image{370, 270, 0.4, pneumaticcraft:textures/wiki/assembly_controller.png}]
+[prefix{l}]装配控制器[prefix{}]
+装配台的核心。在这台设备中可以放置予以装配控制器控制其他装配机器的程序。控制器的显示中显示了关于目前合成周期的信息。其同样在有阻止合成进行的问题时显示感叹号。打开 GUI 以显示问题。
+
+[image{370, 420, 0.3, pneumaticcraft:textures/wiki/assembly_platform.png}]
+[prefix{l}]装配平台[prefix{}]
+装配平台是一个给其他装配机器使用的工作台。它用于在钻孔/激光切割时保持物品静止。装配平台最好被放置在中间，因为很多机器需要访问它。
+
+[image{200, 500, 0.9, pneumaticcraft:textures/wiki/assembly_iounit.png}]
+[prefix{l}]装配台 IO 设备[prefix{}]
+IO 设备是容器与装配平台间的连接。该机械臂可以以对角线访问。IO 设备可以输出装配完成的物品或导入装配过程的材料。你可以通过使用（气动）扳手右击 IO 设备来切换模式。橙色代表输出模式，蓝色代表输入模式。IO 设备需要能够访问装配平台以及能够提取物品（输入模式）/输出物品（输出模式）的容器才能工作。
+
+[image{395, 800, 0.3, pneumaticcraft:textures/wiki/assembly_drill.png}]
+[prefix{l}]装配钻头[prefix{}]
+装配钻头是装配机器其中一个干主要工作的机器。其钻石钻头可以钻透最坚硬的材料。装配钻头[prefix{o}]不能[prefix{}]以对角线访问，也就是说其必须与装配平台相邻。
+
+[image{405, 900, 0.3, pneumaticcraft:textures/wiki/assembly_laser.png}]
+[prefix{l}]装配激光prefix{}]
+装配激光可以切割材料，用来将物品切成一般，或者切去边角。向装配钻头一样，其[prefix{o}]不能[prefix{}]以对角线访问。
+
+
+
+[prefix{l}]使用装配机器[prefix{}]
+将装配程序放入装配控制器并将所需的物品放入输入容器以用装配机器合成物品。装配程序不能被合成，但它们可以通过与机械师（气动工艺的村民）或通过 [link{item/amadron_tablet}]Amadron 平板[link{}]交易获得。
+
+住：装配程序：钻头和激光并不代表其可以进行两类合成配方，只代表其将会对被钻孔后可被激光切割的物品进行连续处理！
+
+[prefix{l}]CraftTweaker 支持[prefix{}]
+如果你的整合包里含有[link{https://crafttweaker.readthedocs.io/en/latest/#Mods/PneumaticCraft_Repressurized/PneumaticCraft_Repressurized/}] CraftTweaker [link{}]，下列（默认）合成配方也许适用，也许不。建议适用 JEI 查看装配系统当前的合成配方。
+
+[crafting{200, 1200, key=block/assembly_controller}]
+[crafting{200, 1320, key=block/assembly_platform}]
+[crafting{200, 1440, key=block/assembly_io_unit}]
+[crafting{200, 1560, key=block/assembly_drill}]
+[crafting{200, 1680, key=block/assembly_laser}]
+[assemblyLine{200, 1800, block/advanced_pressure_tube}]
+[assemblyLine{200, 2000, block/advanced_pressure_tube,1}]
+[assemblyLine{200, 2200, block/pressure_chamber_valve}]
+[assemblyLine{200, 2400, item/unassembled_pcb}]
+[assemblyLine{200, 2600, block/aphorism_tile}]

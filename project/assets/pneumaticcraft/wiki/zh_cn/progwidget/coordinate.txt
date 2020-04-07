@@ -1,0 +1,13 @@
+编程拼图被用于[link{block/programmer}]编程器[link{}]。
+
+[prefix{l}]坐标拼图[prefix{}]
+坐标拼图较少被用作其他拼图的参数。该拼图在处理[link{pneumaticcraft:progwidget/coordinate_operator}]相对坐标[link{}]时被用到。
+
+坐标拼图可以与[link{pneumaticcraft:progwidget/area}]区域拼图[link{}]进行比较。对于区域拼图，需要提供两个坐标来组成区域。这个拼图只需要一个坐标。有两个方法来提供坐标：
+
+[prefix{n}]常量[prefix{}]
+常量坐标是...常量。你可以通过 GPS 工具选择，或者手动在文本框内输入 x/y/z 坐标。
+
+[prefix{n}]变量[prefix{}]
+选择变量后，你可以返回存储在一个变量内的坐标。[link{pneumaticcraft:progwidget/coordinate_operator}]点击这里[link{}]了解变量。
+记住：你只能提供一个坐标，不能修改！

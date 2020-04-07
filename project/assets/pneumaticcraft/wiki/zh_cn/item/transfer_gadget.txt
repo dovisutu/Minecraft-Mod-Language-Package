@@ -1,0 +1,14 @@
+传输装置是一个很基础的物品/流体传输用物品。它可以被放在两个方块[prefix{l}]中间[prefix{}]以在其之间进行传输。最好的放置方式是放下第一个方块，使用传输装置右击其某一面以将其安装到那一面；然后在那一面的旁边放置第二个方块。
+
+传输装置会显示两给颜色：
+-[prefix{9}]蓝色[prefix{}]，指示输入端
+-[prefix{6}]橙色[prefix{}]指示输出端。
+传输装置从[prefix{9}]蓝色输入端[prefix{}]向[prefix{6}]橙色输出端[prefix{}]以每 2 秒 1 个物品或 100mB 流体的速度进行传输。
+
+使用[link{item/logistics_configurator}]物流配置器[link{}]右击传输工具以切换输入输出面。潜行右击取下传输工具。
+
+[crafting{200, 270, key=item/transfer_gadget}]
+
+[image{345,20,0.15,pneumaticcraft:textures/wiki/transfer_gadget_items.png}]
+
+[image{200,390,0.2,pneumaticcraft:textures/wiki/transfer_gadget_fluids.png}]

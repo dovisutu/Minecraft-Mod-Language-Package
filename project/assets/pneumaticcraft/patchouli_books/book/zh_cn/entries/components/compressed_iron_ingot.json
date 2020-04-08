@@ -1,11 +1,11 @@
 {
-  "name": "Compressed Iron Ingot",
+  "name": "Ñ¹ËõÌú¶§",
   "icon": "pneumaticcraft:ingot_iron_compressed",
   "category": "components",
   "pages": [
     {
       "type": "text",
-      "text": "See $(l:base_concepts/basic_materials#compressed_iron_ingot)Basic Materials/$."
+      "text": "¼û$(l:base_concepts/basic_materials#compressed_iron_ingot)»ù´¡²ÄÁÏ¡£/$."
     }
   ]
 }

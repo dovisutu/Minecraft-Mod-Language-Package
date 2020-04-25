@@ -44,7 +44,7 @@
 
 你可以使用[link{block/vortex_tube}]涡流泵[link{}]来加热精炼厂，或者在任何一个精炼厂方块旁边放置热流体（岩浆等）或者方块（熔岩块等）注意：这些流体/方块的热量会被耗尽（被精炼厂吸取），所以最好将其生产与放置自动化。
 
-[prefix{l}][link{https://crafttweaker.readthedocs.io/en/latest/#Mods/PneumaticCraft_Repressurized/PneumaticCraft_Repressurized/}]CraftTweaker 支持[link{}][prefix{}]
+[prefix{l}][link{https://docs.blamejared.com/1.12/zh/Mods/PneumaticCraft_Repressurized/Refinery/}]CraftTweaker 支持[link{}][prefix{}]
 
 如果你的整合包内含有 CraftTweaker，上述合成也许可用，也许不。最好使用 JEI 查看这台机器的当前合成。
 

@@ -29,7 +29,7 @@ IO 设备是容器与装配平台间的连接。该机械臂可以以对角线访问。IO 设备可以输出装配完
 住：装配程序：钻头和激光并不代表其可以进行两类合成配方，只代表其将会对被钻孔后可被激光切割的物品进行连续处理！
 
 [prefix{l}]CraftTweaker 支持[prefix{}]
-如果你的整合包里含有[link{https://crafttweaker.readthedocs.io/en/latest/#Mods/PneumaticCraft_Repressurized/PneumaticCraft_Repressurized/}] CraftTweaker [link{}]，下列（默认）合成配方也许适用，也许不。建议适用 JEI 查看装配系统当前的合成配方。
+如果你的整合包里含有[link{https://docs.blamejared.com/1.12/zh/Mods/PneumaticCraft_Repressurized/Assembly/}] CraftTweaker [link{}]，下列（默认）合成配方也许适用，也许不。建议适用 JEI 查看装配系统当前的合成配方。
 
 [crafting{200, 1200, key=block/assembly_controller}]
 [crafting{200, 1320, key=block/assembly_platform}]

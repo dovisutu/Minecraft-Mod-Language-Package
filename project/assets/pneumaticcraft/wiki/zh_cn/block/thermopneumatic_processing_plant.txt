@@ -14,7 +14,7 @@
 煤油 --> 汽油
 汽油 --> LPG
 
-[link{https://crafttweaker.readthedocs.io/en/latest/#Mods/PneumaticCraft_Repressurized/PneumaticCraft_Repressurized/}]对 CraftTweaker 的支持[link{}]
+[link{https://docs.blamejared.com/1.12/zh/Mods/PneumaticCraft_Repressurized/ThermopneumaticProcessingPlant/}]对 CraftTweaker 的支持[link{}]
 
 如果你的整合包里有 CraftTweaker，上述（默认）合成也许适用，也许不。建议使用 JEI 查看这台机器“当前”的合成表。
 

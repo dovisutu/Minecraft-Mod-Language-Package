@@ -1,4 +1,4 @@
-Programming Puzzles are used in [link{block/programmer}]programmers [link{}].
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
 [prefix{l}]The 'Inv-I' (Inventory Import) piece [prefix{}]
 This will make the Drone move to the nearest inventory within the specified area. It will then take items from that inventory and it will put them in the Drone's inventory.

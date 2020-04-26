@@ -1,4 +1,4 @@
-This is a Condition. [link{pneumaticcraft:progwidget/conditions}]Click here[link{}] to read general information about Conditions.
+这是一个条件拼图。[link{pneumaticcraft:progwidget/conditions}]点击这里[link{}]来获取关于条件拼图的一般信息。
 
 Note: although this piece is named 'Condition: RF', it actually uses Forge Energy, which is RF-compatible, but not necessarily limited to just RF.
 

@@ -1,4 +1,4 @@
-This is a Condition. [link{pneumaticcraft:progwidget/conditions}]Click here[link{}] to read general information about Conditions.
+这是一个条件拼图。[link{pneumaticcraft:progwidget/conditions}]点击这里[link{}]来获取关于条件拼图的一般信息。
 
 The Condition: Item Filter piece allows you to compare Item Filters. This is mostly useful when you are using Item Filters with variables.
 

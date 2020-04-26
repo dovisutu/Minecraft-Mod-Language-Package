@@ -1,4 +1,4 @@
-Programming Puzzles are used in [link{block/programmer}]programmers [link{}].
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
 [prefix{l}]The 'Dig' (Dig Blocks) piece [prefix{}]
 The Drone will dig/mine the blocks within the specified area. Items that are dropped from the blocks will not be picked up by the Drone. The order in which the blocks will be dug is similar to the 'Place' piece's. Also like with the 'Place' piece, you can control if the area should be digged layer by layer (top to bottom or bottom to top).

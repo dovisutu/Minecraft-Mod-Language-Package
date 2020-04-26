@@ -1,7 +1,7 @@
 [image{200,10,0.32,pneumaticcraft:textures/wiki/conditions.png}]
-Conditions are a collection of puzzle pieces that allow you to check a certain thing, and jump to a certain part in the program when that condition is met.
+条件拼图是一系列允许你检查某些事情，并且当条件满足时跳转到程序的某一部分的编程拼图。
 
-Every Condition puzzle piece can take a Text puzzle piece in the bottom parameter slot. When a condition is met, it will look for a Text puzzle piece on the [prefix{o}]right-hand [prefix{}] side of this parameter, and jump to a [link{pneumaticcraft:progwidget/label}]Label [link{}] piece with that name. When the condition is [prefix{o}]not [prefix{}] met, it will jump to a label with the same name as the Text parameter on the [prefix{o}]left-hand [prefix{}] side. When the Condition piece can't find a Text parameter, it will proceed to a puzzle piece connected to the bottom.
+每一个条件拼图都可以在其靠下的参数槽连接一个文本拼图。当满足条件时，其将在[prefix{o}]右[prefix{}]侧寻找文本拼图，并跳转到以其内容为名的[link{pneumaticcraft:progwidget/label}]标签[link{}]拼图。当条件[prefix{o}]不[prefix{}]满足时，其将跳转到以其[prefix{o}]左[prefix{}]侧文本拼图的内容为名的标签拼图。当条件拼图找不到文本拼图参数时，将继续处理连接在其下方的拼图。
 
 Most of the time, you can right-click a Condition piece to open a GUI to configure the condition. The GUI will usually contain a '='/'>='/'<=' option, and a text field where you can enter a number. With this you can set up conditions (like item counts in a chest) to be exactly 10 ('=' mode and text field 10), more than 20 ('>=' mode and text field '21') and less than 12 (either '>=' mode and text field '12', and checking for the condition to be false OR '<=' mode and text field '11').
 

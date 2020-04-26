@@ -1,4 +1,4 @@
-Programming Puzzles are used in [link{block/programmer}]programmers [link{}].
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
 [prefix{l}]The Item Drop piece [prefix{}]
 This will make the Drone drop items out of its inventory in the specified area. By right clicking the Drop Item piece you can specify how many items per position in the area are allowed to be dropped. You can also toggle between 'Random' and 'Straight' spreading modes, which mean they will drop the item with a speed, or drop the item straight down respectively.

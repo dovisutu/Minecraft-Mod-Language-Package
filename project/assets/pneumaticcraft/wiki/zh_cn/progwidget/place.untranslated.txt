@@ -1,4 +1,4 @@
-Programming Puzzles are used in [link{block/programmer}]programmers [link{}].
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
 [prefix{l}]The 'Place' (Place Blocks) piece [prefix{}]
 The Drone will place blocks from its inventory in the world. It will place blocks in the area specified and it will place blocks in locations that are the closest first.

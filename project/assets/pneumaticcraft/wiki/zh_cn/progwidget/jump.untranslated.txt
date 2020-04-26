@@ -1,4 +1,4 @@
-Programming Puzzles are used in [link{block/programmer}]programmers [link{}].
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
 [prefix{l}]The Jump piece [prefix{}]
 This piece is purely focused on program flow. When the program hits a Jump piece, it will look at the connected Text piece, and try to jump to a [link{pneumaticcraft:progwidget/label}] Label[link{}] piece with the same text in the attached Text piece. When it fails, execution will return to the Start piece. (This fallback behaviour should never occur normally).

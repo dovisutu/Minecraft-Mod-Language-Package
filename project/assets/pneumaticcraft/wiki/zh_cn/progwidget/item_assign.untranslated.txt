@@ -1,4 +1,4 @@
-Programming Puzzles are used in [link{block/programmer}]programmers [link{}].
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
 [prefix{l}]The Item Assign piece [prefix{}]
 The Item Assign piece is an advanced piece that allows you to store an item in a variable. Variables are either coordinates or items. Currently we are talking about the latter. For information about coordinate variables and a generic explanation about variables, [link{pneumaticcraft:progwidget/coordinate_operator}]click here[link{}].

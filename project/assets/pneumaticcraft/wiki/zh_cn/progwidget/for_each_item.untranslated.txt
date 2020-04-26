@@ -1,4 +1,4 @@
-Programming Puzzles are used in [link{block/programmer}]programmers [link{}].
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
 [prefix{l}]The 'For Each Item' piece[prefix{}]
 This advanced piece will execute a subroutine for every attached Item Filter. For each Item Filter, it will set the specified variable to that filter, and jump to the [link{pneumaticcraft:progwidget/label}]Label [link{}] specified. When that routine is done executing (when it reaches the end of a program where it would usually jump back to Start), it will come back to this piece and do the same for the next Item Filter.

@@ -1,4 +1,4 @@
-Programming Puzzles are used in [link{block/programmer}]programmers [link{}].
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
 [prefix{l}]The 'I-pick' (Item Pick) piece [prefix{}]
 This will make the Drone pick up items that are within the specified area. The Drone will put these items in it's inventory. Keep in mind that the 'Area' pieces connected to an 'I-pick' piece always will be interpreted with cuboid mode, regardless of the 'Area' piece's area mode. It's possible to create strange shapes though by using whitelisting/blacklisting of areas.

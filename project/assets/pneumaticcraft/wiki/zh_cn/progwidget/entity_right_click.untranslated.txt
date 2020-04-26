@@ -1,4 +1,4 @@
-Programming Puzzles are used in [link{block/programmer}]programmers [link{}].
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
 [prefix{l}]The Right Click Entity piece [prefix{}]
 The Drone will right click the item in its first inventory slot, for every entity in the area once. This can be used to shear sheep, milk cows, breed animals, and what not!

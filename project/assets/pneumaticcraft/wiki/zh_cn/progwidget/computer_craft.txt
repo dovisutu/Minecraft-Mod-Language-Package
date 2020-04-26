@@ -1,0 +1,3 @@
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
+
+查看[link{block/drone_interface}]无人机接口[link{}]获得 ComputerCraft 拼图的有关信息。

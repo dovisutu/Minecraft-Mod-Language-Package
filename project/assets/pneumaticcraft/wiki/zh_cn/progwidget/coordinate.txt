@@ -1,4 +1,4 @@
-编程拼图被用于[link{block/programmer}]编程器[link{}]。
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
 [prefix{l}]坐标拼图[prefix{}]
 坐标拼图较少被用作其他拼图的参数。该拼图在处理[link{pneumaticcraft:progwidget/coordinate_operator}]相对坐标[link{}]时被用到。

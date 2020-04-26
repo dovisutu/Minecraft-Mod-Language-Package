@@ -1,4 +1,4 @@
-Programming Puzzles are used in [link{block/programmer}]programmers [link{}].
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
 [prefix{l}]The Entity Attack piece [prefix{}]
 The Drone will attack every living creature within the area. Keep in mind that the Area pieces connected to an Entity Attack piece always will be interpreted with cuboid mode, regardless of the Area piece's area mode. It's possible to create different shapes, though, by using whitelisting/blacklisting of areas.

@@ -1,4 +1,4 @@
-Programming Puzzles are used in [link{block/programmer}]programmers [link{}].
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
 [prefix{l}]The Label piece [prefix{}]
 This piece is purely focused on program flow. The label defines a point in the program that [link{pneumaticcraft:progwidget/jump}] Jump[link{}] and [link{pneumaticcraft:progwidget/conditions}]Conditions [link{}] can jump to. You must attach a [link{pneumaticcraft:progwidget/text}]Text [link{}] piece to this label piece to name it with the Text piece's string value. Any jumps/conditions using a Text piece of that value will then jump to this label.

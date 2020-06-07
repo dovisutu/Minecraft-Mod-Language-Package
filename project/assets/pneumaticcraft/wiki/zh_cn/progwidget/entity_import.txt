@@ -1,0 +1,4 @@
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
+
+[prefix{l}]输入实体[prefix{}]
+无人机将会前往指定区域内最近的在所连接的[link{pneumaticcraft:misc/entity_filter}]实体过滤器[link{}]（可选）限定内的实体并将其抓取以便运输。“实体”包括玩家。玩家可以按下 Shift 离开无人机（就像在矿车和马上一样）。

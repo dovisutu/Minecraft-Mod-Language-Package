@@ -1,0 +1,20 @@
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
+
+[prefix{l}]文本[prefix{}]
+该拼图只能用作其它拼图的参数。可以被用在下列拼图中：
+
+作为[link{pneumaticcraft:misc/entity_filter}]实体过滤器[link{}]提供：
+
+• [link{pneumaticcraft:progwidget/entity_attack}]攻击实体[link{}]拼图。
+• [link{pneumaticcraft:progwidget/entity_right_click}]右击实体[link{}]拼图。
+• [link{pneumaticcraft:progwidget/entity_import}]输入实体[link{}]拼图。
+• [link{pneumaticcraft:progwidget/condition_entity}]条件：实体[link{}]拼图。
+• [link{pneumaticcraft:progwidget/drone_condition_entity}]无人机条件：实体[link{}]拼图
+
+作为文本数据提供：
+
+• [link{pneumaticcraft:progwidget/edit_sign}]编辑告示牌[link{}]拼图。
+• [link{pneumaticcraft:progwidget/rename_drone}]重命名无人机[link{}]拼图。
+• [link{pneumaticcraft:progwidget/jump}]跳转[link{}] and [link{pneumaticcraft:progwidget/label}]标签[link{}]拼图。
+• [link{pneumaticcraft:progwidget/wait}]等待[link{}]拼图。
+• [link{pneumaticcraft:progwidget/conditions}]条件[link{}]拼图。

@@ -1,0 +1,4 @@
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
+
+[prefix{l}]输出实体[prefix{}]
+无人机将会前往指定区域，并将搭载的通过给定的[link{pneumaticcraft:misc/entity_filter}]实体过滤器[link{}]（可选）的实体丢出。

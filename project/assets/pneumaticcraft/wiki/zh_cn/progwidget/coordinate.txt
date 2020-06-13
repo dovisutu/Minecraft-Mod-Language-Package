@@ -10,4 +10,4 @@
 
 [prefix{n}]变量[prefix{}]
 选择变量后，你可以返回存储在一个变量内的坐标。[link{pneumaticcraft:progwidget/coordinate_operator}]点击这里[link{}]了解变量。
-记住：你只能提供一个坐标，不能修改！
+记住：你只能提供一个坐标，不能修改这个变量！

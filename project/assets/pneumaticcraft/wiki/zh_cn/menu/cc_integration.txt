@@ -1,0 +1,51 @@
+当同时安装了 ComputerCraft 时，可以使用其与 PneumaticCraft 中的任何机器以及无人机交互。任何下面提及的机器都可以作为 ComputerCraft 的外设被交互。在 Lua 中，可以使用 m = peripheral.wrap(<面>) （其中<面>代表外设被连接在哪一面上，可以为 top（顶面）, bottom（底面）, right（右面）, left（左面）, back（前面）, front（后面））；然后就可以通过 m.<函数名> 调用下面提及的所有函数。
+下午所有以 <面> 作为参数的地方中，up, down, north, south, east, west 为合法参数。
+如果你仍然希望提供更多的函数，去给作者提建议吧！
+
+[prefix{l}]任何与压缩空气相关的机器[prefix{}]
+你可以从任何与压缩空气相关的方块（包括空气压缩机和压力管道）获取以下信息：
+• getPressure(), getPressure(<面>) - 获取该方块的气压。“面”参数是可选的，目前只在获取真空泵的气压时用到，因为其有两个气压值。
+• getDangerPressure() - 常数。对于一级机器其为 5 bar， 对于二级机器其为 20 bar。
+• getCriticalPressure() - 常数。对于一级机器其为 7 bar，对于二级机器其为 25 bar。
+
+[prefix{l}]任何与热量相关的机器Every machine that is heat-related[prefix{}]
+对于像是散热片或是压缩铁块一样有热量的方块。
+• getTemperature(), getTemperature(<面>) - 获取该方块的温度。
+
+[link{pneumaticcraft:block/air_cannon}]空气加农炮[link{}]
+除去对于其他气动机器适用的方法外，还有下列函数可用：
+• setExternalControl(<true/false>) - 传参为 true 时，将会禁用使用通常的方式旋转（插入 GPS 工具，更改范围升级的数量...）。
+• setTargetLocation(<x>,<y>,<z>) - 使空气加农炮指向传入的坐标。这原本是在 GPS 工具内存储的坐标。
+• setRotationAngle(<角度>) - 使空气加农炮绕竖轴旋转到指定的角度。
+• setHeightAngle(<角度>) - 使空气加农炮将高度角旋转到指定的角度。
+• isDoneRotating() - 当加农炮完成旋转后，返回 true。
+• getMinWorkingPressure() - 返回加农炮发射所需要的最小气压（GUI 中黄色与绿色的分界线）
+• fire() - 当有足够的气压发射并且放置有物品时，发射。成功时返回 true。
+
+[link{pneumaticcraft:menu/elevator}]电梯（基座）[link{}]
+除去对于其他气动机器适用的方法外，还有下列函数可用：
+• setExternalControl(<true/false>) - 传参为 true 时，将会把电梯的“红石模式”设置为“电梯呼叫器”模式，此时同样可以被 ComputerCraft 控制。然而，不一定需要在调用 setTargetHeight 前调用：模式会自动调整为外部控制。
+• getMinWorkingPressure() - 返回使电梯运动的最小气压（GUI 内黄色与绿色的分界线）。电梯下降过程不需要气压。
+• setTargetHeight(<高度>) - 把电梯的目标高度设为传入的高度（单位为米/格，浮点数）。
+• getTargetHeight() - 获取电梯的目标高度（单位为米/格，浮点数）。
+• getCurrentHeight() - 获取电梯的当前高度（单位为米/格，浮点数）。
+
+[link{pneumaticcraft:block/universal_sensor}]万能传感器[link{}]
+除去对于其他气动机器适用的方法外，还有下列函数可用：
+• getSensorNames() - 以列表的形式返回所有传感器的名称。
+• setSensor(<传感器名称>), setSensor(<索引>), setSensor() - 把目前选中的传感器设为传入的传感器。传感器名称应当在 getSensorNames 返回的列表中。索引应当为由 getSensorNames 返回的列表的索引，也即：要选择第二个传感器，调用 setSensor(2)。当所选传感器在当前的升级条件下可用时，返回 true。调用 setSensor() 时，万能传感器将不会选择传感器，也就不消耗空气。
+• getSensor() - 返回当前选择的传感器的名称。
+• setTextField(<文本>) - 有些传感器使用一个文本框指定附加选项（比如范围内的实体接受 @players 以只检测玩家）可以通过此方法指定此文本。
+• getTextField() - 返回万能传感器当前存储的文本参数。
+• isSensorEventBased() - 有两类传感器：基于事件的，以及基于轮询的。基于时间的传感器会等待到一个时间发生（玩家攻击，捡起物品...）。基于轮询的传感器隔一段时间检查一次状态（范围内的实体，世界时间，下雨）。如果当前选择的传感器是基于事件的，返回 true。
+• getSensorValue() - 如果选中的传感器是基于轮询的，返回（未取反的）红石信号输出。和使用 ComputerCraft 直接读取红石输出的效果是一样的。注意：设置传感器后马上读取数据并不可靠，因为很多基于轮询的传感器并不很频繁地轮询，以此来提高性能。使用 getSensorName() 的好处是其会发起一个拉取事件。当未选择基于轮询的传感器时，将抛出一个异常。
+• getMinWorkingPressure() - 返回万能传感器工作需要的最小气压（GUI 中黄色与绿色的分界线）。
+• setGPSToolCoordinate(<槽位索引>,<x>,<y>,<z>) - 把 GPS 工具内<槽位索引>（从 1 开始）对应的槽位存储的坐标设为提供的坐标。对于需要一个坐标的传感器这很有用。
+对于基于事件的传感器（像是玩家右击传感器），需要基于事件获取传感器的值。使用 <返回值> = os.PullEvent("universalSensor") 获取事件。一般而言，返回值包括 <eventName, redstoneStrength>。玩家右击传感器是一个例外：其返回 <eventName, redstoneStrength, interactedX, interactedY, interactedZ>。这允许一些有趣的用法...
+
+[link{pneumaticcraft:block/plastic_mixer}]塑料混合机[link{}]
+除去 getTemperature() 外，还有下列函数可用：
+• selectColor(<色彩索引>) - 设置所选要生产的塑料眼色设为索引（1-16）指定的颜色。调用 selectColor(0) 将取消选择所有颜色的塑料。
+
+[link{pneumaticcraft:block/drone_interface}]无人机接口[link{}]
+点击该链接查看无人机接口的界面，或查看 ComputerCraft wiki。

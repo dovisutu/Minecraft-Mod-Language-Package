@@ -1,7 +1,7 @@
 [image{200,10,0.32,pneumaticcraft:textures/wiki/conditions.png}]
-Ìõ¼þÆ´Í¼ÊÇÒ»ÏµÁÐÔÊÐíÄã¼ì²éÄ³Ð©ÊÂÇé£¬²¢ÇÒµ±Ìõ¼þÂú×ãÊ±Ìø×ªµ½³ÌÐòµÄÄ³Ò»²¿·ÖµÄ±à³ÌÆ´Í¼¡£
+æ¡ä»¶æ‹¼å›¾æ˜¯ä¸€ç³»åˆ—å…è®¸ä½ æ£€æŸ¥æŸäº›äº‹æƒ…ï¼Œå¹¶ä¸”å½“æ¡ä»¶æ»¡è¶³æ—¶è·³è½¬åˆ°ç¨‹åºçš„æŸä¸€éƒ¨åˆ†çš„ç¼–ç¨‹æ‹¼å›¾ã€‚
 
-Ã¿Ò»¸öÌõ¼þÆ´Í¼¶¼¿ÉÒÔÔÚÆä¿¿ÏÂµÄ²ÎÊý²ÛÁ¬½ÓÒ»¸öÎÄ±¾Æ´Í¼¡£µ±Âú×ãÌõ¼þÊ±£¬Æä½«ÔÚ[prefix{o}]ÓÒ[prefix{}]²àÑ°ÕÒÎÄ±¾Æ´Í¼£¬²¢Ìø×ªµ½ÒÔÆäÄÚÈÝÎªÃûµÄ[link{pneumaticcraft:progwidget/label}]±êÇ©[link{}]Æ´Í¼¡£µ±Ìõ¼þ[prefix{o}]²»[prefix{}]Âú×ãÊ±£¬Æä½«Ìø×ªµ½ÒÔÆä[prefix{o}]×ó[prefix{}]²àÎÄ±¾Æ´Í¼µÄÄÚÈÝÎªÃûµÄ±êÇ©Æ´Í¼¡£µ±Ìõ¼þÆ´Í¼ÕÒ²»µ½ÎÄ±¾Æ´Í¼²ÎÊýÊ±£¬½«¼ÌÐø´¦ÀíÁ¬½ÓÔÚÆäÏÂ·½µÄÆ´Í¼¡£
+æ¯ä¸€ä¸ªæ¡ä»¶æ‹¼å›¾éƒ½å¯ä»¥åœ¨å…¶é ä¸‹çš„å‚æ•°æ§½è¿žæŽ¥ä¸€ä¸ªæ–‡æœ¬æ‹¼å›¾ã€‚å½“æ»¡è¶³æ¡ä»¶æ—¶ï¼Œå…¶å°†åœ¨[prefix{o}]å³[prefix{}]ä¾§å¯»æ‰¾æ–‡æœ¬æ‹¼å›¾ï¼Œå¹¶è·³è½¬åˆ°ä»¥å…¶å†…å®¹ä¸ºåçš„[link{pneumaticcraft:progwidget/label}]æ ‡ç­¾[link{}]æ‹¼å›¾ã€‚å½“æ¡ä»¶[prefix{o}]ä¸[prefix{}]æ»¡è¶³æ—¶ï¼Œå…¶å°†è·³è½¬åˆ°ä»¥å…¶[prefix{o}]å·¦[prefix{}]ä¾§æ–‡æœ¬æ‹¼å›¾çš„å†…å®¹ä¸ºåçš„æ ‡ç­¾æ‹¼å›¾ã€‚å½“æ¡ä»¶æ‹¼å›¾æ‰¾ä¸åˆ°æ–‡æœ¬æ‹¼å›¾å‚æ•°æ—¶ï¼Œå°†ç»§ç»­å¤„ç†è¿žæŽ¥åœ¨å…¶ä¸‹æ–¹çš„æ‹¼å›¾ã€‚
 
 Most of the time, you can right-click a Condition piece to open a GUI to configure the condition. The GUI will usually contain a '='/'>='/'<=' option, and a text field where you can enter a number. With this you can set up conditions (like item counts in a chest) to be exactly 10 ('=' mode and text field 10), more than 20 ('>=' mode and text field '21') and less than 12 (either '>=' mode and text field '12', and checking for the condition to be false OR '<=' mode and text field '11').
 

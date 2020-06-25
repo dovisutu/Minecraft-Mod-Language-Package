@@ -1,3 +1,3 @@
-ÕâÊÇÒ»¸öÌõ¼şÆ´Í¼¡£[link{pneumaticcraft:progwidget/conditions}]µã»÷ÕâÀï[link{}]À´»ñÈ¡¹ØÓÚÌõ¼şÆ´Í¼µÄÒ»°ãĞÅÏ¢¡£
+è¿™æ˜¯ä¸€ä¸ªæ¡ä»¶æ‹¼å›¾ã€‚[link{pneumaticcraft:progwidget/conditions}]ç‚¹å‡»è¿™é‡Œ[link{}]æ¥è·å–å…³äºæ¡ä»¶æ‹¼å›¾çš„ä¸€èˆ¬ä¿¡æ¯ã€‚
 
 The Drone Condition: Pressure allows you to check the pressure of the drone.

@@ -1,4 +1,4 @@
-±à³ÌÆ´Í¼±»ÓÃÓÚ[link{block/programmer}]±à³ÌÆ÷[link{}]ÖÐ¡£
+ç¼–ç¨‹æ‹¼å›¾è¢«ç”¨äºŽ[link{block/programmer}]ç¼–ç¨‹å™¨[link{}]ä¸­ã€‚
 
 [prefix{l}]The 'Place' (Place Blocks) piece [prefix{}]
 The Drone will place blocks from its inventory in the world. It will place blocks in the area specified and it will place blocks in locations that are the closest first.

@@ -1,4 +1,4 @@
-±à³ÌÆ´Í¼±»ÓÃÓÚ[link{block/programmer}]±à³ÌÆ÷[link{}]ÖÐ¡£
+ç¼–ç¨‹æ‹¼å›¾è¢«ç”¨äºŽ[link{block/programmer}]ç¼–ç¨‹å™¨[link{}]ä¸­ã€‚
 
 [prefix{l}]The 'For Each Item' piece[prefix{}]
 This advanced piece will execute a subroutine for every attached Item Filter. For each Item Filter, it will set the specified variable to that filter, and jump to the [link{pneumaticcraft:progwidget/label}]Label [link{}] specified. When that routine is done executing (when it reaches the end of a program where it would usually jump back to Start), it will come back to this piece and do the same for the next Item Filter.

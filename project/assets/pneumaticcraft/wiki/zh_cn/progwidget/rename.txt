@@ -1,8 +1,8 @@
-±à³ÌÆ´Í¼±»ÓÃÓÚ[link{block/programmer}]±à³ÌÆ÷[link{}]ÖÐ¡£
+ç¼–ç¨‹æ‹¼å›¾è¢«ç”¨äºŽ[link{block/programmer}]ç¼–ç¨‹å™¨[link{}]ä¸­ã€‚
 
-[prefix{l}]ÖØÃüÃû[prefix{}]
-Ð§¹ûÓëÊ¹ÓÃÃüÃûÅÆÓÒ»÷ÎÞÈË»úÒ»Ñù¡£Ãû³Æ±»·ÅÖÃÔÚÎÄ±¾Æ´Í¼ÖÐ¡£Õâ¿ÉÒÔÓÃ×÷µ÷ÊÔÌØÐÔ£¬ÒòÎªÎÞÈË»úÔÚ·ÉÐÐ¹ý³ÌÖÐÍ¬Ñù¿ÉÒÔ±»ÃüÃû¡£´ËÍâ£¬Í¬Ñù¿ÉÒÔÍ¨¹ý ${<±äÁ¿Ãû>} ¸ñÊ½ÏòÃû³ÆÖÐÌí¼Ó[link{pneumaticcraft:progwidget/coordinate_operator}]±äÁ¿[link{}]µÄÖµ¡£ÀýÈç£º
+[prefix{l}]é‡å‘½å[prefix{}]
+æ•ˆæžœä¸Žä½¿ç”¨å‘½åç‰Œå³å‡»æ— äººæœºä¸€æ ·ã€‚åç§°è¢«æ”¾ç½®åœ¨æ–‡æœ¬æ‹¼å›¾ä¸­ã€‚è¿™å¯ä»¥ç”¨ä½œè°ƒè¯•ç‰¹æ€§ï¼Œå› ä¸ºæ— äººæœºåœ¨é£žè¡Œè¿‡ç¨‹ä¸­åŒæ ·å¯ä»¥è¢«å‘½åã€‚æ­¤å¤–ï¼ŒåŒæ ·å¯ä»¥é€šè¿‡ ${<å˜é‡å>} æ ¼å¼å‘åç§°ä¸­æ·»åŠ [link{pneumaticcraft:progwidget/coordinate_operator}]å˜é‡[link{}]çš„å€¼ã€‚ä¾‹å¦‚ï¼š
 
-"¼ÆÊý£º${counter}"
+"è®¡æ•°ï¼š${counter}"
 
-µ±¡°counter¡±µÄÖµÎª x=1. y=2, z=3 Ê±£¬ÎÞÈË»ú½«»á±»ÃüÃûÎª"¼ÆÊý£º1, 2, 3"¡£Í¬ÑùÊÊÓÃÓÚÈçÈ«¾Ö±äÁ¿£¨Í¬Ñù£¬ÔÚ±äÁ¿ÃûÇ°¸½¼Ó #£©µÄÆäËû±äÁ¿¡£
+å½“â€œcounterâ€çš„å€¼ä¸º x=1. y=2, z=3 æ—¶ï¼Œæ— äººæœºå°†ä¼šè¢«å‘½åä¸º"è®¡æ•°ï¼š1, 2, 3"ã€‚åŒæ ·é€‚ç”¨äºŽå¦‚å…¨å±€å˜é‡ï¼ˆåŒæ ·ï¼Œåœ¨å˜é‡åå‰é™„åŠ  #ï¼‰çš„å…¶ä»–å˜é‡ã€‚

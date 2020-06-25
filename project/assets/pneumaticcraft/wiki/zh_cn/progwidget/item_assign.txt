@@ -1,6 +1,6 @@
-���ƴͼ������[link{block/programmer}]�����[link{}]�С�
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
 [prefix{l}]The Item Assign piece [prefix{}]
-��Ʒ��ֵƴͼ��һ�����԰���Ʒ���������ĸ߼�ƴͼ������Ҫô�����꣬Ҫô����Ʒ��������̸���Ǻ��ߡ�Ҫ��ȡ���������������Ϣ�ͶԱ����Ļ������ͣ�[link{pneumaticcraft:progwidget/coordinate_operator}]�������[link{}]��
+物品赋值拼图是一个可以把物品存进变量里的高级拼图。变量要么是坐标，要么是物品。现在所谈的是后者。要获取关于坐标变量的信息和对变量的基本解释，[link{pneumaticcraft:progwidget/coordinate_operator}]点击这里[link{}]。
 
-��һ����Ʒ�������������ұ��԰�һ����Ʒ�洢��һ�����������ӵĹ��������ᱻ�洢�����һ�������ָ���ı������С�ֻ����������Ʒ�ű��洢�����������ã������ǣ����ᱻ�洢��
+将一个物品过滤器连接在右边以把一个物品存储入一个变量。连接的过滤器将会被存储在由右击界面内指定的变量名中。只有真正的物品才被存储。过滤器设置（比如矿辞）不会被存储。

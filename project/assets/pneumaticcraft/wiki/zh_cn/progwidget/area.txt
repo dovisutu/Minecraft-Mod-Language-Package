@@ -1,12 +1,12 @@
-���ƴͼ������[link{block/programmer}]�����[link{}]�С�
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
-[prefix{l}]����[prefix{}]
-����ƴͼֻ����������ƴͼ�Ĳ�������Ҫ����һ��������������GPS ���߲��ܿ�ʼʹ�á��� GPS ����ѡ��һ�����ꡣȻ���һ�����ƴͼ��������ѡ�� GPS 1����ť�Ե��� GPS �������洢�����ꡣ����Ʒ����ѡ�� GPS ���ߡ����ڵڶ������꣬�ظ��ù��̡�
+[prefix{l}]区域[prefix{}]
+区域拼图只被用于其它拼图的参数。需要至少一个（建议两个）GPS 工具才能开始使用。用 GPS 工具选择一个坐标。然后，右击区域拼图，单击“选择 GPS 1”按钮以导入 GPS 工具所存储的坐标。从物品栏中选择 GPS 工具。对于第二个坐标，重复该过程。
 
-����ͨ����������������״��ͬ�����������Ƕ����д������ͼ����ʾ������ʾ�� GPS ����ѡ����������ꡣ
+可以通过这两个点生成形状不同的区域。下面是对其中大多数的图像化显示。金块表示用 GPS 工具选择的两个坐标。
 
-[prefix{l}]��װ[prefix{}]
-����������Ϊ�����һ�������壬Ҫô[prefix{l}]���[prefix{}]Ϊʵ��...
+[prefix{l}]盒装[prefix{}]
+以两个坐标为顶点的一个立方体，要么[prefix{l}]填充[prefix{}]为实心...
 [image{200,220,0.96,pneumaticcraft:textures/wiki/programming_puzzle_area_filled.png}]
 
 
@@ -35,7 +35,7 @@
 
 
 
-Ҫô��һ��[prefix{l}]�߿�[prefix{}]...
+要么是一个[prefix{l}]边框[prefix{}]...
 [image{200,510,1.1,pneumaticcraft:textures/wiki/programming_puzzle_area_frame.png}]
 
 
@@ -65,7 +65,7 @@
 
 
 
-Ҫô��[prefix{l}]����[prefix{}]�ġ�
+要么是[prefix{l}]空心[prefix{}]的。
 [image{200,810,0.60,pneumaticcraft:textures/wiki/programming_puzzle_area_wall.png}]
 
 
@@ -95,8 +95,8 @@
 
 
 
-[prefix{l}]��״[prefix{}]
-��һ������Ϊ���ġ��ڶ�������Ϊ��������ϵ�һ�㣨Ҳ���涨�˰뾶��������Ϊ������
+[prefix{l}]球状[prefix{}]
+第一个坐标为球心。第二个坐标为其外表面上的一点（也即规定了半径）。可以为空心球。
 [image{200,1140,0.80,pneumaticcraft:textures/wiki/programming_puzzle_area_sphere.png}]
 
 
@@ -126,8 +126,8 @@
 
 
 
-[prefix{l}]��״[prefix{}]
-һ����������������߶Ρ�
+[prefix{l}]线状[prefix{}]
+一条连接两个坐标的线段。
 [image{200,1470,1.40,pneumaticcraft:textures/wiki/programming_puzzle_area_line.png}]
 
 
@@ -157,8 +157,8 @@
 
 
 
-[prefix{l}]ǽ״���� x �� z ���ϣ�[prefix{}]
-��������֮��¥��״��ǽ��
+[prefix{l}]墙状（在 x 和 z 轴上）[prefix{}]
+两个坐标之间楼梯状的墙。
 [image{200,1780,1.1,pneumaticcraft:textures/wiki/programming_puzzle_area_x_wall.png}]
 
 
@@ -188,8 +188,8 @@
 
 
 
-[prefix{l}]ǽ״��y ���ϣ�[prefix{}]
-��������֮����ֱ��ǽ��
+[prefix{l}]墙状（y 轴上）[prefix{}]
+两个坐标之间竖直的墙。
 [image{200,2090,0.70,pneumaticcraft:textures/wiki/programming_puzzle_area_y_wall.png}]
 
 
@@ -207,8 +207,8 @@
 
 
 
-[prefix{l}]Բ��״[prefix{}]
-��һ������Ϊһ�������Բ�ġ��ڶ�������Ϊ��Եĵ����Բ���ϵ�һ�㡣Բ�����Գ���ÿһ�������᣺x, y, z������Ϊ����Բ���͹ܵ���û�е���Ŀ���Բ������
+[prefix{l}]圆柱状[prefix{}]
+第一个坐标为一个底面的圆心。第二个坐标为相对的底面的圆周上的一点。圆柱可以朝向每一个坐标轴：x, y, z。可以为空心圆柱和管道（没有底面的空心圆柱）。
 [image{200,2320,0.40,pneumaticcraft:textures/wiki/programming_puzzle_area_y_cylinder.png}]
 
 
@@ -228,8 +228,8 @@
 
 
 
-[prefix{l}]������״[prefix{}]
-��һ������Ϊ�������Ķ��ˣ���ˣ����ڶ�������Ϊ����� 4 �������е�һ�������������Գ���ÿһ�������᣺x, y, z������Ϊ���Ľ�������
+[prefix{l}]金字塔状[prefix{}]
+第一个坐标为金字塔的顶端（尖端）。第二个坐标为其底面 4 个顶点中的一个。金字塔可以朝向每一个坐标轴：x, y, z。可以为空心金字塔。
 [image{200,2570,0.48,pneumaticcraft:textures/wiki/programming_puzzle_area_y_pyramid.png}]
 
 
@@ -250,8 +250,8 @@
 
 
 
-[prefix{l}]����״[prefix{}]
-����״������һ�����ɵ����ģ�����������ꡣ���磬�ڽ�һ�������û������ʱ�����á�ʹ���һ���������ı���ı�����������ͼΪ�����Ϊ 3 ��ʵ�����������ָ���ĵ�һ�����꿪ʼ���㣨Ҳ����˵����һ��������Զ������������ڡ�����ڵڶ��������ǲ�һ���ģ���
+[prefix{l}]网格状[prefix{}]
+网格状将会以一个（可调整的）间隔添加坐标。例如，在将一个区域用火把照明时很有用。使用右击界面里的文本框改变这个间隔。下图为间隔设为 3 的实例。网格从所指定的第一个坐标开始计算（也就是说，第一个坐标永远会在这个区域内。这对于第二个坐标是不一定的）。
 [image{200,2860,0.80,pneumaticcraft:textures/wiki/programming_puzzle_area_grid.png}]
 
 
@@ -291,6 +291,6 @@
 
 
 
-[prefix{l}]���[prefix{}]
-�Ӹ����������ڣ�ʵ�������壩ѡȡ n ����������ꣻn ���Ա����һ�������ı������롣���磬�����������ѡ��һ��Ŀ�����ӡ�
+[prefix{l}]随机[prefix{}]
+从给定的区域内（实心正方体）选取 n 个随机的坐标；n 可以被从右击界面的文本框输入。例如，可以用来随机选定一个目标箱子。
 [image{200,3300,0.80,pneumaticcraft:textures/wiki/programming_puzzle_area_random.png}]

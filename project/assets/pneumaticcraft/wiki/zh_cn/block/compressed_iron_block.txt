@@ -1,2 +1,2 @@
-Ò»¸öÑ¹ËõÌú¿é°üº¬¾Å¸ö[link{pneumaticcraft:menu/base_concepts}]Ñ¹ËõÌú¶§[link{}]¡£ËüÓĞÒ»¸öÌØĞÔ£º ËüÊÇÒ»¸öºÜºÃµÄ[link{pneumaticcraft:menu/heat}]ÈÈµ¼Ìå[link{}]¡£Ñ¹ËõÌú¿éÒ»°ãÓÃÀ´½«ÈÈ´«µ¼µ½ÆäËûµØ·½¡£
+ä¸€ä¸ªå‹ç¼©é“å—åŒ…å«ä¹ä¸ª[link{pneumaticcraft:menu/base_concepts}]å‹ç¼©é“é”­[link{}]ã€‚å®ƒæœ‰ä¸€ä¸ªç‰¹æ€§ï¼š å®ƒæ˜¯ä¸€ä¸ªå¾ˆå¥½çš„[link{pneumaticcraft:menu/heat}]çƒ­å¯¼ä½“[link{}]ã€‚å‹ç¼©é“å—ä¸€èˆ¬ç”¨æ¥å°†çƒ­ä¼ å¯¼åˆ°å…¶ä»–åœ°æ–¹ã€‚
 [crafting{200, 80,key=block/compressed_iron_block}]

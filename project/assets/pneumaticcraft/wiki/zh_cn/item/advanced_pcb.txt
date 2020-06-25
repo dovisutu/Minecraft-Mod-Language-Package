@@ -1,3 +1,3 @@
-Ò»¸ö¿ÉÒÔ¶Ô×Å´ó¶àÊı[link{pneumaticcraft:menu/pressure_tubes}]¹ÜµÀÄ£×é[link{}]ÓÒ»÷À´Éı¼¶µÄÎïÆ·¡£
+ä¸€ä¸ªå¯ä»¥å¯¹ç€å¤§å¤šæ•°[link{pneumaticcraft:menu/pressure_tubes}]ç®¡é“æ¨¡ç»„[link{}]å³å‡»æ¥å‡çº§çš„ç‰©å“ã€‚
 
 [crafting{200, 50, key=item/advanced_pcb}]

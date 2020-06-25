@@ -1,26 +1,26 @@
 [image{200,10,0.32,pneumaticcraft:textures/wiki/conditions.png}]
-Ìõ¼þÆ´Í¼ÊÇÒ»ÏµÁÐÔÊÐíÄã¼ì²éÄ³Ð©ÊÂÇé£¬²¢ÇÒµ±Ìõ¼þÂú×ãÊ±Ìø×ªµ½³ÌÐòµÄÄ³Ò»²¿·ÖµÄ±à³ÌÆ´Í¼¡£
+æ¡ä»¶æ‹¼å›¾æ˜¯ä¸€ç³»åˆ—å…è®¸ä½ æ£€æŸ¥æŸäº›äº‹æƒ…ï¼Œå¹¶ä¸”å½“æ¡ä»¶æ»¡è¶³æ—¶è·³è½¬åˆ°ç¨‹åºçš„æŸä¸€éƒ¨åˆ†çš„ç¼–ç¨‹æ‹¼å›¾ã€‚
 
-Ã¿Ò»¸öÌõ¼þÆ´Í¼¶¼¿ÉÒÔÔÚÆä¿¿ÏÂµÄ²ÎÊý²ÛÁ¬½ÓÒ»¸öÎÄ±¾Æ´Í¼¡£µ±Âú×ãÌõ¼þÊ±£¬Æä½«ÔÚ[prefix{o}]ÓÒ[prefix{}]²àÑ°ÕÒÎÄ±¾Æ´Í¼£¬²¢Ìø×ªµ½ÒÔÆäÄÚÈÝÎªÃûµÄ[link{pneumaticcraft:progwidget/label}]±êÇ©[link{}]Æ´Í¼¡£µ±Ìõ¼þ[prefix{o}]²»[prefix{}]Âú×ãÊ±£¬Æä½«Ìø×ªµ½ÒÔÆä[prefix{o}]×ó[prefix{}]²àÎÄ±¾Æ´Í¼µÄÄÚÈÝÎªÃûµÄ±êÇ©Æ´Í¼¡£µ±Ìõ¼þÆ´Í¼ÕÒ²»µ½ÎÄ±¾Æ´Í¼²ÎÊýÊ±£¬½«¼ÌÐø´¦ÀíÁ¬½ÓÔÚÆäÏÂ·½µÄÆ´Í¼¡£
+æ¯ä¸€ä¸ªæ¡ä»¶æ‹¼å›¾éƒ½å¯ä»¥åœ¨å…¶é ä¸‹çš„å‚æ•°æ§½è¿žæŽ¥ä¸€ä¸ªæ–‡æœ¬æ‹¼å›¾ã€‚å½“æ»¡è¶³æ¡ä»¶æ—¶ï¼Œå…¶å°†åœ¨[prefix{o}]å³[prefix{}]ä¾§å¯»æ‰¾æ–‡æœ¬æ‹¼å›¾ï¼Œå¹¶è·³è½¬åˆ°ä»¥å…¶å†…å®¹ä¸ºåçš„[link{pneumaticcraft:progwidget/label}]æ ‡ç­¾[link{}]æ‹¼å›¾ã€‚å½“æ¡ä»¶[prefix{o}]ä¸[prefix{}]æ»¡è¶³æ—¶ï¼Œå…¶å°†è·³è½¬åˆ°ä»¥å…¶[prefix{o}]å·¦[prefix{}]ä¾§æ–‡æœ¬æ‹¼å›¾çš„å†…å®¹ä¸ºåçš„æ ‡ç­¾æ‹¼å›¾ã€‚å½“æ¡ä»¶æ‹¼å›¾æ‰¾ä¸åˆ°æ–‡æœ¬æ‹¼å›¾å‚æ•°æ—¶ï¼Œå°†ç»§ç»­å¤„ç†è¿žæŽ¥åœ¨å…¶ä¸‹æ–¹çš„æ‹¼å›¾ã€‚
 
-Ò»°ã¶øÑÔ£¬Äã¿ÉÒÔÓÒ»÷Ò»¿éÌõ¼þÆ´Í¼À´´ò¿ªÆä GUI µ÷½ÚÌõ¼þ¡£GUI ÖÐÒ»°ã»á°üº¬ =/>=/<= Ñ¡Ïî£¬Ò»¼¶Ò»¸ö¿ÉÒÔÊäÈëÊý×ÖµÄÎÄ±¾¿ò¡£½è´Ë£¬Äã¿ÉÒÔÉèÖÃºÃÌõ¼þ£¨ÀýÈçÏä×ÓÄÚµÄÎïÆ·Êý£©ÎªÕýºÃ 10 ¸ö£¨= Ä£Ê½£¬ÊäÈë 10£©£¬´óÓÚ 20 ¸ö£¨>= Ä£Ê½£¬ÊäÈë 21£©»òÕßÐ¡ÓÚ 12 ¸ö£¨>= Ä£Ê½£¬ÊäÈë 12£¬¼ì²éÌõ¼þÎª¼Ù »ò <= Ä£Ê½£¬ÊäÈë 11£©
+ä¸€èˆ¬è€Œè¨€ï¼Œä½ å¯ä»¥å³å‡»ä¸€å—æ¡ä»¶æ‹¼å›¾æ¥æ‰“å¼€å…¶ GUI è°ƒèŠ‚æ¡ä»¶ã€‚GUI ä¸­ä¸€èˆ¬ä¼šåŒ…å« =/>=/<= é€‰é¡¹ï¼Œä¸€çº§ä¸€ä¸ªå¯ä»¥è¾“å…¥æ•°å­—çš„æ–‡æœ¬æ¡†ã€‚å€Ÿæ­¤ï¼Œä½ å¯ä»¥è®¾ç½®å¥½æ¡ä»¶ï¼ˆä¾‹å¦‚ç®±å­å†…çš„ç‰©å“æ•°ï¼‰ä¸ºæ­£å¥½ 10 ä¸ªï¼ˆ= æ¨¡å¼ï¼Œè¾“å…¥ 10ï¼‰ï¼Œå¤§äºŽ 20 ä¸ªï¼ˆ>= æ¨¡å¼ï¼Œè¾“å…¥ 21ï¼‰æˆ–è€…å°äºŽ 12 ä¸ªï¼ˆ>= æ¨¡å¼ï¼Œè¾“å…¥ 12ï¼Œæ£€æŸ¥æ¡ä»¶ä¸ºå‡ æˆ– <= æ¨¡å¼ï¼Œè¾“å…¥ 11ï¼‰
 
-Ìõ¼þÆ´Í¼¿ÉÒÔ±»·ÖÎªÁ½Àà£ºÌõ¼þÓëÎÞÈË»úÌõ¼þ¡£ÆÕÍ¨µÄÌõ¼þÓÃÓÚ¼ì²éÔÚÊÀ½çÀïµÄ¶«Î÷¡£ÀýÈç£¬¿ÉÒÔ¼ì²éÏä×ÓÀïÊÇ·ñÓÐÒ»¶¨Á¿µÄÎïÆ·¡£ÎÞÈË»úÌõ¼þÌØ±ðÖ¸¶¨ÎÞÈË»ú¡£ÀýÈç£¬Äã¿ÉÒÔ¼ì²éÎÞÈË»úÊÇ·ñº¬ÓÐÒ»¶¨Á¿µÄÎïÆ·£¬»òÒ»¶¨µÄÆøÑ¹
+æ¡ä»¶æ‹¼å›¾å¯ä»¥è¢«åˆ†ä¸ºä¸¤ç±»ï¼šæ¡ä»¶ä¸Žæ— äººæœºæ¡ä»¶ã€‚æ™®é€šçš„æ¡ä»¶ç”¨äºŽæ£€æŸ¥åœ¨ä¸–ç•Œé‡Œçš„ä¸œè¥¿ã€‚ä¾‹å¦‚ï¼Œå¯ä»¥æ£€æŸ¥ç®±å­é‡Œæ˜¯å¦æœ‰ä¸€å®šé‡çš„ç‰©å“ã€‚æ— äººæœºæ¡ä»¶ç‰¹åˆ«æŒ‡å®šæ— äººæœºã€‚ä¾‹å¦‚ï¼Œä½ å¯ä»¥æ£€æŸ¥æ— äººæœºæ˜¯å¦å«æœ‰ä¸€å®šé‡çš„ç‰©å“ï¼Œæˆ–ä¸€å®šçš„æ°”åŽ‹
 
-[prefix{l}]Ìõ¼þ£º[prefix{}]
-´ó¶àÊý£¨Ò»°ãµÄ£©Ìõ¼þº¬ÓÐÈÎÒâ/ËùÓÐ·½¿éÑ¡Ïî¡£µ±ÄãÊ¹ÓÃÒ»¸öÌõ¼þ¼ì²é¶à¸ö·½¿éÊ±£¬Õâ½«»áÓÐÓÃ¡£ÔÚ¡°ÈÎÒâ¡±Ä£Ê½ÏÂ£¬Ñ¡ÖÐµÄÇøÓòÄÚÖÁÉÙÒ»¸ö·½¿éÐèÒªÂú×ãÌõ¼þ²ÅÄÜ¼ì²éÎªÕæ¡£ÔÚ¡°È«²¿¡±Ä£Ê½ÏÂ£¬ËùÓÐ·½¿é¶¼ÒªÂú×ã¡£
+[prefix{l}]æ¡ä»¶ï¼š[prefix{}]
+å¤§å¤šæ•°ï¼ˆä¸€èˆ¬çš„ï¼‰æ¡ä»¶å«æœ‰ä»»æ„/æ‰€æœ‰æ–¹å—é€‰é¡¹ã€‚å½“ä½ ä½¿ç”¨ä¸€ä¸ªæ¡ä»¶æ£€æŸ¥å¤šä¸ªæ–¹å—æ—¶ï¼Œè¿™å°†ä¼šæœ‰ç”¨ã€‚åœ¨â€œä»»æ„â€æ¨¡å¼ä¸‹ï¼Œé€‰ä¸­çš„åŒºåŸŸå†…è‡³å°‘ä¸€ä¸ªæ–¹å—éœ€è¦æ»¡è¶³æ¡ä»¶æ‰èƒ½æ£€æŸ¥ä¸ºçœŸã€‚åœ¨â€œå…¨éƒ¨â€æ¨¡å¼ä¸‹ï¼Œæ‰€æœ‰æ–¹å—éƒ½è¦æ»¡è¶³ã€‚
 
-ÏÂ±íÊÇËùÓÐÌõ¼þ£º
-[link{pneumaticcraft:progwidget/condition_item_inventory}]Ìõ¼þ£ºÎïÆ·[link{}]
-[link{pneumaticcraft:progwidget/condition_block}]Ìõ¼þ£º·½¿é[link{}]
-[link{pneumaticcraft:progwidget/condition_liquid_inventory}]Ìõ¼þ£ºÁ÷Ìå[link{}]
-[link{pneumaticcraft:progwidget/condition_redstone}]Ìõ¼þ£ººìÊ¯[link{}]
-[link{pneumaticcraft:progwidget/condition_entity}]Ìõ¼þ£ºÊµÌå[link{}]
-[link{pneumaticcraft:progwidget/condition_pressure}]Ìõ¼þ£ºÑ¹Á¦[link{}]
-[link{pneumaticcraft:progwidget/condition_coordinate}]Ìõ¼þ£º×ø±ê[link{}]
+ä¸‹è¡¨æ˜¯æ‰€æœ‰æ¡ä»¶ï¼š
+[link{pneumaticcraft:progwidget/condition_item_inventory}]æ¡ä»¶ï¼šç‰©å“[link{}]
+[link{pneumaticcraft:progwidget/condition_block}]æ¡ä»¶ï¼šæ–¹å—[link{}]
+[link{pneumaticcraft:progwidget/condition_liquid_inventory}]æ¡ä»¶ï¼šæµä½“[link{}]
+[link{pneumaticcraft:progwidget/condition_redstone}]æ¡ä»¶ï¼šçº¢çŸ³[link{}]
+[link{pneumaticcraft:progwidget/condition_entity}]æ¡ä»¶ï¼šå®žä½“[link{}]
+[link{pneumaticcraft:progwidget/condition_pressure}]æ¡ä»¶ï¼šåŽ‹åŠ›[link{}]
+[link{pneumaticcraft:progwidget/condition_coordinate}]æ¡ä»¶ï¼šåæ ‡[link{}]
 
-[prefix{l}]ÎÞÈË»úÌõ¼þ£º[prefix{}]
-[link{pneumaticcraft:progwidget/drone_condition_item}]ÎÞÈË»úÌõ¼þ£ºÎïÆ·[link{}]
-[link{pneumaticcraft:progwidget/drone_condition_liquid}]ÎÞÈË»úÌõ¼þ£ºÁ÷Ìå[link{}]
-[link{pneumaticcraft:progwidget/drone_condition_entity}]ÎÞÈË»úÌõ¼þ£ºÊµÌå[link{}]
-[link{pneumaticcraft:progwidget/drone_condition_pressure}]ÎÞÈË»úÌõ¼þ£ºÑ¹Á¦[link{}]
+[prefix{l}]æ— äººæœºæ¡ä»¶ï¼š[prefix{}]
+[link{pneumaticcraft:progwidget/drone_condition_item}]æ— äººæœºæ¡ä»¶ï¼šç‰©å“[link{}]
+[link{pneumaticcraft:progwidget/drone_condition_liquid}]æ— äººæœºæ¡ä»¶ï¼šæµä½“[link{}]
+[link{pneumaticcraft:progwidget/drone_condition_entity}]æ— äººæœºæ¡ä»¶ï¼šå®žä½“[link{}]
+[link{pneumaticcraft:progwidget/drone_condition_pressure}]æ— äººæœºæ¡ä»¶ï¼šåŽ‹åŠ›[link{}]

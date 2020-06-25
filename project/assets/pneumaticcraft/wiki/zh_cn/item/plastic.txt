@@ -1,8 +1,8 @@
-ºÏ³ÉÔ­ÁÏ¡£
+åˆæˆåŸæ–™ã€‚
 
-ÓÉ[link{pneumaticcraft:menu/oil}]OÔ­ÓÍ[link{}]Éú²úµÃµ½
+ç”±[link{pneumaticcraft:menu/oil}]OåŸæ²¹[link{}]ç”Ÿäº§å¾—åˆ°
 
-[prefix{l}]¾ÉºÏ³É[prefix{}]
-½«[link{pneumaticcraft:menu/worldgen}]ÖÖ×Ó[link{}]ÈÓÈë[link{pneumaticcraft:menu/pressure_chamber}]Ñ¹Á¦ÊÒ[link{}]À´ºÏ³É¡£ÌØ¶¨ÑÕÉ«µÄÖÖ×Ó»á±äÎªÏàÍ¬ÑÕÉ«µÄËÜÁÏ¡£
+[prefix{l}]æ—§åˆæˆ[prefix{}]
+å°†[link{pneumaticcraft:menu/worldgen}]ç§å­[link{}]æ‰”å…¥[link{pneumaticcraft:menu/pressure_chamber}]å‹åŠ›å®¤[link{}]æ¥åˆæˆã€‚ç‰¹å®šé¢œè‰²çš„ç§å­ä¼šå˜ä¸ºç›¸åŒé¢œè‰²çš„å¡‘æ–™ã€‚
 
 [pressureChamber{190, 70, item/plastic}]

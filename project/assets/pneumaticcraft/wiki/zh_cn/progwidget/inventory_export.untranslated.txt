@@ -1,4 +1,4 @@
-±à³ÌÆ´Í¼±»ÓÃÓÚ[link{block/programmer}]±à³ÌÆ÷[link{}]ÖÐ¡£
+ç¼–ç¨‹æ‹¼å›¾è¢«ç”¨äºŽ[link{block/programmer}]ç¼–ç¨‹å™¨[link{}]ä¸­ã€‚
 
 [prefix{l}]The 'Inv-E' (Inventory Export) piece [prefix{}]
 The opposite of [link{item/programming_puzzle_inv-i}]Inventory Import [link{}]: The Drone will move to the nearest inventory within the specified area to drop off items from the Drone's inventory.

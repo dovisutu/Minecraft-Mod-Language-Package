@@ -1,6 +1,6 @@
 {
-  "name": "ÊÀ½ç½»»¥Æ´Í¼",
-  "description": "Í¨¹ıÄ³Ğ©·½Ê½ÓëÊÀ½ç½»»¥µÄÄ£¿é¡£",
+  "name": "ä¸–ç•Œäº¤äº’æ‹¼å›¾",
+  "description": "é€šè¿‡æŸäº›æ–¹å¼ä¸ä¸–ç•Œäº¤äº’çš„æ¨¡å—ã€‚",
   "icon": "pneumaticcraft:textures/items/progwidgets/dig_piece.png",
   "parent": "programming",
   "sortnum": 2

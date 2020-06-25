@@ -1,4 +1,4 @@
-±à³ÌÆ´Í¼±»ÓÃÓÚ[link{block/programmer}]±à³ÌÆ÷[link{}]ÖÐ¡£
+ç¼–ç¨‹æ‹¼å›¾è¢«ç”¨äºŽ[link{block/programmer}]ç¼–ç¨‹å™¨[link{}]ä¸­ã€‚
 
 [prefix{l}]The Label piece [prefix{}]
 This piece is purely focused on program flow. The label defines a point in the program that [link{pneumaticcraft:progwidget/jump}] Jump[link{}] and [link{pneumaticcraft:progwidget/conditions}]Conditions [link{}] can jump to. You must attach a [link{pneumaticcraft:progwidget/text}]Text [link{}] piece to this label piece to name it with the Text piece's string value. Any jumps/conditions using a Text piece of that value will then jump to this label.

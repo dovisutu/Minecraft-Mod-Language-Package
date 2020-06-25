@@ -1,6 +1,6 @@
-���ƴͼ������[link{block/programmer}]�����[link{}]�С�
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
-[prefix{l}]�༭��ʾ��[prefix{}]
-�⽫��������ڵ����и�ʾ������Ϊָ�����ı�ƴͼ�ڵ����֡�����ʾ�ơ�������ԭ��ĸ�ʾ�ƻ���[link{pneumaticcraft:block/aphorism_tile}]���Դ�ש[link{}]��
+[prefix{l}]编辑告示牌[prefix{}]
+这将会把区域内的所有告示牌设置为指定的文本拼图内的文字。“告示牌”可以是原版的告示牌或者[link{pneumaticcraft:block/aphorism_tile}]格言瓷砖[link{}]。
 
-�����ӵ�ÿһ���ı�ƴͼ��ʾһ�����֡�����ͨ�����Ӷ���ı�ƴͼ�����ö������֡�
+所连接的每一个文本拼图表示一行文字。可以通过连接多个文本拼图来设置多行文字。

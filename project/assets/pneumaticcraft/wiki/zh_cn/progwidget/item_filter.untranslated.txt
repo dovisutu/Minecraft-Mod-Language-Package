@@ -1,4 +1,4 @@
-±à³ÌÆ´Í¼±»ÓÃÓÚ[link{block/programmer}]±à³ÌÆ÷[link{}]ÖÐ¡£
+ç¼–ç¨‹æ‹¼å›¾è¢«ç”¨äºŽ[link{block/programmer}]ç¼–ç¨‹å™¨[link{}]ä¸­ã€‚
 
 [prefix{l}]The 'I-ftr' (Item Filter) piece [prefix{}]
 The Item Filter is a piece solely used as parameter for other pieces. You can do things like specifying which blocks/items are allowed to be picked up/placed/mined/... Start by right clicking the piece. Then you can either search for an item in the game by clicking 'Search Item...' or you can select an item from your inventory by clicking 'Search Inventory...'.

@@ -1,3 +1,3 @@
-±à³ÌÆ´Í¼±»ÓÃÓÚ[link{block/programmer}]±à³ÌÆ÷[link{}]ÖĞ¡£
+ç¼–ç¨‹æ‹¼å›¾è¢«ç”¨äº[link{block/programmer}]ç¼–ç¨‹å™¨[link{}]ä¸­ã€‚
 
-²é¿´[link{block/drone_interface}]ÎŞÈË»ú½Ó¿Ú[link{}]»ñµÃ ComputerCraft Æ´Í¼µÄÓĞ¹ØĞÅÏ¢¡£
+æŸ¥çœ‹[link{block/drone_interface}]æ— äººæœºæ¥å£[link{}]è·å¾— ComputerCraft æ‹¼å›¾çš„æœ‰å…³ä¿¡æ¯ã€‚

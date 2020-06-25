@@ -1,7 +1,8 @@
 [image{320, 20, 0.5, pneumaticcraft:textures/wiki/aerial_interface.png}]
-The Aerial Interface uses a very high-tech technology to transmit items from and to a player. This player is set to the player who placed the Aerial Interface. Then, when enough pressure is applied, this block can be interacted with just like any other inventory (like Chests). You can use hoppers to insert items for example. Instead of landing in the block,  it gets sent directly to the player who placed the block. You can pump items in and out of player inventories directly with this block. You can keep a player supplied with 64 torches with a Applied Energistics Import Bus connected to the Aerial Interface for example.
+空气接口使用高端的科技与玩家之间传输物品。这个玩家被设定为放置空气接口的玩家。然后，施加足够的压力后，这个方块可以被像与其他容器（比如箱子）一样的方法交互。比如，可以用漏斗输入物品。物品并不是输入到这个方块里；其直接被传输到放置该空气接口的玩家的物品栏里。可以通过该方块直接从玩家的物品栏取出/加入物品。例如，通过与空气接口连接的 Applied Energistics 的输出总线，可以保持玩家背包里有 64 根火把。
+<译者注：此处疑似笔误，原文为 import bus（输入总线），但此处应当使用输出总线才能提供物品>
 
-The connected player's main inventory (hotbar + inventory) can be accessed from the sides and the armor slots from the top or bottom.
+所连接的玩家的主物品栏（快捷栏和物品栏）可以通过四个侧面访问，而装甲栏可以通过顶面和底面访问。
 [crafting{200, 300, key=block/aerial_interface}]
 
 
@@ -19,7 +20,7 @@ The connected player's main inventory (hotbar + inventory) can be accessed from 
 
 
 [prefix{l}]Water Breathing[prefix{}]
-��Ȼ����Ȼ�������ÿ������ܵĿ�����������ӵĻ�������Ӧ�ÿ��԰���Щ�������͸���ҡ����԰ɣ� At a cost of 200mL/tick (equal to 4 Advanced Air Compressors) the player can breathe indefinitely under water.
+显然，既然我们有用空气供能的可以与玩家连接的机器，就应该可以把这些空气传送给玩家——对吧？At a cost of 200mL/tick (equal to 4 Advanced Air Compressors) the player can breathe indefinitely under water.
 
 [prefix{l}]Interfacing RF[prefix{}]
 An Aerial Interface accepts Forge Energy (compatible with RF power). The energy stored in its internal buffer (100,000) is used to charge any chargeable item in the player's inventory (and armor slots).

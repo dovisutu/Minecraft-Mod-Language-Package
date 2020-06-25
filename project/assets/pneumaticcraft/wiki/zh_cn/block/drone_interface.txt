@@ -1,154 +1,154 @@
 [image{200, 20, 0.44,pneumaticcraft:textures/wiki/drone_interface.png}]
-ÎÞÈË»ú½Ó¿ÚÊÇÒ»¸öÖ»ÓÐÔÚ°²×°ÁË ComputerCraft Ê±²Å»á³öÏÖµÄ·½¿é¡£ËüÊÇÒ»¸öÓÃÀ´ÓëÎÞÈË»úÁªÏµµÄÍâ²¿Éè±¸¡£ÔÚ¶ÔÎÞÈË»ú±à³ÌÊ±¼ÓÈë ComputerCraft µÄ±à³ÌÆ´Í¼´Ó¶ø×öµ½ÕâÒ»µã¡£Äã¿ÉÒÔ½«ÆäÓëÆäËûµÄ±à³ÌÆ´Í¼½áºÏÔÚÒ»Æð¡£µ±ÎÞÈË»úÔËÐÐµ½ÁË ComputerCraft Æ´Í¼Ê±£¬Ëü»áÊÔÍ¼ÓëÒ»¸öÑ¡¶¨ÇøÓòÄÚ¿ÉÓÃµÄÎÞÈË»ú½Ó¿ÚÁ¬½Ó¡£Ëµ¡°¿ÉÓÃ¡±ÊÇÒòÎªÒ»¸öÎÞÈË»ú½Ó¿ÚÖ»ÄÜÒ»´ÎÓëÒ»¸öÎÞÈË»úÁ¬½Ó¡£ÏÂÁÐº¯Êý¿ÉÓÃ£º
+æ— äººæœºæŽ¥å£æ˜¯ä¸€ä¸ªåªæœ‰åœ¨å®‰è£…äº† ComputerCraft æ—¶æ‰ä¼šå‡ºçŽ°çš„æ–¹å—ã€‚å®ƒæ˜¯ä¸€ä¸ªç”¨æ¥ä¸Žæ— äººæœºè”ç³»çš„å¤–éƒ¨è®¾å¤‡ã€‚åœ¨å¯¹æ— äººæœºç¼–ç¨‹æ—¶åŠ å…¥ ComputerCraft çš„ç¼–ç¨‹æ‹¼å›¾ä»Žè€Œåšåˆ°è¿™ä¸€ç‚¹ã€‚ä½ å¯ä»¥å°†å…¶ä¸Žå…¶ä»–çš„ç¼–ç¨‹æ‹¼å›¾ç»“åˆåœ¨ä¸€èµ·ã€‚å½“æ— äººæœºè¿è¡Œåˆ°äº† ComputerCraft æ‹¼å›¾æ—¶ï¼Œå®ƒä¼šè¯•å›¾ä¸Žä¸€ä¸ªé€‰å®šåŒºåŸŸå†…å¯ç”¨çš„æ— äººæœºæŽ¥å£è¿žæŽ¥ã€‚è¯´â€œå¯ç”¨â€æ˜¯å› ä¸ºä¸€ä¸ªæ— äººæœºæŽ¥å£åªèƒ½ä¸€æ¬¡ä¸Žä¸€ä¸ªæ— äººæœºè¿žæŽ¥ã€‚ä¸‹åˆ—å‡½æ•°å¯ç”¨ï¼š
 
 [prefix{l}]isConnectedToDrone() [prefix{}] 
-Èç¹ûÒ»¸öÎÞÈË»úÓë¸ÃÎÞÈË»ú½Ó¿ÚÁ¬½Ó£¨¼´ÎÞÈË»úµÄ³ÌÐòÔËÐÐµ½ÁË ComputerCraft Æ´Í¼²¢ÇÒÁ¬½ÓÉÏÁË£©£¬·µ»Ø True¡£
+å¦‚æžœä¸€ä¸ªæ— äººæœºä¸Žè¯¥æ— äººæœºæŽ¥å£è¿žæŽ¥ï¼ˆå³æ— äººæœºçš„ç¨‹åºè¿è¡Œåˆ°äº† ComputerCraft æ‹¼å›¾å¹¶ä¸”è¿žæŽ¥ä¸Šäº†ï¼‰ï¼Œè¿”å›ž Trueã€‚
 
 [prefix{l}]getDronePressure() [prefix{}] 
-·µ»ØËùÁ¬½ÓµÄÎÞÈË»úµÄµ±Ç°ÆøÑ¹¡£
+è¿”å›žæ‰€è¿žæŽ¥çš„æ— äººæœºçš„å½“å‰æ°”åŽ‹ã€‚
 
 [prefix{l}]getDronePosition() [prefix{}] 
-·µ»Ø°üº¬ÓÐÎÞÈË»úµÄ x, y, z ×ø±êµÄÁÐ±í¡£
+è¿”å›žåŒ…å«æœ‰æ— äººæœºçš„ x, y, z åæ ‡çš„åˆ—è¡¨ã€‚
 
 [prefix{l}]exitPiece() [prefix{}] 
-ÖÕÖ¹ÎÞÈË»úËùÔÚµÄ ComputerCraft Æ´Í¼£¬Ê¹µÃÎÞÈË»úµÄ³ÌÐò½øÈëÏÂÒ»¿éÆ´Í¼¡£
+ç»ˆæ­¢æ— äººæœºæ‰€åœ¨çš„ ComputerCraft æ‹¼å›¾ï¼Œä½¿å¾—æ— äººæœºçš„ç¨‹åºè¿›å…¥ä¸‹ä¸€å—æ‹¼å›¾ã€‚
 
 [prefix{l}]getAllActions() [prefix{}] 
-·µ»Ø°üº¬ËùÓÐ¿ÉÒÔ±»Ñ¡ÔñµÄ²Ù×÷£¨±ÈÈç dig£¨ÍÚ¾ò£© »òÕß place£¨·ÅÖÃ£©£©µÄÁÐ±í£¬ÒÔÓ¢ÎÄ±íÊ¾¡£
+è¿”å›žåŒ…å«æ‰€æœ‰å¯ä»¥è¢«é€‰æ‹©çš„æ“ä½œï¼ˆæ¯”å¦‚ digï¼ˆæŒ–æŽ˜ï¼‰ æˆ–è€… placeï¼ˆæ”¾ç½®ï¼‰ï¼‰çš„åˆ—è¡¨ï¼Œä»¥è‹±æ–‡è¡¨ç¤ºã€‚
 
 [prefix{l}]setBlockOrder(<"closest"/"highToLow"/"lowToHigh">) [prefix{}]
-ÉèÖÃÎÞÈË»úÍÚ¾ò/·ÅÖÃ·½¿éµÄË³Ðò¡£
+è®¾ç½®æ— äººæœºæŒ–æŽ˜/æ”¾ç½®æ–¹å—çš„é¡ºåºã€‚
 
 [prefix{l}]getAreaTypes() [prefix{}] 
-·µ»ØËùÓÐ¿ÉÐÐµÄÇøÓòÀàÐÍ£¨filled£¨Ìî³ä£©£¬frame£¨¿ò¼Ü£©£¬sphere£¨Çò£©µÈ£©¡£
+è¿”å›žæ‰€æœ‰å¯è¡Œçš„åŒºåŸŸç±»åž‹ï¼ˆfilledï¼ˆå¡«å……ï¼‰ï¼Œframeï¼ˆæ¡†æž¶ï¼‰ï¼Œsphereï¼ˆçƒï¼‰ç­‰ï¼‰ã€‚
 
 [prefix{l}]addArea(<x>,<y>,<z>),
 addArea(<x1>,<y1>,<z1>,<x2>,<y2>,<z2>,<areaType>) [prefix{}] 
-ÏòÎÞÈË»úÄ¿Ç°´æ´¢µÄÇøÓòÌí¼ÓÒ»¸öÇøÓò¡£µ±Ê¹ÓÃºóÒ»¸öÖØÔØÊ±£¬<x1,y1,z1>±íÊ¾µÄÊÇµÚÒ»¸öµã£¨´ú±íÊÖ¶¯Ìí¼ÓÊ±µÚÒ»¸ö GPS ¹¤¾ß£©£¬<x1,y2,z2>±íÊ¾µÚ¶þ¸öµã¡£
+å‘æ— äººæœºç›®å‰å­˜å‚¨çš„åŒºåŸŸæ·»åŠ ä¸€ä¸ªåŒºåŸŸã€‚å½“ä½¿ç”¨åŽä¸€ä¸ªé‡è½½æ—¶ï¼Œ<x1,y1,z1>è¡¨ç¤ºçš„æ˜¯ç¬¬ä¸€ä¸ªç‚¹ï¼ˆä»£è¡¨æ‰‹åŠ¨æ·»åŠ æ—¶ç¬¬ä¸€ä¸ª GPS å·¥å…·ï¼‰ï¼Œ<x1,y2,z2>è¡¨ç¤ºç¬¬äºŒä¸ªç‚¹ã€‚
 
 [prefix{l}]removeArea(<x>,<y>,<z>),
-removeArea(<x1>,<y1>,<z1>,<x2>,<y2>,<z2>,<ÇøÓòÀàÐÍ>) [prefix{}] 
-´ÓÄ¿Ç°´æ´¢µÄÇøÓòÀïÉ¾³ýÒ»¸öÇøÓò£¨¼´¼ÓÈëºÚÃûµ¥£©¡£
+removeArea(<x1>,<y1>,<z1>,<x2>,<y2>,<z2>,<åŒºåŸŸç±»åž‹>) [prefix{}] 
+ä»Žç›®å‰å­˜å‚¨çš„åŒºåŸŸé‡Œåˆ é™¤ä¸€ä¸ªåŒºåŸŸï¼ˆå³åŠ å…¥é»‘åå•ï¼‰ã€‚
 
 [prefix{l}]clearArea() [prefix{}] 
-Çå¿Õµ±Ç°´æ´¢µÄÇøÓò¡£
+æ¸…ç©ºå½“å‰å­˜å‚¨çš„åŒºåŸŸã€‚
 
 [prefix{l}]showArea() [prefix{}] 
-Ê¹ÓÃÇøÓòäÖÈ¾Æ÷ÏÔÊ¾´æ´¢µÄÇøÓò£¬Èç¹ûÄãÏ°¹ßµÄ»°¡£
+ä½¿ç”¨åŒºåŸŸæ¸²æŸ“å™¨æ˜¾ç¤ºå­˜å‚¨çš„åŒºåŸŸï¼Œå¦‚æžœä½ ä¹ æƒ¯çš„è¯ã€‚
 [prefix{l}]hideArea() [prefix{}] 
-Í£Ö¹ÏÔÊ¾ÎÞÈË»ú´æ´¢µÄÇøÓò¡£
+åœæ­¢æ˜¾ç¤ºæ— äººæœºå­˜å‚¨çš„åŒºåŸŸã€‚
 
-[prefix{l}]addWhitelistItemFilter(<ÎïÆ·/·½¿éÃû>, <Ëðº¦Öµ/ÔªÊý¾Ý>, <Ê¹ÓÃÔªÊý¾Ý>, <Ê¹ÓÃNBT>, <Ê¹ÓÃ¿óÎï´Êµä>, <useModSimilarity>) [prefix{}] 
-¾ÍÏñ°ÑÒ»¸öÎïÆ·¹ýÂËÆ÷·ÅÔÚÒ»¿éÆ´Í¼µÄÓÒ²àÒ»Ñù£¨¼ÓÈë°×Ãûµ¥£©¡£ÎïÆ·/·½¿éÃûÊ¹ÓÃ Minecraft ¸ñÊ½£¬Èç£º"minecraft:stone"£¬»ò"pneumaticcraft:pressureTube"¡£¡®Ê¹ÓÃxxx¡¯²ÎÊýÈ·¶¨ÄÄÐ©¹ýÂËÆ÷»á±»Ê¹ÓÃµÄ bool ²ÎÊý£¨ºÍÎïÆ·¹ýÂËÆ÷±à³ÌÆ´Í¼ÀïµÄ¶àÑ¡¿ò¹¦ÄÜÒ»Ñù£©¡£
+[prefix{l}]addWhitelistItemFilter(<ç‰©å“/æ–¹å—å>, <æŸå®³å€¼/å…ƒæ•°æ®>, <ä½¿ç”¨å…ƒæ•°æ®>, <ä½¿ç”¨NBT>, <ä½¿ç”¨çŸ¿ç‰©è¯å…¸>, <useModSimilarity>) [prefix{}] 
+å°±åƒæŠŠä¸€ä¸ªç‰©å“è¿‡æ»¤å™¨æ”¾åœ¨ä¸€å—æ‹¼å›¾çš„å³ä¾§ä¸€æ ·ï¼ˆåŠ å…¥ç™½åå•ï¼‰ã€‚ç‰©å“/æ–¹å—åä½¿ç”¨ Minecraft æ ¼å¼ï¼Œå¦‚ï¼š"minecraft:stone"ï¼Œæˆ–"pneumaticcraft:pressureTube"ã€‚â€˜ä½¿ç”¨xxxâ€™å‚æ•°ç¡®å®šå“ªäº›è¿‡æ»¤å™¨ä¼šè¢«ä½¿ç”¨çš„ bool å‚æ•°ï¼ˆå’Œç‰©å“è¿‡æ»¤å™¨ç¼–ç¨‹æ‹¼å›¾é‡Œçš„å¤šé€‰æ¡†åŠŸèƒ½ä¸€æ ·ï¼‰ã€‚
 
-[prefix{l}]addBlacklistItemFilter(<ÎïÆ·/·½¿éÃû>, <Ëðº¦Öµ/ÔªÊý¾Ý>, <Ê¹ÓÃÔªÊý¾Ý>, <Ê¹ÓÃNBT>, <Ê¹ÓÃ¿óÎï´Êµä>, <useModSimilarity>) [prefix{}] 
-ºÍaddWhitelistItemFilter(...)Ò»Ñù£¬µ«¼ÓÈëµÄÊÇºÚÃûµ¥¡£
+[prefix{l}]addBlacklistItemFilter(<ç‰©å“/æ–¹å—å>, <æŸå®³å€¼/å…ƒæ•°æ®>, <ä½¿ç”¨å…ƒæ•°æ®>, <ä½¿ç”¨NBT>, <ä½¿ç”¨çŸ¿ç‰©è¯å…¸>, <useModSimilarity>) [prefix{}] 
+å’ŒaddWhitelistItemFilter(...)ä¸€æ ·ï¼Œä½†åŠ å…¥çš„æ˜¯é»‘åå•ã€‚
 
 [prefix{l}]clearWhitelistItemFilter() [prefix{}] 
-Çå¿Õ°×Ãûµ¥ÄÚ´æ´¢µÄÎïÆ·¹ýÂËÆ÷¡£
+æ¸…ç©ºç™½åå•å†…å­˜å‚¨çš„ç‰©å“è¿‡æ»¤å™¨ã€‚
 
 [prefix{l}]clearBlacklistItemFilter() [prefix{}] 
-Çå¿ÕºÚÃûµ¥ÄÚ´æ´¢µÄÎïÆ·¹ýÂËÆ÷¡£
+æ¸…ç©ºé»‘åå•å†…å­˜å‚¨çš„ç‰©å“è¿‡æ»¤å™¨ã€‚
 
-[prefix{l}]addWhitelistText(<ÎÄ±¾>) [prefix{}] 
-Ïò°×Ãûµ¥¼ÓÈëÒ»¸öÎÄ±¾¡£ÀýÈç£ºÖ¸¶¨¹¥»÷ÊµÌå²Ù×÷µÄ¹ýÂËÆ÷¡£
+[prefix{l}]addWhitelistText(<æ–‡æœ¬>) [prefix{}] 
+å‘ç™½åå•åŠ å…¥ä¸€ä¸ªæ–‡æœ¬ã€‚ä¾‹å¦‚ï¼šæŒ‡å®šæ”»å‡»å®žä½“æ“ä½œçš„è¿‡æ»¤å™¨ã€‚
 
-[prefix{l}]addBlacklistText(<ÎÄ±¾>) [prefix{}] 
-ÏòºÚÃûµ¥¼ÓÈëÒ»¸öÎÄ±¾¡£ÀýÈç£ºÖ¸¶¨¹¥»÷ÊµÌå²Ù×÷µÄ¹ýÂËÆ÷¡£
+[prefix{l}]addBlacklistText(<æ–‡æœ¬>) [prefix{}] 
+å‘é»‘åå•åŠ å…¥ä¸€ä¸ªæ–‡æœ¬ã€‚ä¾‹å¦‚ï¼šæŒ‡å®šæ”»å‡»å®žä½“æ“ä½œçš„è¿‡æ»¤å™¨ã€‚
 
 [prefix{l}]clearWhitelistText() [prefix{}] 
-Çå¿Õ°×Ãûµ¥ÄÚµÄÎÄ±¾¡£
+æ¸…ç©ºç™½åå•å†…çš„æ–‡æœ¬ã€‚
 
 [prefix{l}]clearBlacklistText() [prefix{}] 
-Çå¿ÕºÚÃûµ¥ÄÚµÄÎÄ±¾¡£
+æ¸…ç©ºé»‘åå•å†…çš„æ–‡æœ¬ã€‚
 
-[prefix{l}]addWhitelistLiquidFilter(<Á÷ÌåÃû>) [prefix{}] 
-¾ÍÏñ°ÑÒ»¸öÁ÷Ìå¹ýÂËÆ÷·ÅÔÚÒ»¿éÆ´Í¼µÄÓÒ²àÒ»Ñù£¨¼ÓÈë°×Ãûµ¥£©¡£Á÷ÌåÃû¿ÉÒÔÊÇÆä¡®×¢²áÃû¡¯£¬Ò²¿ÉÒÔÊÇ±¾µØ»¯µÄÃû³Æ¡£
+[prefix{l}]addWhitelistLiquidFilter(<æµä½“å>) [prefix{}] 
+å°±åƒæŠŠä¸€ä¸ªæµä½“è¿‡æ»¤å™¨æ”¾åœ¨ä¸€å—æ‹¼å›¾çš„å³ä¾§ä¸€æ ·ï¼ˆåŠ å…¥ç™½åå•ï¼‰ã€‚æµä½“åå¯ä»¥æ˜¯å…¶â€˜æ³¨å†Œåâ€™ï¼Œä¹Ÿå¯ä»¥æ˜¯æœ¬åœ°åŒ–çš„åç§°ã€‚
 
-[prefix{l}]addBlacklistLiquidFilter(<Á÷ÌåÃû>) [prefix{}] 
-ºÍaddWhitelistLiquidFilter(...)Ò»Ñù£¬µ«¼ÓÈëµÄÊÇºÚÃûµ¥¡£
+[prefix{l}]addBlacklistLiquidFilter(<æµä½“å>) [prefix{}] 
+å’ŒaddWhitelistLiquidFilter(...)ä¸€æ ·ï¼Œä½†åŠ å…¥çš„æ˜¯é»‘åå•ã€‚
 
 [prefix{l}]clearWhitelistLiquidFilter() [prefix{}] 
-Çå¿Õ°×Ãûµ¥ÄÚ´æ´¢µÄÎïÆ·¹ýÂËÆ÷¡£
+æ¸…ç©ºç™½åå•å†…å­˜å‚¨çš„ç‰©å“è¿‡æ»¤å™¨ã€‚
 
 [prefix{l}]clearBlacklistLiquidFilter() [prefix{}] 
-Çå¿ÕºÚÃûµ¥ÄÚ´æ´¢µÄÎïÆ·¹ýÂËÆ÷¡£
+æ¸…ç©ºé»‘åå•å†…å­˜å‚¨çš„ç‰©å“è¿‡æ»¤å™¨ã€‚
 
-[prefix{l}]setEmittingRedstone(<Ç¿¶È>) [prefix{}] 
-ÉèÖÃÖ´ÐÐ emitRedstone £¨Êä³öºìÊ¯ÐÅºÅ£©²Ù×÷Ê±Êä³öµÄºìÊ¯ÐÅºÅÇ¿¶È¡£.
+[prefix{l}]setEmittingRedstone(<å¼ºåº¦>) [prefix{}] 
+è®¾ç½®æ‰§è¡Œ emitRedstone ï¼ˆè¾“å‡ºçº¢çŸ³ä¿¡å·ï¼‰æ“ä½œæ—¶è¾“å‡ºçš„çº¢çŸ³ä¿¡å·å¼ºåº¦ã€‚.
 
-[prefix{l}]setRenameString(<Ãû³Æ>) [prefix{}] 
-ÉèÖÃÖ´ÐÐ rename £¨¸ÄÃû£©²Ù×÷Ê±ÎÞÈË»ú»á±»ÉèÖÃµÄÃû³Æ¡£
+[prefix{l}]setRenameString(<åç§°>) [prefix{}] 
+è®¾ç½®æ‰§è¡Œ rename ï¼ˆæ”¹åï¼‰æ“ä½œæ—¶æ— äººæœºä¼šè¢«è®¾ç½®çš„åç§°ã€‚
 
 [prefix{l}]setDropStraight(<true/false>) [prefix{}] 
-ÉèÖÃÖ´ÐÐ dropItem £¨¶ª³öÎïÆ·£©²Ù×÷Ê±ÎïÆ·»áÒÔÒ»¸öËæ»úµÄËÙ¶È¶ª³ö£¨false£©»¹ÊÇÊúÖ±ÏÂÂä£¨true£©¡£ 
+è®¾ç½®æ‰§è¡Œ dropItem ï¼ˆä¸¢å‡ºç‰©å“ï¼‰æ“ä½œæ—¶ç‰©å“ä¼šä»¥ä¸€ä¸ªéšæœºçš„é€Ÿåº¦ä¸¢å‡ºï¼ˆfalseï¼‰è¿˜æ˜¯ç«–ç›´ä¸‹è½ï¼ˆtrueï¼‰ã€‚ 
 
 [prefix{l}]setUseCount(<true/false>) [prefix{}] 
-ÉèÖÃÎÞÈË»úÊÇ·ñÓÐ×î´óÊäÈë/Êä³ö/¶ª³öÎïÆ·ÏÞÖÆ¡£ Èç¹ûÉèÖÃÎª true£¬ÐèÒªÍ¬Ê±µ÷ÓÃ setCount()¡£
+è®¾ç½®æ— äººæœºæ˜¯å¦æœ‰æœ€å¤§è¾“å…¥/è¾“å‡º/ä¸¢å‡ºç‰©å“é™åˆ¶ã€‚ å¦‚æžœè®¾ç½®ä¸º trueï¼Œéœ€è¦åŒæ—¶è°ƒç”¨ setCount()ã€‚
 
-[prefix{l}]setCount(<ÊýÁ¿>) [prefix{}] 
-ÉèÖÃ×î´óÊäÈë/Êä³ö/¶ª³öÎïÆ·ÏÞÖÆ£¬Ò²ÊÇÌõ¼þ¼ì²éÊ±±»¼ì²éµÄÎïÆ·ÊýÁ¿¡£
+[prefix{l}]setCount(<æ•°é‡>) [prefix{}] 
+è®¾ç½®æœ€å¤§è¾“å…¥/è¾“å‡º/ä¸¢å‡ºç‰©å“é™åˆ¶ï¼Œä¹Ÿæ˜¯æ¡ä»¶æ£€æŸ¥æ—¶è¢«æ£€æŸ¥çš„ç‰©å“æ•°é‡ã€‚
 
 [prefix{l}]setIsAndFunction(<true/false>) [prefix{}] 
-Ö»ÔÚÌõ¼þÖÐÊ¹ÓÃ¡£ÉèÖÃÎª true Ê±£¬ËùÓÐ±»¼ì²éµÄ·½¿éÐèÒªÂú×ãÌõ¼þ£¨Èç>= 10£©¡£
+åªåœ¨æ¡ä»¶ä¸­ä½¿ç”¨ã€‚è®¾ç½®ä¸º true æ—¶ï¼Œæ‰€æœ‰è¢«æ£€æŸ¥çš„æ–¹å—éœ€è¦æ»¡è¶³æ¡ä»¶ï¼ˆå¦‚>= 10ï¼‰ã€‚
 
 [prefix{l}]setOperator(<">=" / "=">) [prefix{}] 
-Ö»ÔÚÌõ¼þÖÐÊ¹ÓÃ¡£ÉèÖÃ¸ÃÌõ¼þ¼ì²éÏàµÈÓÚ£¨"="£©»òÊÇ´óÓÚµÈÓÚ£¨">="£©Ö¸¶¨ÊýÁ¿¡£Õâ¸öÊýÁ¿¿ÉÒÔÓÃ setCount() ÉèÖÃ¡£
+åªåœ¨æ¡ä»¶ä¸­ä½¿ç”¨ã€‚è®¾ç½®è¯¥æ¡ä»¶æ£€æŸ¥ç›¸ç­‰äºŽï¼ˆ"="ï¼‰æˆ–æ˜¯å¤§äºŽç­‰äºŽï¼ˆ">="ï¼‰æŒ‡å®šæ•°é‡ã€‚è¿™ä¸ªæ•°é‡å¯ä»¥ç”¨ setCount() è®¾ç½®ã€‚
 
 [prefix{l}]evaluateCondition() [prefix{}] 
-·µ»Ø true/false¡£Ö»ÔÚÌõ¼þÖÐÊ¹ÓÃ¡£Æä½«¸ù¾ÝÌõ¼þÊÇ·ñÂú×ã·µ»Ø true/false¡£ÎÞÈË»úÌõ¼þ¿ÉÒÔÔÚµ÷ÓÃ setAction() ºó±»¼ì²é¡£×¢Òâ£ºÈç¹ûÄãÒª¼ì²éµÄÊÇ·ÇÎÞÈË»úÌõ¼þ£¬ÐèÒªµÈµ½ isActionDone¡£
+è¿”å›ž true/falseã€‚åªåœ¨æ¡ä»¶ä¸­ä½¿ç”¨ã€‚å…¶å°†æ ¹æ®æ¡ä»¶æ˜¯å¦æ»¡è¶³è¿”å›ž true/falseã€‚æ— äººæœºæ¡ä»¶å¯ä»¥åœ¨è°ƒç”¨ setAction() åŽè¢«æ£€æŸ¥ã€‚æ³¨æ„ï¼šå¦‚æžœä½ è¦æ£€æŸ¥çš„æ˜¯éžæ— äººæœºæ¡ä»¶ï¼Œéœ€è¦ç­‰åˆ° isActionDoneã€‚
 
-[prefix{l}]setSide(<³¯Ïò>, <¿É·ÃÎÊÐÔ>) [prefix{}] 
-ÉèÖÃ·½¿éÄ³Ò»Ãæ¿ÉÒÔ±»·ÃÎÊ¡£ÓÃÓÚ  Inventory Import / Export£¨ÊäÈë/³öÈÝÆ÷£©Ê±ÉèÖÃÎÞÈË»ú¿ÉÒÔ·ÃÎÊÈÝÆ÷µÄÄÄÒ»Ãæ¡£Ò²¿ÉÒÔÓÃÓÚ Place£¨·ÅÖÃ£©Ö¸Áî£¬´ËÊ±¾ö¶¨ÈçºÎ·ÅÖÃ·½¿é¡£
+[prefix{l}]setSide(<æœå‘>, <å¯è®¿é—®æ€§>) [prefix{}] 
+è®¾ç½®æ–¹å—æŸä¸€é¢å¯ä»¥è¢«è®¿é—®ã€‚ç”¨äºŽ  Inventory Import / Exportï¼ˆè¾“å…¥/å‡ºå®¹å™¨ï¼‰æ—¶è®¾ç½®æ— äººæœºå¯ä»¥è®¿é—®å®¹å™¨çš„å“ªä¸€é¢ã€‚ä¹Ÿå¯ä»¥ç”¨äºŽ Placeï¼ˆæ”¾ç½®ï¼‰æŒ‡ä»¤ï¼Œæ­¤æ—¶å†³å®šå¦‚ä½•æ”¾ç½®æ–¹å—ã€‚
 
-[prefix{l}]setSides(<ÏÂ>, <ÉÏ>, <±±>, <ÄÏ>, <¶«>, <Î÷>) [prefix{}] 
-ºÍÉÏÒ»¸öÖØÔØÒ»Ñù£¬Õâ´ÎÒ»´ÎÐÔÉèÖÃËùÓÐÃæ£¨6 ¸ö bool£©
+[prefix{l}]setSides(<ä¸‹>, <ä¸Š>, <åŒ—>, <å—>, <ä¸œ>, <è¥¿>) [prefix{}] 
+å’Œä¸Šä¸€ä¸ªé‡è½½ä¸€æ ·ï¼Œè¿™æ¬¡ä¸€æ¬¡æ€§è®¾ç½®æ‰€æœ‰é¢ï¼ˆ6 ä¸ª boolï¼‰
 
 [prefix{l}]setUseMaxActions(<true/false>) [prefix{}] 
-ÉèÖÃÎÞÈË»úÊÇ·ñÓÐÔÚÖ¸Áî±»ÈÏÎª¡®Íê³É¡¯Ç°ÔÚÒ»¸ö·½¿éÉÏÖ´ÐÐµÄ×î¶à²Ù×÷ÏÞÖÆ¡£¶Ô Place, Dig, Rifht-Click ²Ù×÷ÊÊÓÃ¡£Èç¹ûÉèÖÃÎª true£¬ÐèÒªÍ¬Ê±µ÷ÓÃ setMaxActions()¡£
+è®¾ç½®æ— äººæœºæ˜¯å¦æœ‰åœ¨æŒ‡ä»¤è¢«è®¤ä¸ºâ€˜å®Œæˆâ€™å‰åœ¨ä¸€ä¸ªæ–¹å—ä¸Šæ‰§è¡Œçš„æœ€å¤šæ“ä½œé™åˆ¶ã€‚å¯¹ Place, Dig, Rifht-Click æ“ä½œé€‚ç”¨ã€‚å¦‚æžœè®¾ç½®ä¸º trueï¼Œéœ€è¦åŒæ—¶è°ƒç”¨ setMaxActions()ã€‚
 
-[prefix{l}]setMaxActions(<ÊýÁ¿>) [prefix{}] 
-ÉèÖÃÔÚÖ¸Áî±»ÈÏÎª¡®Íê³É¡¯Ç°ÔÚÒ»¸ö·½¿éÉÏÖ´ÐÐµÄ×î¶à²Ù×÷ÏÞÖÆ¡£¶Ô Place, Dig, Rifht-Click ²Ù×÷ÊÊÓÃ¡£È·±£µ÷ÓÃÁË setUseMaxActions(true) ÒÔÆôÓÃ¿ØÖÆ¡£
+[prefix{l}]setMaxActions(<æ•°é‡>) [prefix{}] 
+è®¾ç½®åœ¨æŒ‡ä»¤è¢«è®¤ä¸ºâ€˜å®Œæˆâ€™å‰åœ¨ä¸€ä¸ªæ–¹å—ä¸Šæ‰§è¡Œçš„æœ€å¤šæ“ä½œé™åˆ¶ã€‚å¯¹ Place, Dig, Rifht-Click æ“ä½œé€‚ç”¨ã€‚ç¡®ä¿è°ƒç”¨äº† setUseMaxActions(true) ä»¥å¯ç”¨æŽ§åˆ¶ã€‚
 
-[prefix{l}]setCraftingGrid(<ÎïÆ·/·½¿éÃû>, <ÎïÆ·/·½¿éÃû>, ...(9¸ö)) [prefix{}] 
-ÉèÖÃºÃÔÚ Crafting Ö¸Áî±»µ÷ÓÃÊ±ÊÊÓÃµÄºÏ³ÉÅä·½¡£ÐèÒªÖ¸¶¨ËùÓÐ 9 ¸ö²ÎÓëºÏ³ÉÅä·½µÄÎïÆ·¡£ÓÃ nil ´ú±í¿Õ¸ñ¡£ÃüÃû¸ñÊ½ÓëÉèÖÃÎïÆ·¹ýÂËÆ÷µÄ¸ñÊ½Ò»Ñù¡£
+[prefix{l}]setCraftingGrid(<ç‰©å“/æ–¹å—å>, <ç‰©å“/æ–¹å—å>, ...(9ä¸ª)) [prefix{}] 
+è®¾ç½®å¥½åœ¨ Crafting æŒ‡ä»¤è¢«è°ƒç”¨æ—¶é€‚ç”¨çš„åˆæˆé…æ–¹ã€‚éœ€è¦æŒ‡å®šæ‰€æœ‰ 9 ä¸ªå‚ä¸Žåˆæˆé…æ–¹çš„ç‰©å“ã€‚ç”¨ nil ä»£è¡¨ç©ºæ ¼ã€‚å‘½åæ ¼å¼ä¸Žè®¾ç½®ç‰©å“è¿‡æ»¤å™¨çš„æ ¼å¼ä¸€æ ·ã€‚
 
 [prefix{l}]setSneaking(<true/false>) [prefix{}]
-Ö»ÓÃÔÚ Right-Cilck Ö¸Áî¡£ÉèÖÃÓÒ¼üÊ±ÊÇ·ñÄ£ÄâÇ±ÐÐ¡£
+åªç”¨åœ¨ Right-Cilck æŒ‡ä»¤ã€‚è®¾ç½®å³é”®æ—¶æ˜¯å¦æ¨¡æ‹Ÿæ½œè¡Œã€‚
 
 [prefix{l}]setPlaceFluidBlocks(<true/false>) [prefix{}]
-Ö»ÓÃÔÚ Liquid Export Ö¸Áî¡£ÉèÖÃÎª true Ê±ÎÞÈË»ú¿ÉÒÔ·ÅÖÃÏÂÁ÷Ìå·½¿é¡£
+åªç”¨åœ¨ Liquid Export æŒ‡ä»¤ã€‚è®¾ç½®ä¸º true æ—¶æ— äººæœºå¯ä»¥æ”¾ç½®ä¸‹æµä½“æ–¹å—ã€‚
 
-[prefix{l}]setVariable(<±äÁ¿Ãû>, <true/false>) [prefix{}]
-[prefix{l}]setVariable(<±äÁ¿Ãû>, <x>) [prefix{}]
-[prefix{l}]setVariable(<±äÁ¿Ãû>, <x>, <y>, <z>) [prefix{}]
-ÉèÖÃÎÞÈË»úµÄ[link{pneumaticcraft:progwidget/coordinate_operator}]±äÁ¿[link{}]¡£µ±´«Èë true Ê±£¬×ø±ê»á±»ÉèÎª <1,0,0>¡£Í¬Ñù£¬false »á±»ÉèÎª <0,0,0>¡£Í¬Ñù¿ÉÒÔÉèÖÃÈ«¾Ö±äÁ¿£¨Ê¹ÓÃ#£©¡£
+[prefix{l}]setVariable(<å˜é‡å>, <true/false>) [prefix{}]
+[prefix{l}]setVariable(<å˜é‡å>, <x>) [prefix{}]
+[prefix{l}]setVariable(<å˜é‡å>, <x>, <y>, <z>) [prefix{}]
+è®¾ç½®æ— äººæœºçš„[link{pneumaticcraft:progwidget/coordinate_operator}]å˜é‡[link{}]ã€‚å½“ä¼ å…¥ true æ—¶ï¼Œåæ ‡ä¼šè¢«è®¾ä¸º <1,0,0>ã€‚åŒæ ·ï¼Œfalse ä¼šè¢«è®¾ä¸º <0,0,0>ã€‚åŒæ ·å¯ä»¥è®¾ç½®å…¨å±€å˜é‡ï¼ˆä½¿ç”¨#ï¼‰ã€‚
 
-[prefix{l}]getVariable(<±äÁ¿Ãû>) [prefix{}]
-·µ»ØÎÞÈË»úµÄ±äÁ¿Öµ<x,y,z>¡£Í¬Ñù¿ÉÒÔ·µ»ØÈ«¾Ö£¨Ê¹ÓÃ#£©ºÍ¾Ö²¿£¨Ê¹ÓÃ$£©±äÁ¿¡£
+[prefix{l}]getVariable(<å˜é‡å>) [prefix{}]
+è¿”å›žæ— äººæœºçš„å˜é‡å€¼<x,y,z>ã€‚åŒæ ·å¯ä»¥è¿”å›žå…¨å±€ï¼ˆä½¿ç”¨#ï¼‰å’Œå±€éƒ¨ï¼ˆä½¿ç”¨$ï¼‰å˜é‡ã€‚
 
-[prefix{l}]setSignText(<ÐÐ1>, <ÐÐ2>, ..., <ÐÐN>) [prefix{}]
-ÉèÖÃ½«Í¨¹ý Edit Sign Ö¸Áî±»Ð´Èë¸æÊ¾ÅÆµÄÎÄ±¾¡£
+[prefix{l}]setSignText(<è¡Œ1>, <è¡Œ2>, ..., <è¡ŒN>) [prefix{}]
+è®¾ç½®å°†é€šè¿‡ Edit Sign æŒ‡ä»¤è¢«å†™å…¥å‘Šç¤ºç‰Œçš„æ–‡æœ¬ã€‚
 
 [prefix{l}]setRequiresTool(<true/false>) [prefix{}]
-ÉèÖÃÎÞÈË»úÔÚÖ´ÐÐ Dig »ò Harvest Ö¸ÁîÊ±Ê¹ÓÃ¹¤¾ß¡£
+è®¾ç½®æ— äººæœºåœ¨æ‰§è¡Œ Dig æˆ– Harvest æŒ‡ä»¤æ—¶ä½¿ç”¨å·¥å…·ã€‚
 
-[prefix{l}]setAction(<²Ù×÷>) [prefix{}] 
-ÉèÖÃ²Ù×÷£¨ÓÃ×Ö·û´®±íÊ¾£©¡£²ÎÊýÓ¦µ±ÊÇ getAllActions ·µ»ØµÄÁÐ±íÖÐµÄÒ»¸ö¡£
+[prefix{l}]setAction(<æ“ä½œ>) [prefix{}] 
+è®¾ç½®æ“ä½œï¼ˆç”¨å­—ç¬¦ä¸²è¡¨ç¤ºï¼‰ã€‚å‚æ•°åº”å½“æ˜¯ getAllActions è¿”å›žçš„åˆ—è¡¨ä¸­çš„ä¸€ä¸ªã€‚
 
 [prefix{l}]getAction() [prefix{}]
-·µ»Ø´ú±íÉÏÒ»¸ö±» setAction ÉèÖÃµÄ²Ù×÷µÄ×Ö·û´®¡£µ±Ã»ÓÐ²Ù×÷±»ÉèÖÃÊ±·µ»Ø nil¡£¿ÉÒÔÓÃÒÔÈ·±£Ö»ÔÚÆä²»·µ»Ø nil Ê±²Åµ÷ÓÃ isActionDone¡£
+è¿”å›žä»£è¡¨ä¸Šä¸€ä¸ªè¢« setAction è®¾ç½®çš„æ“ä½œçš„å­—ç¬¦ä¸²ã€‚å½“æ²¡æœ‰æ“ä½œè¢«è®¾ç½®æ—¶è¿”å›ž nilã€‚å¯ä»¥ç”¨ä»¥ç¡®ä¿åªåœ¨å…¶ä¸è¿”å›ž nil æ—¶æ‰è°ƒç”¨ isActionDoneã€‚
 
 [prefix{l}]abortAction() [prefix{}] 
-ÖÕÖ¹ÕýÔÚÔËÐÐµÄ²Ù×÷¡£
+ç»ˆæ­¢æ­£åœ¨è¿è¡Œçš„æ“ä½œã€‚
 
 [prefix{l}]isActionDone() [prefix{}] 
-Èç¹ûÄ¿Ç°µÄ²Ù×÷ÒÑ¾­½áÊø£¨Èç£ºgoto µ½ÁËÄ¿±êÎ»ÖÃ£¬inventory import ÎÞ·¨¼ÌÐøÊäÈë£¬dig ÍÚµôÁËËùÓÐÖ¸¶¨·½¿é£©£¬·µ»Ø true¡£
+å¦‚æžœç›®å‰çš„æ“ä½œå·²ç»ç»“æŸï¼ˆå¦‚ï¼šgoto åˆ°äº†ç›®æ ‡ä½ç½®ï¼Œinventory import æ— æ³•ç»§ç»­è¾“å…¥ï¼Œdig æŒ–æŽ‰äº†æ‰€æœ‰æŒ‡å®šæ–¹å—ï¼‰ï¼Œè¿”å›ž trueã€‚
 
 [prefix{l}]forgetTarget() [prefix{}] 
-µ±ÎÞÈË»ú£¨ÔÚ Entity Attack Ö¸ÁîÖÐ£©±»Ö¸¶¨ÁËÒ»¸öÊµÌå£¬Í£Ö¹¹¥»÷¸ÃÊµÌå¡£
+å½“æ— äººæœºï¼ˆåœ¨ Entity Attack æŒ‡ä»¤ä¸­ï¼‰è¢«æŒ‡å®šäº†ä¸€ä¸ªå®žä½“ï¼Œåœæ­¢æ”»å‡»è¯¥å®žä½“ã€‚
 
-[prefix{l}]getUpgrades(<Éý¼¶>) [prefix{}] 
-»ñÈ¡¸ø¶¨ÀàÐÍµÄ±»°²×°µÄÉý¼¶µÄÊýÁ¿¡£¡°ÀàÐÍ¡±ÊÇÒÔ0Îª»ù×¼µÄ£¨ÔÚ´´ÔìÄ£Ê½ÖÐ£¬»òÕß°´ NBT£©Éý¼¶µÄË÷Òý¡£Ò²¿ÉÒÔÊÇÊ¹ÓÃ NEIÊ±µÄÔªÊý¾Ý¡£ÀýÈç£¬ËÙ¶ÈÉý¼¶µÄË÷ÒýÎª 5¡£
+[prefix{l}]getUpgrades(<å‡çº§>) [prefix{}] 
+èŽ·å–ç»™å®šç±»åž‹çš„è¢«å®‰è£…çš„å‡çº§çš„æ•°é‡ã€‚â€œç±»åž‹â€æ˜¯ä»¥0ä¸ºåŸºå‡†çš„ï¼ˆåœ¨åˆ›é€ æ¨¡å¼ä¸­ï¼Œæˆ–è€…æŒ‰ NBTï¼‰å‡çº§çš„ç´¢å¼•ã€‚ä¹Ÿå¯ä»¥æ˜¯ä½¿ç”¨ NEIæ—¶çš„å…ƒæ•°æ®ã€‚ä¾‹å¦‚ï¼Œé€Ÿåº¦å‡çº§çš„ç´¢å¼•ä¸º 5ã€‚
 
-µ±ÎÞÈË»ú±»¸üÐÂÊ±£¬Ò»¸ö»·»á´ÓÎÞÈË»ú½Ó¿ÚÖÐ³öÏÖ£¬±íÊ¾¸üÐÂ³É¹¦¡£»·µÄÑÕÉ«ÓëËù¹ØÁªµÄÆ´Í¼µÄÑÕÉ«ÏàÍ¬¡£
+å½“æ— äººæœºè¢«æ›´æ–°æ—¶ï¼Œä¸€ä¸ªçŽ¯ä¼šä»Žæ— äººæœºæŽ¥å£ä¸­å‡ºçŽ°ï¼Œè¡¨ç¤ºæ›´æ–°æˆåŠŸã€‚çŽ¯çš„é¢œè‰²ä¸Žæ‰€å…³è”çš„æ‹¼å›¾çš„é¢œè‰²ç›¸åŒã€‚

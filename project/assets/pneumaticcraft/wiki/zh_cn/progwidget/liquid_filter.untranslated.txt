@@ -1,4 +1,4 @@
-±à³ÌÆ´Í¼±»ÓÃÓÚ[link{block/programmer}]±à³ÌÆ÷[link{}]ÖÐ¡£
+ç¼–ç¨‹æ‹¼å›¾è¢«ç”¨äºŽ[link{block/programmer}]ç¼–ç¨‹å™¨[link{}]ä¸­ã€‚
 
 [prefix{l}]The Liquid Filter Piece [prefix{}]
 The Liquid Filter is a piece solely used as parameter for other pieces. You can specify a certain liquid, by right clicking the piece and selecting/searching for a liquid. This can be used to only import/export/check certain liquids.

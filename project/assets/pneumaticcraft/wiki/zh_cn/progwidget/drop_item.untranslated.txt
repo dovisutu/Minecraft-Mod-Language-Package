@@ -1,4 +1,4 @@
-±à³ÌÆ´Í¼±»ÓÃÓÚ[link{block/programmer}]±à³ÌÆ÷[link{}]ÖÐ¡£
+ç¼–ç¨‹æ‹¼å›¾è¢«ç”¨äºŽ[link{block/programmer}]ç¼–ç¨‹å™¨[link{}]ä¸­ã€‚
 
 [prefix{l}]The Item Drop piece [prefix{}]
 This will make the Drone drop items out of its inventory in the specified area. By right clicking the Drop Item piece you can specify how many items per position in the area are allowed to be dropped. You can also toggle between 'Random' and 'Straight' spreading modes, which mean they will drop the item with a speed, or drop the item straight down respectively.

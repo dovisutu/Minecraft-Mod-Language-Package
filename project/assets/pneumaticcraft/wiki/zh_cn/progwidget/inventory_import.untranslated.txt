@@ -1,4 +1,4 @@
-±à³ÌÆ´Í¼±»ÓÃÓÚ[link{block/programmer}]±à³ÌÆ÷[link{}]ÖÐ¡£
+ç¼–ç¨‹æ‹¼å›¾è¢«ç”¨äºŽ[link{block/programmer}]ç¼–ç¨‹å™¨[link{}]ä¸­ã€‚
 
 [prefix{l}]The 'Inv-I' (Inventory Import) piece [prefix{}]
 This will make the Drone move to the nearest inventory within the specified area. It will then take items from that inventory and it will put them in the Drone's inventory.

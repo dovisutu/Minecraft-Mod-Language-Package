@@ -1,3 +1,3 @@
-合成用品
+鍚堟垚鐢ㄥ搧
 
 [pressureChamber{190, 40, item/transistor}]

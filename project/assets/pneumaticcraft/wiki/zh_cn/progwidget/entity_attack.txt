@@ -1,13 +1,13 @@
-���ƴͼ������[link{block/programmer}]�����[link{}]�С�
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
 
-[prefix{l}]����ʵ��[prefix{}]
-���˻����ṥ�����������ڵ��κ�ʵ�塣ע�⣺����������ƴͼ����������Ϊ�Σ��κ����ӵ�����ƴͼ�����Գ�����ģʽ������������������ͨ����/��������������ͬ��״������
+[prefix{l}]攻击实体[prefix{}]
+无人机将会攻击给定区域内的任何实体。注意：无论在区域拼图内区域设置为何，任何连接的区域拼图都会以长方体模式被处理。不过，可以通过黑/白名单来创建不同形状的区域。
 
-����ͨ����Ϊʵ����������ı�ƴͼָ����Щʵ��Ҫ��������Ʃ�磺������Ҫ�����˻�����������ң��ڹ���ʵ��ƴͼ���Ҳ�����һ��д�С�@player�����ı�ƴͼ������㲻�뱻���������������һ��д�������������ı�ƴͼ��
-�������д[link{pneumaticcraft:misc/entity_filter}]ʵ�������[link{}]�Ĺ���
+可以通过作为实体过滤器的文本拼图指定哪些实体要被攻击。譬如：假如想要让无人机攻击所有玩家，在攻击实体拼图的右侧连接一个写有“@player”的文本拼图。如果你不想被攻击，在左侧连接一个写有你的玩家名的文本拼图。
+这遵从填写[link{pneumaticcraft:misc/entity_filter}]实体过滤器[link{}]的规则。
 
-[prefix{l}]��ս����[prefix{}]
-���˻�����װ����ʹ����Ʒ�����κεĽ�ս�������й����������Ʒ�����ж���������佫��ѡ���˺�ֵ������һ��������ʹ��[link{pneumaticcraft:progwidget/inventory_import}]������������Ʒ[link{}]ƴͼ�������˻��ṩһ������������ǿ���Ƽ��ģ���Ϊ���˻������Ľ�ս�����ܵ͡�
+[prefix{l}]近战攻击[prefix{}]
+无人机将会装备并使用物品栏中任何的近战武器进行攻击。如果物品栏里有多个武器，其将会选择伤害值最大的那一个。可以使用[link{pneumaticcraft:progwidget/inventory_import}]从容器输入物品[link{}]拼图来给无人机提供一个武器；这是强烈推荐的，因为无人机自身的近战攻击很低。
 
-[prefix{l}]��Χ����[prefix{}]
-Ϊ���˻���װʵ��׷��������֮�����˻����ḽ��һ�������ֻ�ǹ���ṩ�����ֻ�ǹ��ʱ��ʹ��[link{pneumaticcraft:progwidget/inventory_import}]������������Ʒ[link{}]ƴͼ�����˻�����ʹ�ô˻�ǹ�����й�����Ĭ�Ϸ�Χ�� 16 �񣬿���ͨ����װ��� 16 ����Χ���������ӣ���� 32 ��
+[prefix{l}]范围攻击[prefix{}]
+为无人机安装实体追踪器升级之后，无人机将会附带一个加特林机枪。提供加特林机枪子时（使用[link{pneumaticcraft:progwidget/inventory_import}]从容器输入物品[link{}]拼图）无人机将会使用此机枪来进行攻击。默认范围是 16 格，可以通过加装最多 16 个范围升级来增加，最大 32 格。

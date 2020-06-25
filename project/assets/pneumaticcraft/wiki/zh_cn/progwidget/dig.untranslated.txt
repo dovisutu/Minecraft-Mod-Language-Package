@@ -1,4 +1,4 @@
-±à³ÌÆ´Í¼±»ÓÃÓÚ[link{block/programmer}]±à³ÌÆ÷[link{}]ÖÐ¡£
+ç¼–ç¨‹æ‹¼å›¾è¢«ç”¨äºŽ[link{block/programmer}]ç¼–ç¨‹å™¨[link{}]ä¸­ã€‚
 
 [prefix{l}]The 'Dig' (Dig Blocks) piece [prefix{}]
 The Drone will dig/mine the blocks within the specified area. Items that are dropped from the blocks will not be picked up by the Drone. The order in which the blocks will be dug is similar to the 'Place' piece's. Also like with the 'Place' piece, you can control if the area should be digged layer by layer (top to bottom or bottom to top).

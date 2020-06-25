@@ -1,6 +1,6 @@
 {
-  "name": "Ìõ¼şÆ´Í¼",
-  "description": "ÆÀ¹ÀÌõ¼şµÄÄ£¿é¡£",
+  "name": "æ¡ä»¶æ‹¼å›¾",
+  "description": "è¯„ä¼°æ¡ä»¶çš„æ¨¡å—ã€‚",
   "icon": "pneumaticcraft:textures/items/progwidgets/condition_block_piece.png",
   "parent": "programming",
   "sortnum": 3

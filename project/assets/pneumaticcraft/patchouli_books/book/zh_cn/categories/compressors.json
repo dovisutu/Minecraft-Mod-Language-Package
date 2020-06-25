@@ -1,6 +1,6 @@
 {
-  "name": "Ñ¹Ëõ»ú",
-  "description": "Ñ¹Ëõ»úÊÇ¿ÉÒÔÍ¨¹ıÑ¹Ëõ¿ÕÆøÖÆÔì $(l:base_concepts/pressure)Ñ¹Á¦/$µÄ»úÆ÷¡£ÕâÊÇ $(pncr) ÀïµÄÄÜÁ¿À´Ô´¡£",
+  "name": "å‹ç¼©æœº",
+  "description": "å‹ç¼©æœºæ˜¯å¯ä»¥é€šè¿‡å‹ç¼©ç©ºæ°”åˆ¶é€  $(l:base_concepts/pressure)å‹åŠ›/$çš„æœºå™¨ã€‚è¿™æ˜¯ $(pncr) é‡Œçš„èƒ½é‡æ¥æºã€‚",
   "icon": "pneumaticcraft:air_compressor",
   "sortnum": 1
 }

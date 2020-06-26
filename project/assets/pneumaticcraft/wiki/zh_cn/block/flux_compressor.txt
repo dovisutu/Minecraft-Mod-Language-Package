@@ -1,4 +1,4 @@
-通量压缩机将 Forge 能量（与红石通量和其他几个 mod 的能量系统相兼容，包括但不限于：沉浸工艺，EnderIO，Actually Additions）转换为压缩空气。默认消耗 40 RF/t，可以使用[link{pneumaticcraft:menu/machine_upgrades}]速度升级[link{}]来升级。这将会把 RF 输入速度提高为原来的 2 倍。也即：默认 80 RF/t，可以通过速度升级加快。
+通量压缩机将 Forge 能量（与红石通量和其他几个 mod 的能量系统相兼容，包括但不限于：沉浸工艺，EnderIO，Actually Additions）转换为压缩空气。默认消耗 40 RF/t，可以使用[link{pneumaticcraft:menu/machine_upgrades}]速度升级[link{}]来升级。这将会把 RF 输入速度提高为原来的 2 倍。也即：80 RF/t，可以通过速度升级接着加快。
 
 影响该机器的一个重要因素是其温度。该机器需要被[link{pneumaticcraft:menu/heat}]冷却[link{}]，否则其效率会随着温度增高而降低，直到没有任何空气被产生。
 [crafting{200, 200, key=block/flux_compressor}]

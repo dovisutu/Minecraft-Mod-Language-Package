@@ -1,0 +1,8 @@
+散热片是一个用于散[link{pneumaticcraft:menu/heat}]热[link{}]的方块。它与空气间有较低的热阻，从而可以散热。其一般的目的是为产生热量的压缩机散热。注意：超过 50℃ 的散热片会对你产生烧灼伤害！
+[image{200,5,0.60,pneumaticcraft:textures/wiki/heat_sink.png}]
+ 
+散热片只与其实心一侧所连接的方块有热连接。因此，需要像[link{block/compressed_iron_block}]压缩铁块[link{}]一样的热导体才能连接一排散热片。
+[image{200,245,0.60,pneumaticcraft:textures/wiki/compressor_cooling.png}]
+
+把散热片放置在[link{item/air_grate_module}]空气栅管道模块[link{}]的工作范围内可以提高其效率。放下装有该模块的管道时这个范围将会显示。效率提升可以叠加。
+[crafting{200, 480, key=block/heat_sink}]

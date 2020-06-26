@@ -1,0 +1,26 @@
+[image{340, 20,0.6, pneumaticcraft:textures/wiki/pressure_chamber_interface.png}]
+这个特殊的[link{pneumaticcraft:menu/pressure_chamber}]压力室[link{}]的组成方块可以用来自动化物品的压缩过程。这可以通过（原版或气动工艺中的）漏斗或者任何其他 mod 的管道系统做到。要做到这一点，需要像放置压力室阀门一样放置：其必须被正确地朝向并且必须接触压力室内的空气方块。压力室接口有两个模式：输出模式，将压力室内的物品输出；以及输入模式，将物品输入压力室。可以通过摆放的朝向确定其在哪一个模式下工作。如果带有 I（Import，输入）的面朝向压力室外，其为输入模式。类似的，如果带有 O（Output，输出）的面朝向压力室外，其为输出模式。
+
+[prefix{l}]接口过滤器[prefix{}]
+有好几种方法选择哪些物品应该输入/出压力室。点击过滤器标签里的按钮在其之间切换。以下是所有不同的过滤器：
+
+[image{320, 310,0.5, pneumaticcraft:textures/wiki/interface_item_filter.png}]
+[prefix{n}]物品[prefix{}]，按物品判断。只有和该过滤器里的物品相同的物品可以通过。留空该过滤器将使得接口输入/出任何物品。
+
+[image{320, 390,0.5, pneumaticcraft:textures/wiki/interface_name_contains.png}]
+-[prefix{n}]物品名* 包含 'x'[prefix{}]，当物品名包含一个特定的字符串时可以通过。例如，想取出所有锭，可以输入“锭”。每一个包含“锭”的物品将会被输入/出。 
+
+[image{320, 490,0.5, pneumaticcraft:textures/wiki/interface_name_starts.png}]
+-[prefix{n}]物品名* 以 'x' 开始[prefix{}]，当物品名以一个特定的字符串开始时可以通过。可以用此按字典序分类物品。如果你只想取出以 a 开头的物品，输入 a。
+
+[image{320, 580,0.5, pneumaticcraft:textures/wiki/filter_creative.png}]
+-[prefix{n}]创造模式标签页[prefix{}]，当物品在指定的创造模式标签页里可以找到时可以通过。如果你（只）想要取出所有工具，输入“工具”，因为所有原版工具都可以在那里找到。注意：只在单人游戏中可用！
+
+[prefix{n}]*)注：[prefix{}]物品名是本地化以后的名称。在服务器里，由服务端的语言决定。
+
+[prefix{l}]自动弹射[prefix{}]
+当接口是输出模式时，将自动将物品输出至相邻的容器；也许包含其他 mod 的管道，也许不；这由对于接口而言是否像是一个容器而决定。
+
+[prefix{l}]空气损耗[prefix{}]
+尽管使用压力室接口节省了空气，因为不用破坏压力室的结构，还是不能无损地使用。每传输一个物品消耗 1000mL 空气。也就是说，对于一整组物品，压力室接口需要 4 bar 的压力才能传输！所以当接口“卡住”时，不要惊讶，它只是在等待气压积累起来。小技巧：压缩铁时，将铁锭转化为铁块再输入。这会节省 8/9 的空气。
+

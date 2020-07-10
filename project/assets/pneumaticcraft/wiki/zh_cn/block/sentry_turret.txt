@@ -1,0 +1,14 @@
+哨戒炮是一个自动的防御性武器。使用加特林机枪子弹射击范围内的实体。
+
+[prefix{l}]范围[prefix{}]
+哨戒炮默认范围为 16 格，可以使用范围升级增大。每个范围升级增大 1 格。
+
+[prefix{l}]过滤目标1[prefix{}]
+可以通过输入在 GUI 内的“目标过滤”框中填写[link{pneumaticcraft:misc/entity_filter}]实体过滤器[link{}]指定攻击哪些实体。
+
+[prefix{l}]安全站[prefix{}]
+当哨戒炮没一个或多个安全站的范围覆盖时，所有安全站允许的所有玩家不会被设为目标。过滤器无法改变这一点。
+
+[image{335,10,0.25,pneumaticcraft:textures/wiki/sentry_turret.png}]
+
+[crafting{200,250,key=block/sentry_turret}]

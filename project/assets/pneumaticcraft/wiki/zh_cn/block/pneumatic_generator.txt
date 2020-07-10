@@ -1,0 +1,6 @@
+[image{350, 20, 0.4, pneumaticcraft:textures/wiki/pneumatic_generator.png}]
+气动发电据使用压缩空气生成 IC2 中的 EU。这是（气动工艺中的）2 级机器，也就是说最小工作压力为 15 bar。默认效率为 40%，可以在配置里修改。没有安装升级时，功率为 32EU/t。安装 1 个速度升级后为128EU/t，2 个为 512EU/t。 *能量使用（mL/t）= 输出率 / 效率（%） * 400例如：效率为 40% ，输出功率为 32EU/t 时，空气消耗速率 = 32 / 40 * 400 = 320mL/t。
+
+影响该机器的一个重要因素是其温度。该机器需要被[link{pneumaticcraft:menu/heat}]冷却[link{}]，否则其效率会随着温度增高而降低，直到没有任何能量被产生。
+<译者注：此处疑似笔误，原文为 until no air is generated at all，但该机器根本不产生空气。>
+[crafting{200, 260, key=block/pneumatic_generator}]

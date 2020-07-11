@@ -1,0 +1,33 @@
+[prefix{l}]无人机[prefix{}]
+
+无人机是可编程的可以飞行的机器。可以执行各种操作，比较先进。下面是合成表，但是需要更多资源才能使用。
+[crafting{200,90,item/drone,x_rx,rpr,x_rx,r=item/turbine_rotor,p=item/printed_circuit_board}]
+
+
+
+
+
+
+
+
+
+
+
+
+无人机需要被编程才能工作。需要[link{block/programmer}]编程器[link{}]。
+
+除开编程以外，无人机需要压缩空气。可以在[link{block/charging_station}]充气站[link{}]里充气。现在，放置下已被编程的已充气的无人机后，其将会执行编入的程序。
+
+[prefix{l}]自动充气[prefix{}]
+无人机很聪明：气压过低时其将会寻找在同一维度内的安装有发射器升级的充气站。这将会暂停正在运行的程序。找到后，将会前往此充气站，直到充气站无法再对其充气再离开。然后，将会继续原本中断的程序。
+
+在一个多人服务器上你也许想要只允许自己的无人机在自己的充气站充气。可以通过把充气站放在[link{block/security_station}]安全站Security Station[link{}]的范围内将其变为私有。现在，只有被在安全站白名单内的玩家放置的无人机才能在这里充气。 
+
+无人机耗尽空气后，其螺旋桨将会关闭，无人机将会直接落在地面上。
+
+[prefix{l}]染色[prefix{}]
+可以通过咋工作台里和一个染料合成染色。同样可以在放置后用染料右击染色。
+[image{200, 570, 0.64, pneumaticcraft:textures/wiki/drone_dye.png}]
+
+[prefix{l}]调试[prefix{}]
+呃...为什么无人机像这样工作？为什么它又什么又不做了？  可以使用安装有发射器升级的[link{item/pneumatic_helmet}]气动头盔[link{}]对其进行调试。

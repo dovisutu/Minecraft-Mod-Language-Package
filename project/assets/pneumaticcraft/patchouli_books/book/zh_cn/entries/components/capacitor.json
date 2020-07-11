@@ -1,12 +1,12 @@
 {
-  "name": "µçÈİ",
+  "name": "ç”µå®¹",
   "icon": "pneumaticcraft:capacitor",
   "category": "components",
   "advancement": "pneumaticcraft:plastic",
   "pages": [
     {
       "type": "text",
-      "text": "ÓÃÓÚÆäËûÉè±¸µÄºÏ³ÉÓÃÆ·¡£Æä×ÔÉíÃ»ÓĞÓÃÍ¾¡£"
+      "text": "ç”¨äºå…¶ä»–è®¾å¤‡çš„åˆæˆç”¨å“ã€‚å…¶è‡ªèº«æ²¡æœ‰ç”¨é€”ã€‚"
     },
     {
       "type": "pneumaticcraft:pressure_chamber",

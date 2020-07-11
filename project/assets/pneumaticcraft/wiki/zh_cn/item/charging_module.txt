@@ -1,0 +1,22 @@
+[image{200,100,0.45,pneumaticcraft:textures/wiki/charging_module.png}]
+该物品是一个[link{pneumaticcraft:menu/pressure_tubes}]管道模块[link{}]。也就是说，其只能被放置在压力管道上。点击链接查看关于管道模块的一般信息。
+
+充气模块可以将其指向的任何容器中的任何物品充/放气。默认速度为 10mL / (t * 物品)。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[prefix{l}]安装    [link{item/advanced_pcb}]高级印刷电路板[link{}][prefix{}]
+安装后，最大速度提升至 100mL / (t * 物品)。

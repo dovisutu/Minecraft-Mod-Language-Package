@@ -1,0 +1,12 @@
+定位工具在右击时存储坐标。在下列机器中使用：
+
+- [link{block/air_cannon}]空气加农炮[link{}]
+- [link{block/universal_sensor}]万能传感器[link{}]
+- [link{item/drone}]无人机[link{}]
+
+[prefix{l}]与变量链接{prefix{}]
+可以在 GUI（右击空气）中将定位工具与[link{pneumaticcraft:progwidget/coordinate_operator}]全局变量[link{}]链接。现在，通过右击更改坐标后，全局变量的值相应被改变。例如，可以用于需要动态区域的无人机程序。
+
+同样，当该全局变量的值变化时，定位工具内的坐标也会随之变化。用于标识的正方体会随着变量的变化而移动。
+
+[crafting{200, 250, key=item/gps_tool}]

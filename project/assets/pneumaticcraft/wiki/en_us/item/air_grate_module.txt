@@ -1,4 +1,4 @@
-This item is a [link{pneumaticcraft:menu/pressure_tubes}]Tube Module[link{}]. this means that it can be placed on a Pressure Tube only. For general information about Tube Modules click the link.
+该物品是一个[link{pneumaticcraft:menu/pressure_tubes}]管道模块[link{}]。也就是说，其只能被放置在压力管道上。点击链接查看关于管道模块的一般信息。
 
 This module is used to attract or repel entities towards or from the module. When you apply pressurized air the tube will blow entities away and when you make the pipe vacuum it will suck entities towards it. Vacuum is achieved with a [link{block/vacuum_pump}]Vacuum Pump[link{}]. When item entities are close enough, they will automatically be inserted into any adjacent inventory, respecting sided inventories (like Furnaces). The higher the pressure, the bigger the range. This can be expressed with the following formulae:
 

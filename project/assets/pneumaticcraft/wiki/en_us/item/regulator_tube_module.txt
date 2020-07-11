@@ -1,4 +1,4 @@
-This item is a [link{pneumaticcraft:menu/pressure_tubes}]Tube Module[link{}]. this means that it can be placed on a Pressure Tube only. For general information about Tube Modules click the link.
+该物品是一个[link{pneumaticcraft:menu/pressure_tubes}]管道模块[link{}]。也就是说，其只能被放置在压力管道上。点击链接查看关于管道模块的一般信息。
 
 The Regulator Tube Module is used to limit the pressure going through the tube. The threshold pressure is determined like the [link{item/safety_tube_module}]Safety Valve Tube[link{}], which is by the formula:
 

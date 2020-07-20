@@ -1,0 +1,7 @@
+气动工艺添加了一对专门与 IndustrialCraft 2 联动的机器。因此，这些机器只有在安装了 IndustrialCraft 2 之后才可用。即便安装了，也可以在配置文件里禁用这对机器，迫使玩家需要建立各自的能量网络。同样，其效率可以在配置文件里修改，使 EU 到压力的转换更简单或更困难。这对机器可以用 IC2 的扳手交互。
+
+PneumaticCraft 空气 --> IndustrialCraft 2 EU 转换：
+[link{block/pneumatic_generator}]气动发电机[link{}]
+
+IndustrialCraft 2 EU --> PneumaticCraft 空气 转换：
+[link{block/electric_compressor}]电力压缩机[link{}]

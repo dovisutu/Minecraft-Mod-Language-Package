@@ -1,0 +1,19 @@
+[image{200,20,0.572,pneumaticcraft:textures/wiki/oil.png}]
+在气动工艺里，只添加了一个自然生成：石油。生成形态与小湖差不多。区别是：石油在地底生成的几率远远大于在地表生成的几率。因此，建议使用像[link{item/seismic_sensor}]石油探测器[link{}]一样的工具以协助。
+
+在找到石油以后，需要从地下抽取并运输。推荐的气动工艺的办法是使用[link{block/gas_lift}]气举[link{}]抽取液体，尽管来自其他 mod 的液体泵同样可以被使用。如果在离基地很远的地方抽取石油，一个游戏早期的运输方法是使用[link{block/liquid_hopper}]液体漏斗[link{}]（作为储罐），其可装载 16000mB 的流体，并且在破坏时保留内容物（即便气举本身也可以作为运输方式，因为它在破坏时同样保存其中的流体）。
+
+石油有两个用途：精炼成为高质量燃油，以及制造塑料。塑料在气动工艺的很多合成表里都有用到。
+
+[prefix{l}]合成塑料[prefix{}]
+合成塑料的第一步是在[link{block/refinery}]精炼厂[link{}]里精炼石油。记得给予精炼厂[link{heat}]热量[link{}]。
+
+其中一个产物是液化石油气（LPG）。在[link{block/thermopneumatic_processing_plant}]热气动加工机[link{}]里与煤炭合成，施加热量，可以获得液态塑料。
+
+随后，可以在[link{block/plastic_mixer}]塑料混合机[link{}]里和颜料混合并固化为染色塑料。注：如果是在[prefix{o}]固化[prefix{}]塑料，不需要提供任何热量。
+
+听起来也许很贵，但是上述机器的默认合成表实际上比较便宜。
+
+[prefix{l}]Mod 联动[prefix{}]
+
+气动工艺当然不是唯一一个添加石油的 mod；其他好几个 mod（包括 BuildCraft 和 Immersive Petroleum）也添加自己的石油。根据你的世界生成设置，气动工艺的石油也许无法生成；但是气动工艺的精炼厂可以处理来自其他几个 mod 的石油。

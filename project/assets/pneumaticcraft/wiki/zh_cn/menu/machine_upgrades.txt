@@ -1,4 +1,4 @@
-Most machines in PneumaticCraft have upgrade slots. The sole purpose of these slots is to put in Machine Upgrades. It differs per machine what an upgrade does. To see which upgrades can be put in which machine and what the upgrade does open the Upgrade Tab in the machine. The following is a list of all upgrades with their recipes:
+大多数气动工艺的机器里有升级槽。这些槽的唯一用途就是安装机器升级。升级的效果因机器而异。打开机器内的升级标签查看哪些升级可以被放入哪些机器，它们各自会做什么。下列是所有机器升级的合成表：
 [crafting{200,110,key=item/volume_upgrade}]
 [crafting{200,230,key=item/dispenser_upgrade}]
 [crafting{200,350,key=item/item_life_upgrade}]

@@ -1,0 +1,7 @@
+注：[link{block/pneumatic_dynamo}]气动能源炉[link{}]和[link{block/flux_compressor}]通量压缩机[link{}]现在被认为属于气动工艺的“本体”，因为现在其与 Forge 能量（FE）交互。然而，其仍然与 CoFH mod（以及其他实现 FE 的 mod，包括但不限于 RFTools 和沉浸工程）的机器兼容。
+
+如果检测到 CoFH mod，那么：
+
+• CoFH 的燃油可以用于液体压缩机和高级液体压缩机
+• CoFH 的原油可以在精炼厂内被处理
+• 气动工艺的燃油可以用于压缩能源炉

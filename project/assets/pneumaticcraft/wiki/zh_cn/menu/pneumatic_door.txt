@@ -1,0 +1,8 @@
+[image{320, 20, 0.5, pneumaticcraft:textures/wiki/pneumatic_door.png}]
+这个特殊的门将在有足够的压力时，在附近有玩家时自动打开。感应范围为 2 格，但是可以通过安装范围升级来提高。当气动门基座在一个工作的安全站的范围内时，将只在被安全站允许的玩家靠近时打开。同样可以将气动门设置为只有看向门时才打开，或者还原为原版木/铁门的行为。
+
+[image{320, 190, 0.5, pneumaticcraft:textures/wiki/pneumatic_door_camo.png}]
+[prefix{l}]伪装[prefix{}]
+可以通过使用[link{item/camo_applicator}]伪装涂敷器[link{}]对气动门基座进行伪装，使其融入周围的环境中。将会消耗掉伪装用的方块。
+[crafting{200, 340, key=block/pneumatic_door_base}]
+[crafting{200, 460, key=block/pneumatic_door}]

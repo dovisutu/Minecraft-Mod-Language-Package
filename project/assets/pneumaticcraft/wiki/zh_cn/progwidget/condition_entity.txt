@@ -1,0 +1,3 @@
+这是一个条件拼图。[link{pneumaticcraft:progwidget/conditions}]点击这里[link{}]来获取关于条件拼图的一般信息。
+
+条件：实体 允许你对特定区域内的实体进行计数。可以通过作为[link{pneumaticcraft:misc/entity_filter}]实体过滤器[link{}]的文本拼图进行过滤。

@@ -18,9 +18,13 @@
 [link{pneumaticcraft:progwidget/condition_entity}]条件：实体[link{}]
 [link{pneumaticcraft:progwidget/condition_pressure}]条件：压力[link{}]
 [link{pneumaticcraft:progwidget/condition_coordinate}]条件：坐标[link{}]
+[link{pneumaticcraft:progwidget/condition_item}]条件：物品过滤器[link{}]
+[link{pneumaticcraft:progwidget/condition_light}]条件：亮度等级[link{}]
+[link{pneumaticcraft:progwidget/condition_r_f}]条件：RF[link{}]
 
 [prefix{l}]无人机条件：[prefix{}]
 [link{pneumaticcraft:progwidget/drone_condition_item}]无人机条件：物品[link{}]
 [link{pneumaticcraft:progwidget/drone_condition_liquid}]无人机条件：流体[link{}]
 [link{pneumaticcraft:progwidget/drone_condition_entity}]无人机条件：实体[link{}]
 [link{pneumaticcraft:progwidget/drone_condition_pressure}]无人机条件：压力[link{}]
+[link{pneumaticcraft:progwidget/drone_condition_r_f}]无人机条件：RF[link{}]

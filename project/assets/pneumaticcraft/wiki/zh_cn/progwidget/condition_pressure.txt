@@ -1,3 +1,3 @@
 这是一个条件拼图。[link{pneumaticcraft:progwidget/conditions}]点击这里[link{}]来获取关于条件拼图的一般信息。
 
-The Condition: Redstone allows you to (remotely) check if a block is powered by a certain Redstone signal.
+条件：压力允许你检查所选区域内的气动方块的气压。

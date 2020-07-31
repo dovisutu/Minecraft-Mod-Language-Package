@@ -1,0 +1,9 @@
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
+
+[prefix{l}]合成[prefix{}]
+无人机将使用其物品栏中的物品合成物品。在右侧按照合成表的样式连接[link{pneumaticcraft:progwidget/item_filter}]物品过滤器[link{}]来指定一个合成表。
+[image{200,95,0.97,pneumaticcraft:textures/wiki/crafting_piece.png}]
+
+并不一定需要 9 个物品过滤器来指定：只要可以形成合成表的样式就可以了。
+
+默认该拼图将会使用该配方合成尽可能多次。可以通过右击此拼图，勾选“使用计数”后指定允许合成的最大数量。

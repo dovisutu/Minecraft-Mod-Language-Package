@@ -1,5 +1,4 @@
-气动能源炉将压缩空气转化为 Forge 能量（也就是 RF）。默认速率为 40 RF/t，可以使用[link{pneumaticcraft:menu/machine_upgrades}]速度升级[link{}]加速。这将会把输出功率翻倍，也就是 80RF/t，还可以继续加速。
+气动能源炉将压缩空气转化为 FE能量（也就是 RF）。默认速率为 40 RF/t，可以使用[link{pneumaticcraft:menu/machine_upgrades}]速度升级[link{}]加速。这将会把输出功率翻倍，也就是 80RF/t，还可以继续加速。
 
 影响该机器的一个重要因素是其温度。该机器需要被[link{pneumaticcraft:menu/heat}]冷却[link{}]，否则其效率会随着温度增高而降低，直到没有任何能量被产生。
-<译者注：此处疑似笔误，原文为 until no air is generated at all，但该机器根本不产生空气。>
 [crafting{200, 150, key=block/pneumatic_dynamo}]

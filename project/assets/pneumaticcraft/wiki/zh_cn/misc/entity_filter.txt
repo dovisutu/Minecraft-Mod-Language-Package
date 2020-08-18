@@ -7,10 +7,10 @@
 [prefix{1}]@animal [prefix{}]匹配所有被动生物（动物）
 [prefix{1}]@animal(age = adult) [prefix{}]匹配所有成年动物
 [prefix{1}]@animal(age = baby) [prefix{}]匹配所有未成年动物
-[prefix{1}]@animal(breedable = yes) [prefix{}]匹配所有可以被即刻喂食的动物
+[prefix{1}]@animal(breedable = yes) [prefix{}]匹配所有当前可以被喂食的动物
 [prefix{1}]@minecart [prefix{}]匹配矿车
 [prefix{1}]@boat [prefix{}]匹配船
-[prefix{1}]@living [prefix{}]匹配所有活的实体
+[prefix{1}]@living [prefix{}]匹配所有“活的”实体
 [prefix{1}]@item [prefix{}]匹配所有物品掉落物
 [prefix{1}]@drone [prefix{}]匹配无人机（实体）
 [prefix{1}]Creeper [prefix{}]匹配爬行者（Creeper）

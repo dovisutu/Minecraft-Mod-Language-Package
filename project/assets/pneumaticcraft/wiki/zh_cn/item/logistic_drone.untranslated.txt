@@ -1,6 +1,6 @@
-[prefix{l}]Logistic Drone [prefix{}]
+[prefix{l}]物流无人机[prefix{}]
 
-Logistic Drones are a special type of [link{item/drone}]drone [link{}]. They are a lower tier Drone. As a result of this they are limited in what they can do. Still they are reasonably powerful even though they can't be programmed.
+物流无人机是一种特殊的[link{item/drone}]无人机[link{}]。其是低阶的无人机，也就是说可以做的事情受限。尽管其无法被编程，它仍然合理的强大。
 [crafting{200,90,key=item/logistic_drone}]
 
 
@@ -14,9 +14,9 @@ Logistic Drones are a special type of [link{item/drone}]drone [link{}]. They are
 
 
 
-Logistic Drones are heavily based on [link{www.factorioforums.com/wiki/index.php?title=logistic_network}]Factorio's Logistics system[link{}]. Instead of having different logistic Chests, Logistic Frames are a thing. These frames can be crafted and framed around any inventory/tank by right clicking the inventory/tank. The following frames exist:
+物流无人机的设计很大程度上基于[link{www.factorioforums.com/wiki/index.php?title=logistic_network}]异星工场的物流系统[link{}]。与使用不同的物流箱子相反，这里使用物流框架。这些框架可以被合成并通过右击任何容器/储罐安装在器上。下表是所有框架：
 
-• Logistic Passive Provider Frame, provides items/fluids to Requester Frames. Can be configured to supply only certain items/fluids.
+• 物流被动供应框架，向物流请求框架提供物品/流体。可以配置为只提供特定物品/流体。
 [crafting{200,305,key=item/logistic_frame_passive_provider}]
 
 
@@ -30,7 +30,7 @@ Logistic Drones are heavily based on [link{www.factorioforums.com/wiki/index.php
 
 
 
-• Logistic Active Provider Frame, provides items/fluids to Storage Frames and Requester Frames. Can be configured to supply only certain items/fluids.
+• 物流主动供应方块，向物流存储框架和物流请求框架提供物品/流体。可以配置为只提供特定物品/流体。
 [crafting{200,455,key=item/logistic_frame_active_provider}]
 
 

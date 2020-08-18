@@ -1,0 +1,9 @@
+该物品可以被放置在任何（物品）容器上。当被相邻的[link{pneumaticcraft:menu/heat}]热源[link{}]加热时，将会试图熔炼容器中的任何物品；在被冷却时则会试图冻结物品。只有在容器内有足够空间放置产物时才可以进行处理。加热越多，最快为每秒 1 个物品。类似的，冷却越多，冻结速度越快。
+
+默认情况下，可以“冻结”的物品只有 水桶 -> 冰，和熔岩桶 -> 黑曜石（两个配方都返还桶）。
+
+[link{https://docs.blamejared.com/1.12/zh/Mods/PneumaticCraft_Repressurized/HeatFrameCooling/}]CraftTweaker 支持[link{}]
+
+如果安装有 CraftTweaker，上述（默认）配方不一定适用。建议使用 JEI 查看当前的合成配方。
+
+[crafting{200, 200, key=item/heat_frame}]

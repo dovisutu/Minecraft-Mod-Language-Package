@@ -1,0 +1,3 @@
+这是一个条件拼图。[link{pneumaticcraft:progwidget/conditions}]点击这里[link{}]来获取关于条件拼图的一般信息。
+
+无人机条件：实体允许你检查无人机当前装载的实体。当无人机装载有通过[link{pneumaticcraft:misc/entity_filter}]实体过滤器[link{}]的实体时，条件为真，否则为假。

@@ -5,7 +5,7 @@
 
 可以通过这两个点生成形状不同的区域。下面是对其中大多数的图像化显示。金块表示用 GPS 工具选择的两个坐标。
 
-[prefix{l}]盒装[prefix{}]
+[prefix{l}]盒状[prefix{}]
 以两个坐标为顶点的一个立方体，要么[prefix{l}]填充[prefix{}]为实心...
 [image{200,220,0.96,pneumaticcraft:textures/wiki/programming_puzzle_area_filled.png}]
 

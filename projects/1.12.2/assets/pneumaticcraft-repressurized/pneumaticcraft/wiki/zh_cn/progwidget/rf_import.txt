@@ -1,0 +1,7 @@
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
+
+[prefix{l}]输入 RF[prefix{}]
+
+注：尽管名叫“输入 RF”，其实际上使用 FE能量，与 RF 相兼容，但是不一定非得是 RF。
+
+无人机有一个大小为 100000 FE 的能量缓存。使用该拼图，可以从一个提供能量的方块（如：Thermal Expansion 的能量单元或者 Immersive Engineering 的电容器）输入能量到无人机的内部缓存。

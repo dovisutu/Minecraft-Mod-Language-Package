@@ -1,0 +1,5 @@
+物流配置器的主要用途是帮助配置[link{item/logistic_drone}]物流网络[link{}]。右击任何物流框架可以配置各种过滤器。使用物流配置器潜行右击移除物流框架。
+
+物流配置器同样可以被用于移除其他半方块装置，如[link{item/transfer_gadget}]传输装置[link{}]和[link{item/crop_support}]作物架[link{}]。
+
+[crafting{200, 130, key=item/logistics_configurator}]

@@ -39,7 +39,7 @@
 
 
 
-或者你可以以化学的方式，先放进link{block/uv_light_box}]紫外线灯箱[link{}]然后在[link{pneumaticcraft:item/etching_acid_bucket}]铭刻酸[link{}]里铭刻它。
+或者你可以以化学的方式，先放进link{block/uv_light_box}]紫外线灯箱[link{}]然后在[link{pneumaticcraft:item/etching_acid_bucket}]蚀刻酸[link{}]里蚀刻它。
 
 你在合成了未组装的电路板后可以通过向上面加组件的方式完成合成：
 

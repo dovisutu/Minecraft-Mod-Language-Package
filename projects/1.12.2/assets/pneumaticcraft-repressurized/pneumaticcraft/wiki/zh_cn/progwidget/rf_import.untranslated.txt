@@ -1,7 +1,0 @@
-编程拼图被用于[link{block/programmer}]编程器[link{}]中。
-
-[prefix{l}]The 'RF Import' piece [prefix{}]
-
-Note: although this piece is named 'RF Import', it actually uses Forge Energy, which is RF-compatible, but not necessarily limited to just RF.
-
-Drones have an internal buffer of 100,000 FE.  Using this piece, you can import energy from an energy-providing block (e.g. a Thermal Expansion Energy Cell or Immersive Engineering Capacitor) to the drone's internal storage.

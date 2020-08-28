@@ -1,0 +1,9 @@
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
+
+[prefix{l}]标签[prefix{}]
+该拼图仅用于程序流。标签定义了一个程序可以[link{pneumaticcraft:progwidget/jump}]跳转[link{}]到并且[link{pneumaticcraft:progwidget/conditions}]条件[link{}]可以跳转到的地方。必须连接一个[link{pneumaticcraft:progwidget/text}]文本[link{}]拼图来给标签以文本拼图的文本命名。任何使用该文本的跳转/条件都会跳转到该标签。
+
+因此，标签拼图可以用于创造程序流的“分支”（在使用条件时），或者仅仅通过拆分拼图的方式整理拼图。小窍门：勾选右下角的“显示程序流”；其将把有同一名称的跳转/条件/标签连接起来。
+
+[prefix{l}]调试进程[prefix{}]
+在使用安装了实体跟踪器的[link{pneumaticcraft:item/pneumatic_helmet}]气动头盔[link{}]时，可以查看无人机最后跳转到的标签。这可以用来判断无人机正在运行哪一个进程，对于调试很有用。

@@ -30,4 +30,4 @@
 [image{200, 570, 0.64, pneumaticcraft:textures/wiki/drone_dye.png}]
 
 [prefix{l}]调试[prefix{}]
-呃...为什么无人机像这样工作？为什么它又什么又不做了？  可以使用安装有发射器升级的[link{item/pneumatic_helmet}]气动头盔[link{}]对其进行调试。
+呃...为什么无人机像这样工作？为什么它又什么都不做了？  可以使用安装有发射器升级的[link{item/pneumatic_helmet}]气动头盔[link{}]对其进行调试。

@@ -1,0 +1,4 @@
+编程拼图被用于[link{block/programmer}]编程器[link{}]中。
+
+[prefix{l}]物流[prefix{}]
+物流拼图将执行一整个周期的[link{item/logistic_drone}]物流任务{link{}]，其中物流框架将在指定的区域中被查找。

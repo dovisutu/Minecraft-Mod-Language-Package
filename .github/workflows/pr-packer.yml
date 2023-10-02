@@ -27,7 +27,7 @@ jobs:
         id: cache-packer
         uses: actions/cache@v3
         with:
-          key: ${{ runner.os }}-${{ hashFiles('src/Pakcer/**') }}
+          key: ${{ runner.os }}-${{ hashFiles('src/Packer/**') }}
           path: Packer.exe
           lookup-only: true
 

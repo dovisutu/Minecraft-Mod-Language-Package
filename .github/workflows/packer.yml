@@ -28,7 +28,7 @@ jobs:
         id: cache-packer
         uses: actions/cache@v3
         with:
-          key: ${{ runner.os }}-${{ hashFiles('src/Pakcer/**') }}
+          key: ${{ runner.os }}-${{ hashFiles('src/Packer/**') }}
           path: |
             Packer.exe
             git2-*.dll
@@ -110,8 +110,10 @@ jobs:
         id: cache-restore
         uses: actions/cache/restore@v3
         with:
-          key: ${{ runner.os }}-${{ hashFiles('source/Pakcer/**') }}
-          path: Packer.exe
+          key: ${{ runner.os }}-${{ hashFiles('source/Packer/**') }}
+          path: |
+            Packer.exe
+            git2-*.dll
           fail-on-cache-miss: true # 前一步理应构造过的。如果不命中，肯定有问题，不如直接挂掉。
 
       - name: Check changed path on ${{ matrix.version }}

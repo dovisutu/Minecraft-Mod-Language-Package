@@ -18,6 +18,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
+        with: 
+          fetch-depth: 1
 
       # 缓存程序。一方面，在不同job之间需要这么做；另一方面，大约可以改善运行时间？
       # actions/cache的逻辑会在job末尾缓存打包程序；如果不命中，就自行构造程序。
@@ -48,14 +50,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0 # 问题在于下文需要与main比较，就只有全部拉过来了
+          fetch-depth: 2 
+      - run: git fetch --depth=1 origin main
       
       # 由于Github的限制，这里需要重新拉取打包程序。
       - name: Restore Packer
         id: cache-restore
         uses: actions/cache/restore@v3
         with:
-          key: ${{ runner.os }}-${{ hashFiles('src/Pakcer/**') }}
+          key: ${{ runner.os }}-${{ hashFiles('src/Packer/**') }}
           path: Packer.exe
           fail-on-cache-miss: true # 前一步理应构造过的。如果不命中，肯定有问题，不如直接挂掉。
 
@@ -80,7 +83,7 @@ jobs:
 
       - name: Run Packer for ${{ matrix.version }}
         # 部分包原则：Packer和配置均没有改动
-        run: ./Packer --version="${{ matrix.version }} --increment=${{ !steps.check-critical-changes.outputs.changed }}"
+        run: ./Packer --version="${{ matrix.version }}" --increment=${{ !steps.check-critical-changes.outputs.changed }}
         # 运行逻辑：内容有更改 或 手动运行
         if: steps.check-changes.outputs.changed == 'true' ||  github.event_name == 'workflow_dispatch'
 

@@ -17,7 +17,10 @@ jobs:
     name: Build / Cache Packer
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+        with: 
+          fetch-depth: 1
+          sparse-checkout: src
 
       # 缓存程序。一方面，在不同job之间需要这么做；另一方面，大约可以改善运行时间？
       # actions/cache的逻辑会在job末尾缓存打包程序；如果不命中，就自行构造程序。
@@ -26,7 +29,9 @@ jobs:
         uses: actions/cache@v3
         with:
           key: ${{ runner.os }}-${{ hashFiles('src/Pakcer/**') }}
-          path: Packer.exe
+          path: |
+            Packer.exe
+            git2-*.dll
           lookup-only: true
 
       # 构造程序
@@ -39,7 +44,10 @@ jobs:
     name: Build / Cache Uploader
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+        with: 
+          fetch-depth: 1
+          sparse-checkout: src
 
       # 缓存程序。一方面，在不同job之间需要这么做；另一方面，大约可以改善运行时间？
       # actions/cache的逻辑会在job末尾缓存打包程序；如果不命中，就自行构造程序。

@@ -18,13 +18,9 @@ namespace Packer.Helpers
         {
             Log.Information("对版本 {0} 加载更改模组", version);
             using var repo = new Repository(".");
-            Log.Information("1");
             var headTree = repo.Head.Tip.Tree;
-            Log.Information("2");
             var baseTree = repo.Branches["origin/main"].Tip.Tree;
-            Log.Information("3");
             var changedFiles = repo.Diff.Compare<TreeChanges>(baseTree, headTree);
-            Log.Information("4");
             var query = from change in changedFiles
                         from path in new List<string> { change.Path, change.OldPath }
                         where path.IsInTargetVersion(version)

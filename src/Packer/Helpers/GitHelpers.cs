@@ -21,7 +21,7 @@ namespace Packer.Helpers
             Log.Information("1");
             var headTree = repo.Head.Tip.Tree;
             Log.Information("2");
-            var baseTree = repo.Branches["main"].Tip.Tree;
+            var baseTree = repo.Branches["origin/main"].Tip.Tree;
             Log.Information("3");
             var changedFiles = repo.Diff.Compare<TreeChanges>(baseTree, headTree);
             Log.Information("4");

@@ -17,9 +17,11 @@ jobs:
     name: Build / Cache Packer
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with: 
           fetch-depth: 1
+          sparse-checkout: src
+
 
       # 缓存程序。一方面，在不同job之间需要这么做；另一方面，大约可以改善运行时间？
       # actions/cache的逻辑会在job末尾缓存打包程序；如果不命中，就自行构造程序。
@@ -37,6 +39,8 @@ jobs:
       - name: Build Packer if not cached
         if: steps.cache-packer.outputs.cache_hit != 'true'
         run: dotnet publish .\src\Packer\Packer.csproj -o ./ -r win-x64 -p:PublishSingleFile=true
+
+      - run: ls
 
 
   pack:
@@ -66,6 +70,7 @@ jobs:
             git2-*.dll
           fail-on-cache-miss: true # 前一步理应构造过的。如果不命中，肯定有问题，不如直接挂掉。
 
+      - run: ls
       - name: Check changed path on ${{ matrix.version }}
         uses: MarceloPrado/has-changed-path@v1.0
         id: check-changes

@@ -1,26 +1,35 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using Loader.Converters;
+using System.ComponentModel;
 using System.Text.Json;
-using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
 
 namespace Loader.Models.Providers
 {
-    using JsonMappingProvider = TermMappingProvider<JsonNode>;
-    using LangMappingProvider = TermMappingProvider<string>;
 
     public static partial class LangMappingHelper
     {
+        internal static JsonSerializerOptions genericJsonOptions = new()
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+        };
         /// <summary>
         /// 从组合文件创建<see cref="LangMappingProvider"/>
         /// </summary>
         /// <param name="file">组合文件</param>
         public static LangMappingProvider CreateFromComposition(FileInfo file)
         {
-            using var reader = file.OpenText();
-            var data = JsonSerializer.Deserialize<CompositionData>(
-                reader.ReadToEnd(),
-                new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+            
+            using var stream = file.OpenRead();
+            CompositionData data;
+            try
+            {
+                data = JsonSerializer.Deserialize<CompositionData>(
+                    stream, genericJsonOptions);
+            }
+            catch (JsonException exception)
+            {
+                throw new InvalidDataException($"组合文件 {file.FullName} 格式不正确。", exception);
+            }
             return new LangMappingProvider(
                 new LangDictionaryWrapper(CompositionHelper.CreateRawDictionary(data)),
                 data.Target);
@@ -29,16 +38,28 @@ namespace Loader.Models.Providers
 
     public static partial class JsonMappingHelper
     {
+        internal static JsonSerializerOptions genericJsonOptions = new()
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+        };
+
         /// <summary>
         /// 从组合文件创建<see cref="JsonMappingProvider"/>
         /// </summary>
         /// <param name="file">组合文件</param>
         public static JsonMappingProvider CreateFromComposition(FileInfo file)
         {
-            using var reader = file.OpenText();
-            var data = JsonSerializer.Deserialize<CompositionData>(
-                reader.ReadToEnd(),
-                new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+            using var stream = file.OpenRead();
+            CompositionData data;
+            try
+            {
+                data = JsonSerializer.Deserialize<CompositionData>(
+                    stream, genericJsonOptions);
+            }
+            catch (JsonException exception)
+            {
+                throw new InvalidDataException($"组合文件 {file.FullName} 格式不正确。", exception);
+            }
             return new JsonMappingProvider(
                 JsonDictionaryWrapper.Create(CompositionHelper.CreateRawDictionary(data)),
                 data.Target);
@@ -72,7 +93,7 @@ namespace Loader.Models.Providers
                                           existingGroup.Value.Append(incomingPair.Value)));
     }
 
-    // TODO：给每个dict都搞上异源加载
+    // ~TODO：~ **给每个dict都搞上异源加载**
 
     // composition format:
     // - root
@@ -94,7 +115,10 @@ namespace Loader.Models.Providers
 
     internal struct CompositionEntry
     {
+
         public Dictionary<string, string> Templates { get; set; }
+
+        [TypeConverter(typeof(RedirectableParametersConverter))]
         public List<Dictionary<string, string>> Parameters { get; set; }
     }
 }

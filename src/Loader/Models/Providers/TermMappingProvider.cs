@@ -10,6 +10,7 @@ using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.RegularExpressions;
+using Loader.Helpers;
 
 
 
@@ -33,13 +34,12 @@ namespace Loader.Models.Providers
         /// <param name="searchPattern">替换的匹配模式，使用<see cref="Regex"/></param>
         /// <param name="replacement">替换文本</param>
         /// <returns>替换得到的新<see cref="ITermDictionary{TValue}"/></returns>
-        public ITermDictionary<TValue> ReplaceContent(string searchPattern, string replacement);
+        public ITermDictionary<TValue> ReplaceContent(IRegexReplaceable searchPattern, string replacement);
     }
 
-    internal class LangDictionaryWrapper : Dictionary<string, string>, ITermDictionary<string>
+    internal class LangDictionaryWrapper(IDictionary<string, string> dictionary)
+        : Dictionary<string, string>(dictionary), ITermDictionary<string>
     {
-        public LangDictionaryWrapper(IDictionary<string, string> dictionary) : base(dictionary) { }
-
         public string ProvideStringContent()
         {
             var builder = new StringBuilder();
@@ -51,44 +51,42 @@ namespace Loader.Models.Providers
             return builder.ToString();
         }
 
-        public ITermDictionary<string> ReplaceContent(string searchPattern, string replacement)
+        public ITermDictionary<string> ReplaceContent(IRegexReplaceable searchPattern, string replacement)
         {
             var result = new Dictionary<string, string>();
             foreach (var (key, value) in this)
             {
-                var replaced = Regex.Replace(value,
-                                             searchPattern,
-                                             replacement,
-                                             RegexOptions.Singleline);
+                var replaced = searchPattern.Replace(value,
+                                             
+                                             replacement);
                 result.Add(key, replaced);
             }
             return new LangDictionaryWrapper(result);
         }
     }
 
-    internal class JsonDictionaryWrapper : Dictionary<string, JsonNode>, ITermDictionary<JsonNode>
+    internal class JsonDictionaryWrapper(IDictionary<string, JsonNode> dictionary)
+        : Dictionary<string, JsonNode>(dictionary), ITermDictionary<JsonNode>
     {
-        public JsonDictionaryWrapper(IDictionary<string, JsonNode> dictionary) : base(dictionary) { }
+        internal static readonly JsonSerializerOptions jsonLanguageFileOptions = new()
+        {
+            Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+            WriteIndented = true
+        };
 
         public string ProvideStringContent()
-            => JsonSerializer.Serialize(this, new JsonSerializerOptions()
-            {
-                Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-                WriteIndented = true
-            });
+            => JsonSerializer.Serialize(this, jsonLanguageFileOptions);
 
-        public ITermDictionary<JsonNode> ReplaceContent(string searchPattern, string replacement)
+        public ITermDictionary<JsonNode> ReplaceContent(IRegexReplaceable searchPattern, string replacement)
         {
             var result = new Dictionary<string, JsonNode>();
             foreach (var (key, value) in this)
             {
-                if (value.GetType() == typeof(JsonValue)
-                    && value.AsValue().TryGetValue<string>(out var stringValue))
+                if (value is JsonValue jsonValue
+                    && jsonValue.TryGetValue<string>(out var stringValue))
                 {
-                    var replaced = Regex.Replace(stringValue,
-                                                 searchPattern,
-                                                 replacement,
-                                                 RegexOptions.Singleline);
+                    var replaced = searchPattern.Replace(stringValue,
+                                                 replacement);
                     result.Add(key, JsonValue.Create(replaced)!); // 我猜不会null罢
                     continue;
                 }
@@ -119,26 +117,20 @@ namespace Loader.Models.Providers
     /// 对于在<c>lang/</c>下的文件，使用该类型
     /// </remarks>
     /// <typeparam name="TValue">内部使用的值类型</typeparam>
-    public class TermMappingProvider<TValue> : IResourceFileProvider
+    /// <remarks>
+    /// 从给定的映射表构造提供器
+    /// </remarks>
+    /// <param name="map">映射表</param>
+    /// <param name="destination">目标地址</param>
+    public class TermMappingProvider<TValue>(ITermDictionary<TValue> map, string destination) : IResourceFileProvider
     {
         /// <summary>
         /// 语言文件所表示的映射表
         /// </summary>
-        public ITermDictionary<TValue> Map { get; }
+        public ITermDictionary<TValue> Map { get; } = map;
 
         /// <inheritdoc/>
-        public string Destination { get; }
-
-        /// <summary>
-        /// 从给定的映射表构造提供器
-        /// </summary>
-        /// <param name="map">映射表</param>
-        /// <param name="destination">目标地址</param>
-        public TermMappingProvider(ITermDictionary<TValue> map, string destination)
-        {
-            Map = map;
-            Destination = destination;
-        }
+        public string Destination { get; } = destination;
 
         /// <inheritdoc/>
         public IResourceFileProvider ApplyTo(IResourceFileProvider? baseProvider, ApplyOptions options)
@@ -173,25 +165,22 @@ namespace Loader.Models.Providers
         }
 
         /// <inheritdoc/>
-        public IResourceFileProvider ReplaceContent(string searchPattern, string replacement)
+        public IResourceFileProvider ReplaceContent(IRegexReplaceable searchPattern, string replacement)
             => new TermMappingProvider<TValue>(
                 Map.ReplaceContent(searchPattern, replacement),
                 Destination);
 
         /// <inheritdoc/>
-        public IResourceFileProvider ReplaceDestination(string searchPattern, string replacement)
+        public IResourceFileProvider ReplaceDestination(IRegexReplaceable searchPattern, string replacement)
             => new TermMappingProvider<TValue>(
                 Map,
-                Regex.Replace(Destination,
-                              searchPattern,
-                              replacement,
-                              RegexOptions.Singleline));
+                searchPattern.Replace(Destination,
+                              replacement));
 
         /// <inheritdoc/>
         public async Task WriteToArchive(ZipArchive archive)
         {
             var destination = Destination.NormalizePath();
-            Log.Debug("[TermMappingProvider`1]写入路径 {0}", destination);
 
             archive.ValidateEntryDistinctness(destination);
 
@@ -215,15 +204,22 @@ namespace Loader.Models.Providers
         /// </summary>
         /// <param name="file">读取源</param>
         /// <param name="destination">目标地址</param>
-        public static LangMappingProvider CreateFromFile(FileInfo file, string destination)
+        public static LangMappingProvider CreateFromFile(FileInfo file, string destination, bool silence = true)
         {
             using var stream = file.OpenRead();
             using var reader = new StreamReader(stream, Encoding.UTF8);
             var content = reader.ReadToEnd();
-            return new(new LangDictionaryWrapper(DeserializeFromLang(content)), destination);
+            try
+            {
+                return new(new LangDictionaryWrapper(DeserializeFromLang(content, silence)), destination);
+            }
+            catch (InvalidDataException exception)
+            {
+                throw new InvalidDataException($"文件 {file.FullName} 不是合法的 Lang 语言文件。", exception);
+            }
         }
 
-        internal static Dictionary<string, string> DeserializeFromLang(string content)
+        internal static Dictionary<string, string> DeserializeFromLang(string content, bool silence = true)
         {
             var result = new Dictionary<string, string>();
             var isInComment = false; // 处理多行注释
@@ -231,9 +227,11 @@ namespace Loader.Models.Providers
             var isLineContinuation = false;
             var pendingKey = "";
             var pendingValue = "";
+            var lineNumber = 0;
 
             foreach (var line in content.AsSpan().EnumerateLines())
             {
+                ++lineNumber;
                 if (isLineContinuation) // 行尾转义符，用于换行；在PARSE_ESCAPE下使用
                 {
                     if (line.EndsWith("\\"))
@@ -283,14 +281,21 @@ namespace Loader.Models.Providers
 
                 // 基础条目
                 var splitPosition = line.IndexOf('=');
+                ReadOnlySpan<char> key;
+                ReadOnlySpan<char> value;
 
-                // https://github.com/CFPAOrg/Minecraft-Mod-Language-Package/pull/3272/files#r1461545452
-                if (splitPosition == -1) continue;
+                try
+                {
+                    key = line[..splitPosition];
+                    value = splitPosition + 1 < line.Length
+                        ? line[(splitPosition + 1)..]
+                        : "";
+                }
+                catch (ArgumentOutOfRangeException exception)
+                {
+                    throw new InvalidDataException($"在文件的 {lineNumber} 行存在错误，导致无法定位键值。", exception);
+                }
 
-                var key = line[..splitPosition];
-                var value = splitPosition + 1 < line.Length
-                    ? line[(splitPosition + 1)..]
-                    : "";
                 if (isParseEscape && value.EndsWith("\\"))
                 {
                     isLineContinuation = true;
@@ -312,6 +317,11 @@ namespace Loader.Models.Providers
     /// </summary>
     public static partial class JsonMappingHelper
     {
+        internal static readonly JsonSerializerOptions jsonFileOptions = new()
+        {
+            ReadCommentHandling = JsonCommentHandling.Skip
+        };
+
         /// <summary>
         /// 从给定的语言文件创建<see cref="JsonMappingProvider"/>
         /// </summary>
@@ -320,12 +330,19 @@ namespace Loader.Models.Providers
         public static JsonMappingProvider CreateFromFile(FileInfo file, string destination)
         {
             using var stream = file.OpenRead();
-            return new(
-                new JsonDictionaryWrapper(
-                    JsonSerializer.Deserialize<Dictionary<string, JsonNode>>(
-                        stream,
-                        new JsonSerializerOptions { ReadCommentHandling = JsonCommentHandling.Skip })!),
-                destination);
+            try
+            {
+                return new(
+                    new JsonDictionaryWrapper(
+                        JsonSerializer.Deserialize<Dictionary<string, JsonNode>>(
+                            stream,
+                            jsonFileOptions)!),
+                    destination);
+            }
+            catch(JsonException exception)
+            {
+                throw new InvalidDataException($"文件 {file.FullName} 不是合法的 Json 语言文件。", exception);
+            }
         }
     }
     #endregion

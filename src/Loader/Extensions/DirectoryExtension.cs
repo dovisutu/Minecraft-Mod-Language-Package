@@ -1,20 +1,12 @@
 ﻿using Loader.Helpers;
 using Loader.Models;
 using Loader.Models.Providers;
-using Loader.Extensions;
-using Packer.Models.Providers;
-using Serilog;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Text.Json;
 
 namespace Loader.Extensions
 {
     using EvaluatorReturnType = IEnumerable<(IResourceFileProvider provider, ApplyOptions options)>;
     using ParameterType = Dictionary<string, JsonElement>;
-
 
     /// <summary>
     /// 用于处理\[namespace]层级的不同加载策略的拓展方法，以及一些辅助方法
@@ -34,17 +26,6 @@ namespace Loader.Extensions
                               ParameterType? parameters);
 
         /// <summary>
-        /// 从<see cref="PackerPolicyType"/>到加载方法<see cref="ProviderEvaluator"/>的查询表
-        /// </summary>
-        internal static Dictionary<PackerPolicyType, ProviderEvaluator> evaluatorPolicyMap = new()
-        {
-            { PackerPolicyType.Direct, FromCurrentDirectory },      // 现场生成
-            { PackerPolicyType.Indirect, FromSpecifiedDirectory },  // 给定目录
-            { PackerPolicyType.Composition, FromComposition },      // 组合生成
-            { PackerPolicyType.Singleton, FromSingleton },          // 单项文件
-        };
-
-        /// <summary>
         /// 从给定的命名空间，基于当地的<c>packer-policy.json</c>
         /// 与<c>packer-config-fixup.json</c>，遍历<see cref="IResourceFileProvider"/>
         /// </summary>
@@ -60,16 +41,40 @@ namespace Loader.Extensions
                    (accumulate, next)
                        => next.provider.ApplyTo(accumulate, next.options));
 
+
+        #region Data
+        /// <summary>
+        /// 从<see cref="PackerPolicyType"/>到加载方法<see cref="ProviderEvaluator"/>的查询表
+        /// </summary>
+        internal static Dictionary<PackerPolicyType, ProviderEvaluator> evaluatorPolicyMap = new()
+        {
+            { PackerPolicyType.Direct, FromCurrentDirectory },      // 现场生成
+            { PackerPolicyType.Indirect, FromSpecifiedDirectory },  // 给定目录
+            { PackerPolicyType.Composition, FromComposition },      // 组合生成
+            { PackerPolicyType.Singleton, FromSingleton },          // 单项文件
+        };
+
+        internal static readonly IRegexReplaceable assetPattern = new PersistentRegexStatement(@"(?<=^assets/)[^/]*(?=/)");
+        #endregion
+
+        #region Enumerations
         /// <summary>
         /// 遍历未经合并的文件，用于递归调用
         /// </summary>
         internal static EvaluatorReturnType EnumerateRawProviders(this DirectoryInfo namespaceDirectory, Config config)
         {
-
-            return from policy in ConfigHelpers.RetrievePolicy(namespaceDirectory)
-                   from enumeratedPair in evaluatorPolicyMap[policy.Type].Invoke(
-                       namespaceDirectory, config, policy.Parameters)
-                   select enumeratedPair;
+            try
+            {
+                return from policy in ConfigHelpers.RetrievePolicies(namespaceDirectory)
+                       from enumeratedPair in evaluatorPolicyMap[policy.Type](
+                           namespaceDirectory, config, policy.Parameters)
+                       select enumeratedPair;
+            }
+            catch (InvalidOperationException exception)
+            {
+                throw new InvalidOperationException(
+                    $"在从头枚举命名空间 {namespaceDirectory.FullName} 时，出现错误。", exception);
+            }
         }
 
         internal static EvaluatorReturnType FromCurrentDirectory(DirectoryInfo namespaceDirectory,
@@ -78,56 +83,79 @@ namespace Loader.Extensions
         {
             var floatingConfig = ConfigHelpers.RetrieveLocalConfig(namespaceDirectory);
             var localConfig = config.Modify(floatingConfig);
-
-            return from candidate in namespaceDirectory.EnumerateFiles("*", SearchOption.AllDirectories)
-                   let relativePath = Path.GetRelativePath(namespaceDirectory.FullName,
-                                                           candidate.FullName)
-                                          .NormalizePath()
-                   let fullPath = Path.GetRelativePath(".", candidate.FullName)
-                   let destination = Path.Combine("assets", namespaceDirectory.Name, relativePath)
-                                         .NormalizePath()
-                   where !relativePath.IsPathForceExcluded(localConfig)             // [1] 排除路径   -- packer-policy等
-                   where relativePath.IsPathForceIncluded(localConfig)             // [2] 包含路径   [单列]
-                       || relativePath.IsDomainForceIncluded(localConfig)           // [3] 包含domain -- font/ textures/
-                       || destination.IsInTargetLanguage(localConfig)              // [4] 语言标记   -- 含zh_cn的
-                           && !relativePath.IsDomainForceExcluded(localConfig)    // [5] 排除domain [暂无]
-                   let provider = CreateProviderFromFile(candidate, destination, localConfig)
-                   select (provider, GetOptions(parameters));
+            try
+            {
+                return from candidate in namespaceDirectory.EnumerateFiles("*", SearchOption.AllDirectories)
+                       let relativePath = Path.GetRelativePath(namespaceDirectory.FullName,
+                                                               candidate.FullName)
+                                              .NormalizePath()
+                       let fullPath = Path.GetRelativePath(".", candidate.FullName)
+                       let destination = Path.Combine("assets", namespaceDirectory.Name, relativePath)
+                                             .NormalizePath()
+                       where !relativePath.IsPathForceExcluded(localConfig)            // [1] 排除路径   -- packer-policy等
+                       where relativePath.IsPathForceIncluded(localConfig)             // [2] 包含路径   [单列]
+                           || relativePath.IsDomainForceIncluded(localConfig)          // [3] 包含domain -- font/ textures/
+                           || destination.IsInTargetLanguage(localConfig)              // [4] 语言标记   -- 含zh_cn的
+                               && !relativePath.IsDomainForceExcluded(localConfig)     // [5] 排除domain [暂无]
+                       let provider = CreateProviderFromFile(candidate, destination, localConfig)
+                       select (provider, GetOptions(parameters));
+            }
+            catch (Exception exception)
+            {
+                throw new InvalidOperationException(
+                    $"在原位枚举命名空间 {namespaceDirectory.FullName} 时，出现错误。", exception);
+            }
         }
 
         internal static EvaluatorReturnType FromSpecifiedDirectory(DirectoryInfo namespaceDirectory,
                                                                    Config config,
                                                                    ParameterType? parameters)
         {
-            var redirect = parameters!["source"].GetString();
-            var namespaceName = namespaceDirectory.Name;
-            var redirectDirectory = new DirectoryInfo(redirect!);
+            var redirect = parameters.GetParameterFromKey("source");
 
-            Log.Debug("[Policy:Indirect]目标：{0}，源：{1}", namespaceName, redirect);
-
-            return from candidate in redirectDirectory.EnumerateRawProviders(config)
-                   let provider = candidate.provider
-                                           .ReplaceDestination(@"(?<=^assets/)[^/]*(?=/)",
-                                                               namespaceName)
-                   select (provider, GetOptions(parameters));
+            try
+            {
+                var namespaceName = namespaceDirectory.Name;
+                var redirectDirectory = new DirectoryInfo(redirect!);
+                return from candidate in redirectDirectory.EnumerateRawProviders(config)
+                       let provider = candidate.provider
+                                               .ReplaceDestination(assetPattern, namespaceName)
+                       select (provider, GetOptions(parameters));
+            }
+            catch (Exception exception)
+            {
+                throw new InvalidOperationException(
+                    $"在执行 [indirect] 策略自 {redirect} 枚举文件时，出现错误。", exception);
+            }
         }
 
         internal static EvaluatorReturnType FromComposition(DirectoryInfo namespaceDirectory,
                                                             Config config,
                                                             ParameterType? parameters)
         {
-            var compositionPath = parameters!["source"].GetString();
-            var type = parameters["destType"].GetString();
-            var compositionFile = new FileInfo(compositionPath!);
+            var compositionPath = parameters.GetParameterFromKey("source");
+            var type = parameters.GetParameterFromKey("destType");
 
-            Log.Debug("[Policy:Composition]目标：{0}，源：{1}", namespaceDirectory.Name, compositionPath);
+            IResourceFileProvider provider;
 
-            IResourceFileProvider provider = type switch // 类型推断不出要用接口
+            try
             {
-                "lang" => LangMappingHelper.CreateFromComposition(compositionFile),
-                "json" => JsonMappingHelper.CreateFromComposition(compositionFile),
-                _ => throw new InvalidOperationException($"Unexpected Type parameter at {namespaceDirectory.FullName}.")
-            };
+                var compositionFile = new FileInfo(compositionPath!);
+#pragma warning disable CA2208 // 正确实例化参数异常
+                provider = type switch // 类型推断不出要用接口
+                {
+                    "lang" => LangMappingHelper.CreateFromComposition(compositionFile),
+                    "json" => JsonMappingHelper.CreateFromComposition(compositionFile),
+                    _ => throw new ArgumentOutOfRangeException(
+                        "destType", type, "组合策略的目标文件类型不正确。")
+                };
+#pragma warning restore CA2208 // 正确实例化参数异常
+            }
+            catch (Exception exception)
+            {
+                throw new InvalidOperationException(
+                    $"在执行 [composition] 策略自 {compositionPath} 加载文件时，出现错误。", exception);
+            }
             yield return (provider, GetOptions(parameters));
         }
 
@@ -135,57 +163,53 @@ namespace Loader.Extensions
                                                           Config config,
                                                           ParameterType? parameters)
         {
-            string singletonPath;
-            string relativePath;
-            try
-            {
-                singletonPath = parameters!["source"].GetString()!;
-                relativePath = parameters!["relativePath"].GetString()!;
-            }
-            catch (InvalidOperationException exception) // 包装异常
-            {
-                throw new InvalidOperationException(
-                    $"命名空间文件夹{namespaceDirectory.Name}中，单文件策略读取失败。",
-                    exception);
-            }
+            var singletonPath = parameters.GetParameterFromKey("source");
+            var relativePath = parameters.GetParameterFromKey("relativePath");
 
             var destination = Path.Combine("assets", namespaceDirectory.Name, relativePath)
                                   .NormalizePath();
 
-            Log.Debug("[Policy:Singleton]目标：{0}，源：{1}", destination, singletonPath);
-
-            var file = new FileInfo(singletonPath!);
-
             IResourceFileProvider provider;
-            //try
-            //{
-            provider = CreateProviderFromFile(file, destination, config);
-            //}
-            //catch
-            //{
-            //    throw null;
-            //}
+
+            try
+            {
+                var file = new FileInfo(singletonPath);
+                provider = CreateProviderFromFile(file, destination, config);
+            }
+            catch (Exception exception)
+            {
+                throw new InvalidOperationException(
+                    $"在执行 [singleton] 策略自 {singletonPath} 加载文件时，出现错误。", exception);
+            }
             yield return (provider, GetOptions(parameters));
         }
 
+        #endregion
 
-        internal static IResourceFileProvider CreateProviderFromFile(FileInfo file, string destination, Config config)
+        internal static IResourceFileProvider CreateProviderFromFile(FileInfo file, string destination, Config _)
         {
             var extension = file.Extension;
-            if (file.Directory!.Name == "lang")
+            try
             {
-                switch (extension)
+                if (file.Directory!.Name == "lang")
                 {
-                    case ".json": return JsonMappingHelper.CreateFromFile(file, destination);
-                    case ".lang": return LangMappingHelper.CreateFromFile(file, destination);
+                    switch (extension)
+                    {
+                        case ".json": return JsonMappingHelper.CreateFromFile(file, destination);
+                        case ".lang": return LangMappingHelper.CreateFromFile(file, destination);
+                    };
+                }
+                return extension switch
+                {
+                    // 已知的文本文件类型
+                    ".txt" or ".json" or ".md" => TextFile.Create(file, destination),
+                    _ => new RawFile(file, destination)
                 };
             }
-            return extension switch
+            catch (Exception exception)
             {
-                // 已知的文本文件类型
-                ".txt" or ".json" or ".md" => TextFile.Create(file, destination),
-                _ => new RawFile(file, destination)
-            };
+                throw new InvalidOperationException($"无法从文件 {file.FullName} 创建合理的提供器。", exception);
+            }
         }
 
         internal static ApplyOptions GetOptions(ParameterType? parameters)

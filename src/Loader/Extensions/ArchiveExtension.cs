@@ -1,12 +1,11 @@
-﻿using System;
-using System.IO.Compression;
+﻿using System.IO.Compression;
 
 namespace Loader.Extensions
 {
     /// <summary>
     /// 用于压缩包的拓展方法
     /// </summary>
-    static public class ArchiveExtension
+    public static class ArchiveExtension
     {
         /// <summary>
         /// 校验将要传入压缩包的的文件是否存在重名<br />
@@ -18,7 +17,7 @@ namespace Loader.Extensions
         {
             if (archive.GetEntry(entryName) != null)
             {
-                throw new InvalidOperationException($"An entry named {entryName} already exists.");
+                throw new InvalidOperationException($"名为 {entryName} 的文件已存在");
             }
         }
     }

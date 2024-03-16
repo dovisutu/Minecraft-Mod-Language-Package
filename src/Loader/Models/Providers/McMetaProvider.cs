@@ -1,11 +1,7 @@
 ﻿using Loader.Extensions;
-using Packer.Extensions;
-using Serilog;
-using System;
-using System.IO;
+using Loader.Helpers;
 using System.IO.Compression;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Loader.Models.Providers
 {
@@ -32,16 +28,15 @@ namespace Loader.Models.Providers
         /// <inheritdoc/>
         public override string Destination => "pack.mcmeta";
         /// <inheritdoc/>
-        public override IResourceFileProvider ReplaceContent(string searchPattern, string replacement)
+        public override IResourceFileProvider ReplaceContent(IRegexReplaceable searchPattern, string replacement)
             => this;
         /// <inheritdoc/>
-        public override IResourceFileProvider ReplaceDestination(string searchPattern, string replacement)
+        public override IResourceFileProvider ReplaceDestination(IRegexReplaceable searchPattern, string replacement)
             => this;
         /// <inheritdoc/>
         public override async Task WriteToArchive(ZipArchive archive)
         {
             var destination = Destination.NormalizePath();
-            Log.Debug("[McMetaProvider]写入路径 {0}", destination);
 
             var content = string.Format(Content, DateTime.UtcNow.AddHours(8) /* UTC +8:00 */);
 

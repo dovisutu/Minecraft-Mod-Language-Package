@@ -1,4 +1,5 @@
-﻿using Loader.Models;
+﻿using Loader.Converters;
+using Loader.Models;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -10,6 +11,24 @@ namespace Loader.Helpers
     /// </summary>
     public static class ConfigHelpers
     {
+        internal static JsonSerializerOptions persistentRegexOptions = new()
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            Converters = {new RegexPersistentReplaceableConverter()}
+        };
+
+        internal static JsonSerializerOptions temporaryRegexOptions = new()
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            Converters = { new RegexTemporaryReplaceableConverter() }
+        };
+
+        internal static JsonSerializerOptions policyOptions = new()
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
+        };
+
         /// <summary>
         /// 从给定的命名空间获取局域配置
         /// </summary>
@@ -25,8 +44,7 @@ namespace Loader.Helpers
             try
             {
                 return JsonSerializer.Deserialize<FloatingConfig>(
-                    stream,
-                    new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+                    stream, temporaryRegexOptions);
             }
             catch (JsonException exception)
             {
@@ -46,8 +64,7 @@ namespace Loader.Helpers
             try
             {
                 return JsonSerializer.Deserialize<Config>(
-                    stream,
-                    new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase })!;
+                    stream, persistentRegexOptions)!;
             }
             catch (JsonException exception)
             {
@@ -62,7 +79,7 @@ namespace Loader.Helpers
         /// <returns>若文件存在，返回对应的内容；否则，返回<c>[ Direct ]</c>。</returns>
         /// <exception cref="InvalidDataException">策略文件为 null。</exception>
         /// <exception cref="InvalidOperationException">策略文件解析失败。</exception>
-        public static List<PackerPolicy> RetrievePolicy(DirectoryInfo directory)
+        public static List<PackerPolicy> RetrievePolicies(DirectoryInfo directory)
         {
             var policyFile = directory.GetFiles("packer-policy.json").FirstOrDefault();
 
@@ -78,12 +95,7 @@ namespace Loader.Helpers
             try
             {
                 var result = JsonSerializer.Deserialize<List<PackerPolicy>>(
-                    stream,
-                    new JsonSerializerOptions
-                    {
-                        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                        Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
-                    })
+                    stream, policyOptions)
                     // 这个null检查我也不知道有没有用...
                     ?? throw new InvalidDataException($"策略文件 {policyFile.FullName} 为 null 值。");
                 return result;

@@ -1,10 +1,7 @@
 ﻿using Loader.Extensions;
-using Packer.Extensions;
-using Serilog;
-using System.IO;
+using Loader.Helpers;
 using System.IO.Compression;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Loader.Models.Providers
 {
@@ -14,41 +11,32 @@ namespace Loader.Models.Providers
     /// <remarks>
     /// 对于非文本文件，使用该类
     /// </remarks>
-    public class RawFile : IResourceFileProvider
+    /// <remarks>
+    /// 从给定的<see cref="FileInfo" />构造提供器
+    /// </remarks>
+    /// <param name="sourceFile">源文件的引用</param>
+    /// <param name="destination">目标地址</param>
+    public class RawFile(FileInfo sourceFile, string destination) : IResourceFileProvider
     {
         /// <summary>
         /// 文件的源地址
         /// </summary>
-        public FileInfo SourceFile { get; }
+        public FileInfo SourceFile { get; } = sourceFile;
 
         /// <inheritdoc/>
-        public string Destination { get; }
-
-        /// <summary>
-        /// 从给定的<see cref="FileInfo" />构造提供器
-        /// </summary>
-        /// <param name="sourceFile">源文件的引用</param>
-        /// <param name="destination">目标地址</param>
-        public RawFile(FileInfo sourceFile, string destination)
-        {
-            SourceFile = sourceFile;
-            Destination = destination;
-        }
+        public string Destination { get; } = destination;
 
 
         /// <inheritdoc/>
-        public IResourceFileProvider ReplaceDestination(string searchPattern, string replacement)
+        public IResourceFileProvider ReplaceDestination(IRegexReplaceable searchPattern, string replacement)
             => new RawFile(SourceFile,
-                           Regex.Replace(Destination,
-                                         searchPattern,
-                                         replacement,
-                                         RegexOptions.Singleline));
+                           searchPattern.Replace(Destination,
+                                         replacement));
 
         /// <inheritdoc/>
         public async Task WriteToArchive(ZipArchive archive)
         {
             var destination = Destination.NormalizePath();
-            Log.Debug("[RawFile]写入路径 {0}", destination);
 
             archive.ValidateEntryDistinctness(destination);
 

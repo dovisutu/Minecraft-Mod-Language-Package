@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Loader.Helpers;
+using System.Collections.Generic;
 using System.Linq;
 
 // 要null就抛异常吧（逃）
@@ -85,11 +86,11 @@ namespace Loader.Models
         /// <summary>
         /// 文本字符替换表
         /// </summary>
-        public Dictionary<string, string> CharacterReplacement { get; set; }
+        public Dictionary<IRegexReplaceable, string> CharacterReplacement { get; set; }
         /// <summary>
         /// 内容替换表
         /// </summary>
-        public Dictionary<string, string> DestinationReplacement { get; set; }
+        public Dictionary<IRegexReplaceable, string> DestinationReplacement { get; set; }
 
         /// <summary>
         /// 从另一对象合并配置

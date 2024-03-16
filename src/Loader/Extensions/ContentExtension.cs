@@ -1,9 +1,6 @@
 ﻿using Loader.Models;
-using Serilog;
-using System;
-using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 
 namespace Loader.Extensions
@@ -38,7 +35,7 @@ namespace Loader.Extensions
         {
             // 强行丢异常...行吧
             if (!ValidNamespaceRegex().IsMatch(namespaceName))
-                throw new ArgumentOutOfRangeException(nameof(namespaceName), namespaceName, "Invalid namespace name.");
+                throw new ArgumentOutOfRangeException(nameof(namespaceName), namespaceName, "命名空间名称非法。");
             return true;
         }
 
@@ -99,6 +96,24 @@ namespace Loader.Extensions
         //    Log.Debug(message);
         //    return message;
         //}
+
+        public static string GetParameterFromKey(this Dictionary<string, JsonElement>? parameters, string key)
+        {
+            if (parameters == null) throw new ArgumentNullException($"策略文件中，需要附加参数 {key}，但附加参数不存在。");
+            try
+            {
+                return parameters[key].GetString()
+                    ?? throw new NullReferenceException($"策略文件中，需要附加参数 {key}，但填写了 null。");
+            }
+            catch(InvalidOperationException exception) // 仍然保持 JsonElement 的内部信息。
+            {
+                throw new InvalidOperationException($"策略文件中，附加参数 {key} 存在，但格式不正确。", exception);
+            }
+            catch(KeyNotFoundException) // 这个没有内部信息。
+            {
+                throw new KeyNotFoundException($"策略文件中，存在附加参数，但不存在所需参数 {key}。");
+            }
+        }
 
         // 临时方法
         /// <summary>

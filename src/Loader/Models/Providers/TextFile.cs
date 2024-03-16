@@ -1,13 +1,7 @@
 ﻿using Loader.Extensions;
-using Loader.Models;
-using Packer.Extensions;
-using Serilog;
-using System;
-using System.IO;
+using Loader.Helpers;
 using System.IO.Compression;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Loader.Models.Providers
 {
@@ -17,15 +11,20 @@ namespace Loader.Models.Providers
     /// <remarks>
     /// 对于普通的文本文件，使用该类
     /// </remarks>
-    public class TextFile : IResourceFileProvider
+    /// <remarks>
+    /// 从给定的文本内容构造提供器
+    /// </remarks>
+    /// <param name="content">来源文本</param>
+    /// <param name="destination">目标地址</param>
+    public class TextFile(string content, string destination) : IResourceFileProvider
     {
         /// <summary>
         /// 提供器所携带的文本内容
         /// </summary>
-        public virtual string Content { get; }
+        public virtual string Content { get; } = content;
 
         /// <inheritdoc/>
-        public virtual string Destination { get; }
+        public virtual string Destination { get; } = destination;
 
         /// <summary>
         /// 从给定的<see cref="FileInfo"/>构造提供器
@@ -38,17 +37,6 @@ namespace Loader.Models.Providers
             using var reader = new StreamReader(stream, Encoding.UTF8);
             var content = reader.ReadToEnd();
             return new TextFile(content, destination);
-        }
-
-        /// <summary>
-        /// 从给定的文本内容构造提供器
-        /// </summary>
-        /// <param name="content">来源文本</param>
-        /// <param name="destination">目标地址</param>
-        public TextFile(string content, string destination)
-        {
-            Content = content;
-            Destination = destination;
         }
 
         /// <inheritdoc/>
@@ -67,24 +55,19 @@ namespace Loader.Models.Providers
         }
 
         /// <inheritdoc/>
-        public virtual IResourceFileProvider ReplaceContent(string searchPattern, string replacement)
-            => new TextFile(Regex.Replace(Content,
-                                  searchPattern,
-                                  replacement,
-                                  RegexOptions.Singleline),
+        public virtual IResourceFileProvider ReplaceContent(IRegexReplaceable searchPattern, string replacement)
+            => new TextFile(searchPattern.Replace(Content,
+                                  replacement),
                             Destination);
         /// <inheritdoc/>
-        public virtual IResourceFileProvider ReplaceDestination(string searchPattern, string replacement)
+        public virtual IResourceFileProvider ReplaceDestination(IRegexReplaceable searchPattern, string replacement)
             => new TextFile(Content,
-                            Regex.Replace(Destination,
-                                          searchPattern,
-                                          replacement,
-                                          RegexOptions.Singleline));
+                            searchPattern.Replace(Destination,
+                                          replacement));
         /// <inheritdoc/>
         public virtual async Task WriteToArchive(ZipArchive archive)
         {
             var destination = Destination.NormalizePath();
-            Log.Debug("[TextFile]写入路径 {0}", destination);
 
             archive.ValidateEntryDistinctness(destination);
 

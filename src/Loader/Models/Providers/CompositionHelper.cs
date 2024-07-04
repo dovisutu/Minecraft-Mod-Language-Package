@@ -1,4 +1,5 @@
 ﻿using Loader.Converters;
+using Loader.Helpers;
 using System.ComponentModel;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -76,7 +77,9 @@ namespace Loader.Models.Providers
                         from parameter in parameters
                         from template in templates
                         let formattedKey = string.Format(template.Key, parameter.Key.ToArray())
-                        let formattedValue = string.Format(template.Value, parameter.Value.ToArray())
+                        let formattedValue = string.Format(new SplittedStringFormatter(),
+                                                           template.Value,
+                                                           parameter.Value.ToArray())
                         select (formattedKey, formattedValue);
             return query.ToDictionary(_ => _.formattedKey, _ => _.formattedValue);
         }
@@ -118,7 +121,7 @@ namespace Loader.Models.Providers
 
         public Dictionary<string, string> Templates { get; set; }
 
-        [TypeConverter(typeof(RedirectableParametersConverter))]
+        //[TypeConverter(typeof(RedirectableParametersConverter))]
         public List<Dictionary<string, string>> Parameters { get; set; }
     }
 }

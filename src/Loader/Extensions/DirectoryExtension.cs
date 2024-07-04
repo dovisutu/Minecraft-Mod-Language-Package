@@ -27,7 +27,7 @@ namespace Loader.Extensions
 
         /// <summary>
         /// 从给定的命名空间，基于当地的<c>packer-policy.json</c>
-        /// 与<c>packer-config-fixup.json</c>，遍历<see cref="IResourceFileProvider"/>
+        /// 与<c>local-config.json</c>，遍历<see cref="IResourceFileProvider"/>
         /// </summary>
         /// <param name="namespaceDirectory">命名空间所在目录</param>
         /// <param name="config">所使用的<i>全局</i>配置</param>
@@ -142,7 +142,7 @@ namespace Loader.Extensions
             {
                 var compositionFile = new FileInfo(compositionPath!);
 #pragma warning disable CA2208 // 正确实例化参数异常
-                provider = type switch // 类型推断不出要用接口
+                provider = type switch
                 {
                     "lang" => LangMappingHelper.CreateFromComposition(compositionFile),
                     "json" => JsonMappingHelper.CreateFromComposition(compositionFile),

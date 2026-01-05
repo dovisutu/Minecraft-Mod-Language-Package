@@ -12,7 +12,7 @@ namespace Uploader
 {
     static class Program
     {
-        static async Task Main(string host, string name, string password, bool createSnapshot)
+        static async Task Main(string? host, string? name, string password, bool createSnapshot)
         {
             Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
@@ -49,7 +49,7 @@ namespace Uploader
 
             IEnumerable<Task> tasks =
                 [
-                // UploadToServer(host, name, password, files),
+                (host is null || name is null) ? Task.CompletedTask : UploadToServer(host, name, password, files),
                 createSnapshot ? UploadSnapshotAssets(client, files): Task.CompletedTask,
                 UpdateAutobuildAssets(client, files)
                 ];
@@ -101,7 +101,7 @@ namespace Uploader
                 TargetCommitish = Environment.GetEnvironmentVariable("SHA"),
                 Name = $"汉化资源包-{timestamp}"
             };
-            var result = await client.Repository.Release.Create(long.Parse(Environment.GetEnvironmentVariable("REPO_ID")), newRelease);
+            var result = await client.Repository.Release.Create(long.Parse(Environment.GetEnvironmentVariable("REPO_ID")!), newRelease);
             Log.Information("<Snapshot> 创建 Release");
             foreach (var (name, file) in files)
             {
@@ -123,7 +123,7 @@ namespace Uploader
 
         async static Task UpdateAutobuildAssets(GitHubClient client, IEnumerable<(string name, FileInfo file)> files)
         {
-            var repoId = long.Parse(Environment.GetEnvironmentVariable("REPO_ID"));
+            var repoId = long.Parse(Environment.GetEnvironmentVariable("REPO_ID")!);
             var release = await client.Repository.Release.Get(repoId, "autobuild");
             Log.Information("<Autobuild> 获取 autobuild Release");
 
@@ -133,7 +133,7 @@ namespace Uploader
             {
                 using var fileStream = file.OpenRead();
 
-                if (lookup.TryGetValue(name, out ReleaseAsset asset)) 
+                if (lookup.TryGetValue(name, out ReleaseAsset? asset)) 
                 {
                     await client.Repository.Release.DeleteAsset(repoId, asset.Id);
                     Log.Information("<Autobuild> 删除旧文件：{0}");

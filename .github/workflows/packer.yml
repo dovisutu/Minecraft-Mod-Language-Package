@@ -38,7 +38,7 @@ jobs:
         run: dotnet publish .\src\Packer\Packer.csproj -o ./ -r win-x64
 
   build-uploader:
-    if: github.repository == 'CFPAOrg/Minecraft-Mod-Language-Package'
+    # if: github.repository == 'CFPAOrg/Minecraft-Mod-Language-Package'
     name: Build / Cache Uploader
     runs-on: windows-latest
     steps:
@@ -118,7 +118,7 @@ jobs:
     concurrency: 
       group: packer-upload
       cancel-in-progress: false
-    if: github.repository == 'CFPAOrg/Minecraft-Mod-Language-Package'
+    # if: github.repository == 'CFPAOrg/Minecraft-Mod-Language-Package'
     name: Upload Resource Packs to Various places
     needs: [ pack, build-uploader ]
     runs-on: windows-latest

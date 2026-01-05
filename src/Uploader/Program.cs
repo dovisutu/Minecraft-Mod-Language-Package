@@ -40,7 +40,7 @@ namespace Uploader
                            });
             var md5s = artifactDirectory
                           .EnumerateFiles("*.md5", SearchOption.AllDirectories)
-                          .Select(_ => (name: _.Name + _.Extension, file: _));
+                          .Select(_ => (name: _.Name, file: _));
             var files = packs.Concat(md5s);
 
             Console.WriteLine("待上传的文件数目：{0}", files.Count());
@@ -149,7 +149,7 @@ namespace Uploader
                     fileStream,
                     timeout: null);
                 await client.Repository.Release.UploadAsset(release, newAsset);
-                Log.Information("<Autobuilder> 上传文件：{0}", name);
+                Log.Information("<Autobuild> 上传文件：{0}", name);
                 
             }
         }

@@ -49,7 +49,7 @@ namespace Uploader
 
             IEnumerable<Task> tasks =
                 [
-                (host == "" || name == "" || password == "") ? Task.CompletedTask : UploadToServer(host, name, password, files),
+                //UploadToServer(host, name, password, files),
                 createSnapshot ? UploadSnapshotAssets(client, files): Task.CompletedTask,
                 UpdateAutobuildAssets(client, files)
                 ];

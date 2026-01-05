@@ -152,3 +152,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SHA: ${{ github.sha }}
+          REPO_ID: ${{ github.repository_id }}

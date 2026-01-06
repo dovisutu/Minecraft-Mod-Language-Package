@@ -3,7 +3,7 @@ name: Packer
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ main, 5745-packer-ci ]
     paths:
       - 'src/**'
       - 'config/packer/**'

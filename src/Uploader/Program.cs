@@ -29,6 +29,12 @@ namespace Uploader
             };
 
             var artifactDirectory = new DirectoryInfo(Path.Join(Directory.GetCurrentDirectory(), "artifacts"));
+            if (!artifactDirectory.Exists)
+            {
+                Log.Warning("未找到 artifact 文件夹。可能是所有版本都没有触发打包。");
+                return;
+            }
+
             var packs = artifactDirectory
                            .EnumerateFiles("Minecraft-Mod-Language-Modpack-*.zip", SearchOption.AllDirectories)
                            .Select(_ =>

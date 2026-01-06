@@ -12,7 +12,7 @@ namespace Uploader
 {
     static class Program
     {
-        static async Task Main(string host = "", string name = "", string password = "", bool createSnapshot = false)
+        static async Task Main(string host, string name, string password, bool createSnapshot = false)
         {
             Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
@@ -45,8 +45,6 @@ namespace Uploader
 
             Console.WriteLine("待上传的文件数目：{0}", files.Count());
 
-
-
             IEnumerable<Task> tasks =
                 [
                 //UploadToServer(host, name, password, files),
@@ -54,6 +52,7 @@ namespace Uploader
                 UpdateAutobuildAssets(client, files)
                 ];
             await Task.WhenAll(tasks);
+            
         }
 
         
@@ -127,6 +126,20 @@ namespace Uploader
             var release = await client.Repository.Release.Get(repoId, "autobuild");
             Log.Information("<Autobuild> 获取 autobuild Release");
 
+            var timestamp = DateTime.UtcNow.ToString("yyyyMMddHHmmss");
+            var desc = new ReleaseUpdate()
+            {
+                Body = $"""
+                ## 汉化资源包 Autobuild
+
+                ### 最后更新时间
+
+                - {timestamp}
+                """
+            };
+            await client.Repository.Release.Edit(repoId, release.Id, desc);
+            Log.Information("<Autobuild> 更新 Release 简介：时间 {0}", timestamp);
+
             var assets = release.Assets;
             var lookup = assets.Select(_ => (_.Name, _)).ToDictionary();
             foreach (var (name, file) in files)
@@ -136,7 +149,7 @@ namespace Uploader
                 if (lookup.TryGetValue(name, out ReleaseAsset? asset)) 
                 {
                     await client.Repository.Release.DeleteAsset(repoId, asset.Id);
-                    Log.Information("<Autobuild> 删除旧文件：{0}");
+                    Log.Information("<Autobuild> 删除旧文件：{0}", name);
                 }
                 var newAsset = new ReleaseAssetUpload(
                     name,

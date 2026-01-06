@@ -12,7 +12,7 @@ namespace Uploader
 {
     static class Program
     {
-        static async Task Main(string host, string name, string password, bool createSnapshot = false)
+        static async Task Main(string host, string name, string password)
         {
             Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
@@ -54,7 +54,7 @@ namespace Uploader
             IEnumerable<Task> tasks =
                 [
                 //UploadToServer(host, name, password, files),
-                createSnapshot ? UploadSnapshotAssets(client, files): Task.CompletedTask,
+                UploadSnapshotAssets(client, files),
                 UpdateAutobuildAssets(client, files)
                 ];
             await Task.WhenAll(tasks);
